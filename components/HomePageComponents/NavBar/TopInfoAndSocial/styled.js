@@ -15,4 +15,39 @@ const Info = styled.div`
   }
 `;
 
-export { Info };
+const IconsContainer = styled.div`
+  background-color: #fff;
+  display: none;
+  padding: 0.5rem 7rem;
+  width: 50%;
+  height: 100%;
+  @media (min-width: 531px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const IconContainer = styled.span`
+  background-color: rgb(21, 129, 157);
+  border-radius: 100px;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.2rem;
+  > svg {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+`;
+
+const Container = styled.section`
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  height: 40px;
+`;
+
+export { Info, IconContainer, IconsContainer, Container };

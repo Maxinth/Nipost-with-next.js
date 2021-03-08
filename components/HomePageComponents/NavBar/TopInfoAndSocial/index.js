@@ -1,14 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { Info } from "./styled";
+import { Info, Container } from "./styled";
 import SocialIcons from "./SocialIcons";
-
-const Container = styled.section`
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
-  display: flex;
-`;
 
 const NavTopInfoAndSocial = () => {
   return (
