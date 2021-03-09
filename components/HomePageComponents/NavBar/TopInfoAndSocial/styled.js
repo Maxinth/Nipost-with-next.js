@@ -36,9 +36,7 @@ const IconContainer = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-right: 0.2rem;
-  display: inline-block;
 
   ${({ color }) =>
     color &&

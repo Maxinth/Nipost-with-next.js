@@ -1,8 +1,8 @@
 export const data = [
-  "home",
-  "about us",
-  "services",
-  "media",
-  "quick tools",
-  "contact",
+  { linkText: "home", goTo: "/" },
+  { linkText: "about us", goTo: "/#" },
+  { linkText: "services", goTo: "/#" },
+  { linkText: "media", goTo: "/#" },
+  { linkText: "quick tools", goTo: "/#" },
+  { linkText: "contact", goTo: "/#" },
 ];
