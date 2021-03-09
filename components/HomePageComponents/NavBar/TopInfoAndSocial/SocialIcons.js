@@ -6,7 +6,9 @@ const SocialIcons = () => {
   return (
     <IconsContainer>
       {data.map((item, index) => (
-        <IconContainer key={index}>{item}</IconContainer>
+        <IconContainer key={index} color={item.color}>
+          {item.icon}
+        </IconContainer>
       ))}
     </IconsContainer>
   );

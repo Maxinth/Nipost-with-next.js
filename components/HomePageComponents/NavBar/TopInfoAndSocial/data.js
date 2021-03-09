@@ -5,8 +5,8 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 
 export const data = [
-  <MailIcon />,
-  <FacebookIcon />,
-  <InstagramIcon />,
-  <TwitterIcon />,
+  { icon: <MailIcon />, color: "#333" },
+  { icon: <FacebookIcon />, color: "#3b5998" },
+  { icon: <InstagramIcon />, color: "purple" },
+  { icon: <TwitterIcon />, color: "#00acee" },
 ];

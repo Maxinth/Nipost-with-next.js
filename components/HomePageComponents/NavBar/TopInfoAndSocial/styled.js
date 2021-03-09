@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Info = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Info = styled.div`
 `;
 
 const IconsContainer = styled.div`
-  background-color: #fff;
+  background-color: rgb(21, 129, 157);
   display: none;
   padding: 0.5rem 7rem;
   width: 50%;
@@ -29,17 +29,22 @@ const IconsContainer = styled.div`
 `;
 
 const IconContainer = styled.span`
-  background-color: rgb(21, 129, 157);
+  background-color: #fff;
   border-radius: 100px;
   padding: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 0.2rem;
-  > svg {
-    color: #fff;
-    font-size: 1.5rem;
-  }
+
+  ${({ color }) =>
+    color &&
+    css`
+      > svg {
+        color: ${color};
+        font-size: 1.5rem;
+      }
+    `}
 `;
 
 const Container = styled.section`
