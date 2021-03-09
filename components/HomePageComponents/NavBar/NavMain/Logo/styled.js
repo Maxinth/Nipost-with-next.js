@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   height: 50px;
@@ -29,4 +29,4 @@ const LogoText = styled.h4`
   font-weight: 700;
 `;
 
-export { Container, LogoImage, Box, LogoText };
+export { LogoContainer, LogoImage, Box, LogoText };

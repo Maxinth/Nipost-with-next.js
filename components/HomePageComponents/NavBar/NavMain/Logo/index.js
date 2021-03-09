@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, LogoImage } from "./styled";
+import { LogoContainer, LogoImage } from "./styled";
 import LogoTexts from "./LogoTexts";
 
 const Logo = () => {
   return (
-    <Container>
+    <LogoContainer>
       <LogoImage src="./logoMain.png" alt="logo" />
       <LogoTexts />
-    </Container>
+    </LogoContainer>
   );
 };
 

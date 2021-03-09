@@ -9,6 +9,7 @@ const Info = styled.div`
   background-color: rgb(105, 105, 105);
   width: 100%;
   transition: width 0.2s;
+  text-align: center;
 
   @media (min-width: 531px) {
     width: 50%;
@@ -18,7 +19,7 @@ const Info = styled.div`
 const IconsContainer = styled.div`
   background-color: rgb(21, 129, 157);
   display: none;
-  padding: 0.5rem 7rem;
+  padding: 1.1rem 7rem;
   width: 50%;
   height: 100%;
   @media (min-width: 531px) {
@@ -35,7 +36,9 @@ const IconContainer = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-right: 0.2rem;
+  display: inline-block;
 
   ${({ color }) =>
     color &&
