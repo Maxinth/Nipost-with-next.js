@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { LogoContainer } from "./Logo/styled";
+import { LogoImage } from "./Logo/styled";
 
 const Nav = styled.nav`
   position: sticky;
@@ -31,7 +32,7 @@ const Section = styled.section`
           margin-left: calc(8rem + 15vw);
         }
       }
-      @media (min-width: 760px) {
+      @media (min-width: 780px) {
         display: none;
       }
     `}
@@ -40,7 +41,13 @@ const Section = styled.section`
     largerScreens &&
     css`
       display: none;
-      @media (min-width: 760px) {
+      padding: 0.5rem 0.1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      ${LogoContainer} {
+        margin-left: 0.2rem;
+      }
+      @media (min-width: 780px) {
         display: flex;
         justify-content: space-between;
       }
@@ -48,10 +55,10 @@ const Section = styled.section`
 `;
 
 const BaseLink = styled.a`
-  margin-right: 0.5rem;
+  margin-right: 0.9rem;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
@@ -64,6 +71,13 @@ const BaseLink = styled.a`
     color: rgb(169, 60, 4);
     transform: translateY(10px);
   }
+
+  @media (min-width: 992px) {
+    font-weight: 400;
+  }
+  @media (min-width: 1065px) {
+    text-transform: capitalize;
+  }
 `;
 
 const LinksContainer = styled.div`
@@ -71,7 +85,13 @@ const LinksContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  margin-left: 4rem;
+  justify-content: space-evenly;
+  margin-left: 5rem;
+  transition: margin-left 0.2s;
 `;
 
-export { Nav, Section, LinksContainer, BaseLink };
+const ArmsImage = styled(LogoImage)`
+  height: 40px;
+`;
+
+export { Nav, Section, LinksContainer, BaseLink, ArmsImage };

@@ -1,16 +1,14 @@
 import React from "react";
-import Link from "next/link";
-import { LinksContainer, BaseLink } from "./styled";
-import { data } from "./data";
+import { LinksContainer, ArmsImage } from "./styled";
+import GenerateNavLinks from "./GenerateNavLinks";
+import SearchAndClose from "./SearchAndClose";
 
 const NavigationLinks = () => {
   return (
     <LinksContainer>
-      {data.map((item, index) => (
-        <Link href={item.goTo} key={index}>
-          <BaseLink>{item.linkText}</BaseLink>
-        </Link>
-      ))}
+      <GenerateNavLinks />
+      <SearchAndClose />
+      <ArmsImage src="/coatofarms.png" alt="Coat of Arms" />
     </LinksContainer>
   );
 };

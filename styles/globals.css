@@ -12,3 +12,7 @@ a {
 li {
   list-style-type: none;
 }
+
+svg {
+  cursor: pointer;
+}

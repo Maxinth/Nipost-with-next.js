@@ -14,6 +14,9 @@ const Info = styled.div`
   @media (min-width: 531px) {
     width: 50%;
   }
+  @media (min-width: 900px) {
+    width: 65%;
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -22,10 +25,18 @@ const IconsContainer = styled.div`
   padding: 1.1rem 7rem;
   width: 50%;
   height: 100%;
+  transition: background-color 0.2s;
   @media (min-width: 531px) {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  @media (min-width: 780px) {
+    background-color: ghostwhite;
+  }
+
+  @media (min-width: 900px) {
+    width: 35%;
   }
 `;
 
