@@ -1,7 +1,10 @@
 import styled, { css } from "styled-components";
 import { LogoContainer } from "./Logo/styled";
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  position: sticky;
+`;
+
 const Section = styled.section`
   padding: 0.5rem 1rem;
   display: flex;
@@ -31,6 +34,16 @@ const Section = styled.section`
         display: none;
       }
     `}
+
+  ${({ largerScreens }) =>
+    largerScreens &&
+    css`
+      display: none;
+      @media (min-width: 760px) {
+        display: block;
+      }
+    `}
 `;
 
-export { Nav, Section };
+const LinksContainer = styled.div``;
+export { Nav, Section, LinksContainer };
