@@ -45,13 +45,9 @@ const ListItem = styled.li`
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  ${({ inner }) => {
-    inner &&
-      css`
-        font-size: 0.6rem;
-        padding: 0.5rem 2rem;
-      `;
-  }}
+`;
+const ListItemInner = styled(ListItem)`
+  font-size: 0.7rem;
 `;
 const Span = styled.span`
   > svg {
@@ -70,4 +66,4 @@ const Span = styled.span`
     `}
 `;
 
-export { DropDownContainer, ContentBox, ListItem, Span, Box };
+export { DropDownContainer, ContentBox, ListItem, Span, Box, ListItemInner };

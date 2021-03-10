@@ -5,7 +5,12 @@ import IsDropDownIconShown from "./IsDropDownIconShown";
 import PropTypes from "prop-types";
 import DropDownDetails from "./DropDownDetails";
 
-const DropListItem = ({ linkText, withDropDown, addDetailsHeight }) => {
+const DropListItem = ({
+  linkText,
+  withDropDown,
+  addDetailsHeight,
+  details,
+}) => {
   const [clicked, setClicked] = useState(false);
   const flipIconShown = () => setClicked(!clicked);
 
@@ -23,6 +28,7 @@ const DropListItem = ({ linkText, withDropDown, addDetailsHeight }) => {
         <DropDownDetails
           showDetails={clicked}
           addDetailsHeight={addDetailsHeight}
+          details={details}
         />
       )}
     </>
@@ -33,6 +39,7 @@ DropListItem.propTypes = {
   linkText: PropTypes.string,
   withDropDown: PropTypes.bool,
   addDetailsHeight: PropTypes.func,
+  details: PropTypes.array,
 };
 
 export default DropListItem;

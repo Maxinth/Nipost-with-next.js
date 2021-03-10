@@ -21,6 +21,9 @@ const Section = styled.section`
   ${({ mobile }) =>
     mobile &&
     css`
+      > button {
+        margin-left: 0.2rem;
+      }
       @media (min-width: 300px) {
         ${LogoContainer} {
           margin-left: calc(4rem + 10vw);

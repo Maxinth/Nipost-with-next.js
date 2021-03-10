@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { ContentBox, ListItem, Box } from "./styled";
+import { ContentBox, Box } from "./styled";
 import useDropDown from "../../../useDropDown";
 import PropTypes from "prop-types";
+import GenerateInnerListItems from "./GenerateInnerListItems";
 
-const DropDownDetails = ({ showDetails, addDetailsHeight }) => {
+const DropDownDetails = ({ showDetails, addDetailsHeight, details }) => {
   const { currentHeight, contentRef, getNewHeight } = useDropDown();
 
   // useEffect for each detailsDropDown based on showDetails
@@ -16,9 +17,7 @@ const DropDownDetails = ({ showDetails, addDetailsHeight }) => {
   return (
     <Box details height={currentHeight}>
       <ContentBox ref={contentRef}>
-        <ListItem inner>details</ListItem>
-        <ListItem inner>details 1</ListItem>
-        <ListItem inner>details 2</ListItem>
+        <GenerateInnerListItems data={details} />
       </ContentBox>
     </Box>
   );
