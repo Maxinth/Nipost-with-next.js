@@ -1,16 +1,12 @@
 import React from "react";
-import MenuIcon from "@material-ui/icons/Menu";
 import { IconButton } from "@material-ui/core";
-import styled from "styled-components";
-
-const Hamburger = styled(MenuIcon)`
-  font-size: 2.1rem !important;
-  color: black;
-`;
+import { Hamburger } from "./styled";
+import { useGlobalContext } from "../../../context";
 
 const NavMenuIcon = () => {
+  const { toggleMobileMenu } = useGlobalContext();
   return (
-    <IconButton>
+    <IconButton onClick={toggleMobileMenu}>
       <Hamburger />
     </IconButton>
   );

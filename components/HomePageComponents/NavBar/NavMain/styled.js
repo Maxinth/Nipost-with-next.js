@@ -1,13 +1,17 @@
 import styled, { css } from "styled-components";
 import { LogoContainer } from "./Logo/styled";
 import { LogoImage } from "./Logo/styled";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const Nav = styled.nav`
   position: sticky;
+  /* border: 2px solid red; */
+  background: #fff;
+  box-shadow: 1px 2px 6px grey;
 `;
 
 const Section = styled.section`
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   display: flex;
   align-items: center;
   ${LogoContainer} {
@@ -22,6 +26,17 @@ const Section = styled.section`
           margin-left: calc(4rem + 10vw);
         }
       }
+
+      /* @media (max-width: 360px) {
+        ${LogoContainer} {
+          margin-left: 3rem;
+        }
+      } */
+      /* @media (max-width: 411px) {
+        ${LogoContainer} {
+          margin-left: 5rem;
+        }
+      } */
       @media (min-width: 500px) {
         ${LogoContainer} {
           margin-left: calc(6rem + 10vw);
@@ -94,4 +109,9 @@ const ArmsImage = styled(LogoImage)`
   height: 40px;
 `;
 
-export { Nav, Section, LinksContainer, BaseLink, ArmsImage };
+const Hamburger = styled(MenuIcon)`
+  font-size: 2.1rem !important;
+  color: black;
+`;
+
+export { Nav, Section, LinksContainer, BaseLink, ArmsImage, Hamburger };
