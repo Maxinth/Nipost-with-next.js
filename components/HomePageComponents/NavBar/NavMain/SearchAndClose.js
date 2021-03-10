@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import CloseIcon from "@material-ui/icons/Close";
 import SearchIcon from "@material-ui/icons/Search";
+import { useGlobalContext } from "../../../context";
 
 const SearchAndClose = () => {
   const [isSearchInit, setIsSearchInit] = useState(false);
-
+  const { handleHover: handleClick } = useGlobalContext();
   // see comments
   const iconClickProps = {
-    onClick: () => setIsSearchInit(!isSearchInit),
+    onClick: () => {
+      setIsSearchInit(!isSearchInit);
+      handleClick("searchIcon");
+    },
   };
 
   return (

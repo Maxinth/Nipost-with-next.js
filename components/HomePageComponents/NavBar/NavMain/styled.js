@@ -5,7 +5,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const Nav = styled.nav`
   position: sticky;
-  /* border: 2px solid red; */
   background: #fff;
   box-shadow: 1px 2px 6px grey;
 `;
@@ -87,7 +86,6 @@ const BaseLink = styled.a`
   align-items: center;
   :hover {
     color: rgb(169, 60, 4);
-    transform: translateY(10px);
   }
 
   @media (min-width: 992px) {
