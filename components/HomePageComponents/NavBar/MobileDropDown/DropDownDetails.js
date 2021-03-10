@@ -3,17 +3,14 @@ import { ContentBox, ListItem, Box } from "./styled";
 import useDropDown from "../../../useDropDown";
 import PropTypes from "prop-types";
 
-const DropDownDetails = ({ showDetails }) => {
-  const { currentHeight, contentRef, setCurrentHeight } = useDropDown();
+const DropDownDetails = ({ showDetails, addDetailsHeight }) => {
+  const { currentHeight, contentRef, getNewHeight } = useDropDown();
 
   // useEffect for each detailsDropDown based on showDetails
   useEffect(() => {
     let detailsHeight = contentRef.current.getBoundingClientRect().height;
-    if (!showDetails) {
-      setCurrentHeight(detailsHeight);
-    } else {
-      setCurrentHeight(0);
-    }
+    getNewHeight(!showDetails, detailsHeight);
+    addDetailsHeight(currentHeight);
   }, [showDetails, currentHeight]);
 
   return (
@@ -29,6 +26,7 @@ const DropDownDetails = ({ showDetails }) => {
 
 DropDownDetails.propTypes = {
   showDetails: PropTypes.bool,
+  addDetailsHeight: PropTypes.func,
 };
 
 export default DropDownDetails;

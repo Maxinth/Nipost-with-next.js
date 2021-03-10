@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const DropDownContainer = styled.section`
-  transition: height 0.4s;
+  transition: height 0.3s;
   /* height: 0px; */
   height: ${({ height }) => height && `${height}px`};
   background-color: rgb(190, 186, 186);
@@ -28,7 +28,7 @@ const Box = styled.div`
   ${({ details }) =>
     details &&
     css`
-      transition: height 0.4s;
+      transition: height 0.3s;
       overflow: hidden;
       height: ${({ height }) => height && `${height}px`};
       padding: 0 2rem;
