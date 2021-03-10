@@ -1,23 +1,19 @@
 import React from "react";
-import { DropDownContainer } from "./styled";
+import { DropDownContainer, ContentBox } from "./styled";
 import useDropDown from "../../../useDropDown";
+import DropListItem from "./DropListItem";
+import { data } from "./data";
 
 const MobileDropDown = () => {
   const { currentHeight, contentRef } = useDropDown();
 
   return (
-    <DropDownContainer
-      height={currentHeight}
-      //   style={{ height: `${currentHeight}px` }}
-    >
-      <div ref={contentRef}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit qui
-        fugiat minus iste mollitia unde. Illum nisi iure hic dolore labore
-        reprehenderit repellendus accusantium, laudantium rerum provident optio
-        cumque? Culpa voluptatibus at hic neque repellat, deserunt totam
-        voluptate nesciunt quo impedit blanditiis corrupti illo reiciendis nemo
-        libero dolore provident dolorem ducimus et quis similique possimus quae
-      </div>
+    <DropDownContainer height={currentHeight}>
+      <ContentBox ref={contentRef}>
+        {data.map((item, index) => (
+          <DropListItem key={index} {...item} />
+        ))}
+      </ContentBox>
     </DropDownContainer>
   );
 };
