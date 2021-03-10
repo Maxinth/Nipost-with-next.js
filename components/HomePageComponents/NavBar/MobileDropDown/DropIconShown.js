@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const DropIconShown = ({ flipState, doFlip }) => {
   return (
-    <Span flip={flipState} onClick={doFlip}>
+    <Span flip={!flipState} onClick={doFlip}>
       <ExpandMoreIcon />
     </Span>
   );

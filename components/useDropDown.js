@@ -22,6 +22,7 @@ const useDropDown = () => {
     currentHeight,
     isClicked,
     contentRef,
+    setCurrentHeight,
   };
 };
 

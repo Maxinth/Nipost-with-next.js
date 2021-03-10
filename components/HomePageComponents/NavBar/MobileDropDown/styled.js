@@ -6,7 +6,7 @@ const DropDownContainer = styled.section`
   height: ${({ height }) => height && `${height}px`};
   background-color: rgb(190, 186, 186);
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   > ul {
     padding: 1rem 0.5rem;
   }
@@ -24,6 +24,15 @@ const Box = styled.div`
     font-size: 0.9rem;
     margin-right: 0.5rem;
   }
+
+  ${({ details }) =>
+    details &&
+    css`
+      transition: height 0.4s;
+      overflow: hidden;
+      height: ${({ height }) => height && `${height}px`};
+      padding: 0 2rem;
+    `}
 `;
 const ListItem = styled.li`
   display: flex;
@@ -36,6 +45,13 @@ const ListItem = styled.li`
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
+  ${({ inner }) => {
+    inner &&
+      css`
+        font-size: 0.6rem;
+        padding: 0.5rem 2rem;
+      `;
+  }}
 `;
 const Span = styled.span`
   > svg {

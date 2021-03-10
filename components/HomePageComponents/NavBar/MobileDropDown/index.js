@@ -5,7 +5,7 @@ import DropListItem from "./DropListItem";
 import { data } from "./data";
 
 const MobileDropDown = () => {
-  const { currentHeight, contentRef } = useDropDown();
+  const { currentHeight, contentRef, setCurrentHeight } = useDropDown();
 
   return (
     <DropDownContainer height={currentHeight}>
