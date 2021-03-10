@@ -13,7 +13,7 @@ const BannerImage = styled.img`
 const HomeBanner = () => {
   return (
     <BannerContainer>
-      <BannerImage src="/13.jpg" alt="Nipost Banner" />
+      <BannerImage src="/homeBanner/13.jpg" alt="Nipost Banner" />
     </BannerContainer>
   );
 };

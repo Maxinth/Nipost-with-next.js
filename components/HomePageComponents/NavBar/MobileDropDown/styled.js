@@ -2,7 +2,10 @@ import styled, { css } from "styled-components";
 
 const DropDownContainer = styled.section`
   transition: height 0.3s;
-  /* height: 0px; */
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 98px;
   height: ${({ height }) => height && `${height}px`};
   background-color: rgb(190, 186, 186);
   width: 100%;

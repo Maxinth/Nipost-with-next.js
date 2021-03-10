@@ -16,3 +16,7 @@ li {
 svg {
   cursor: pointer;
 }
+
+#__next {
+  position: relative;
+}
