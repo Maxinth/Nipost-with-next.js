@@ -35,18 +35,11 @@ const PickUpBox = styled.div`
   left: 90px;
   display: flex;
   flex-direction: column;
-  opacity: 0;
-  display: none;
-  transition: all 0.7s;
-  transform: translateX(-100vw);
-  /* transition: opacity 0.2s; */
-  ${({ showContents }) =>
-    showContents &&
-    css`
-      opacity: 1;
-      display: block;
-      transform: translateX(0%);
-    `}
+  /* opacity: 0; */
+  /* opacity: ${({ showContents }) => (showContents ? 1 : 0)}; */
+  transition: transform 0.2s;
+  transform: ${({ showContents }) =>
+    showContents ? "translateX(0px)" : "translateX(-100vw)"};
 `;
 const Header = styled.h1`
   font-size: calc(1.2rem + 2vw);

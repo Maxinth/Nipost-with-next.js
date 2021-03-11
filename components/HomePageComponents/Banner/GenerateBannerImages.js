@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { BannerImage } from "./styled";
-import PickUpServices from "./PickUpServices";
-import { showForIndexBanner } from "./data";
+// import PickUpServices from "./PickUpServices";
+// import { showForIndexBanner } from "./data";
 
 const GenerateBannerImages = ({
   data,
@@ -20,7 +20,7 @@ const GenerateBannerImages = ({
             match={matchCurrentItem(itemIndex)}
             position={itemPosition(index, itemIndex, data)}
           />
-          <PickUpServices show={showForIndexBanner(item)} />
+          {/* {<PickUpServices show={itemIndex === 0} />} */}
         </div>
       ))}
     </>
