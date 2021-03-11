@@ -18,6 +18,7 @@ const HomeBanner = () => {
         matchCurrentItem={matchCurrentItem}
         itemPosition={itemPosition}
       />
+
       <CircleControls
         data={items}
         setIndex={makeCurrentSlide}

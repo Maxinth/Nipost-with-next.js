@@ -16,3 +16,8 @@ export const matchAndMakeCurrent = (index, setIndex) => {
 
   return { makeCurrentItem, matchCurrentItem };
 };
+
+export const showForIndexBanner = (item) => {
+  console.log("condition = ", item === "/homeBanner/index.png");
+  return item === "/homeBanner/index.png";
+};
