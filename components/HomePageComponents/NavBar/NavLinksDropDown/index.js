@@ -3,15 +3,17 @@ import {
   AboutDropDown,
   ServicesDropDown,
   MediaDropDown,
+  QuickToolsDropDown,
 } from "./LinksDropDowns";
 
 const NavLinksDropDown = () => {
   return (
-    <div>
+    <>
       <AboutDropDown />
       <ServicesDropDown />
       <MediaDropDown />
-    </div>
+      <QuickToolsDropDown />
+    </>
   );
 };
 

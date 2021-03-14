@@ -22,7 +22,15 @@ const data = {
   ],
 
   mediaDetails: ["news", "photo gallery", "resources", "video"],
+  quickToolsDetails: [
+    "post code finder",
+    "counter automation",
+    "post alert registration",
+    "post office finder",
+    "PO Box Registration",
+    "buy insurance cover",
+  ],
 };
 
-const { aboutDetails, servicesDetails, mediaDetails } = data;
-export { aboutDetails, servicesDetails, mediaDetails };
+const { aboutDetails, servicesDetails, mediaDetails, quickToolsDetails } = data;
+export { aboutDetails, servicesDetails, mediaDetails, quickToolsDetails };
