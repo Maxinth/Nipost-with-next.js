@@ -20,7 +20,9 @@ const data = {
     "E-commerce and logistics",
     "workshop & property",
   ],
+
+  mediaDetails: ["news", "photo gallery", "resources", "video"],
 };
 
-const { aboutDetails, servicesDetails } = data;
-export { aboutDetails, servicesDetails };
+const { aboutDetails, servicesDetails, mediaDetails } = data;
+export { aboutDetails, servicesDetails, mediaDetails };
