@@ -5,8 +5,12 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 const NavigationDetails = () => {
   return (
     <NavigationBox>
-      <ArrowForwardIosIcon /> <Span>News</Span>
-      <ArrowForwardIosIcon /> <Span>photo gallery</Span>
+      <NavListItem>
+        <ArrowForwardIosIcon /> <Span>News</Span>
+      </NavListItem>
+      <NavListItem>
+        <ArrowForwardIosIcon /> <Span>photo gallery</Span>
+      </NavListItem>
     </NavigationBox>
   );
 };

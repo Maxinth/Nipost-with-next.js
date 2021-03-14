@@ -9,4 +9,5 @@ const DropHeading = ({ text }) => {
 DropHeading.propTypes = {
   text: PropTypes.string,
 };
+
 export default DropHeading;

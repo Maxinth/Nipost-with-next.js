@@ -14,7 +14,8 @@ const DetailsItem = styled.li`
   align-items: center;
   color: black;
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
   > svg {
     font-size: 2.5rem;
     margin-right: 0.5rem;
