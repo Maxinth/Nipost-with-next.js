@@ -1,11 +1,11 @@
 import React from "react";
-import DropDownBox from "./DropDownBox";
-import { AboutDropDown } from "./LinksDropDowns";
+import { AboutDropDown, ServicesDropDown } from "./LinksDropDowns";
 
 const NavLinksDropDown = () => {
   return (
     <div>
       <AboutDropDown />
+      <ServicesDropDown />
     </div>
   );
 };

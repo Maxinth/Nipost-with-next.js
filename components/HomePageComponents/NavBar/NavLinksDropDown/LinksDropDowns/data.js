@@ -10,7 +10,17 @@ const data = {
     "departments",
     "post office structure",
   ],
+
+  servicesDetails: [
+    "counters",
+    "mails",
+    "financial services",
+    "nigerian postal service",
+    "Ems/Parcels",
+    "E-commerce and logistics",
+    "workshop & property",
+  ],
 };
 
-const { aboutDetails } = data;
-export { aboutDetails };
+const { aboutDetails, servicesDetails } = data;
+export { aboutDetails, servicesDetails };
