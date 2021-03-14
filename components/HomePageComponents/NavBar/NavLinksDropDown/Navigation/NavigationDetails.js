@@ -3,7 +3,7 @@ import { NavigationBox, Span, NavListItem } from "./styled";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import PropTypes from "prop-types";
 
-const NavigationDetails = ({ details }) => {
+const NavigationDetails = ({ details = [] }) => {
   return (
     <NavigationBox>
       {details.map((item, index) => (

@@ -1,10 +1,11 @@
 import React from "react";
 import DropDownBox from "./DropDownBox";
+import { AboutDropDown } from "./LinksDropDowns";
 
 const NavLinksDropDown = () => {
   return (
     <div>
-      <DropDownBox />
+      <AboutDropDown />
     </div>
   );
 };
