@@ -6,7 +6,7 @@ import Details from "./Details";
 const OnlineTools = () => {
   return (
     <Container>
-      <DropHeading />
+      <DropHeading text="online tools" />
       <Details />
     </Container>
   );
