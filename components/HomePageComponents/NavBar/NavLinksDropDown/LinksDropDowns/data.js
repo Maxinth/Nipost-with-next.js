@@ -30,7 +30,21 @@ const data = {
     "PO Box Registration",
     "buy insurance cover",
   ],
+  contactDetails: ["corporate address", "feedback"],
 };
 
-const { aboutDetails, servicesDetails, mediaDetails, quickToolsDetails } = data;
-export { aboutDetails, servicesDetails, mediaDetails, quickToolsDetails };
+const {
+  aboutDetails,
+  servicesDetails,
+  mediaDetails,
+  quickToolsDetails,
+  contactDetails,
+} = data;
+
+export {
+  aboutDetails,
+  servicesDetails,
+  mediaDetails,
+  quickToolsDetails,
+  contactDetails,
+};

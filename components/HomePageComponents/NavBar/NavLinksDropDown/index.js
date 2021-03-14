@@ -4,6 +4,7 @@ import {
   ServicesDropDown,
   MediaDropDown,
   QuickToolsDropDown,
+  ContactDetails,
 } from "./LinksDropDowns";
 
 const NavLinksDropDown = () => {
@@ -13,6 +14,7 @@ const NavLinksDropDown = () => {
       <ServicesDropDown />
       <MediaDropDown />
       <QuickToolsDropDown />
+      <ContactDetails />
     </>
   );
 };
