@@ -2,7 +2,7 @@ import {
   Container,
   DetailsBox,
   Span,
-  DetailsItem as NavListItem,
+  DetailsItem,
 } from "../OnlineTools/styled";
 import styled from "styled-components";
 
@@ -10,12 +10,21 @@ const NavigationBox = styled(DetailsBox)`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 1rem;
+`;
 
-  ${NavListItem} {
-    > svg {
-      font-size: 0.7rem;
-    }
+const NavListItem = styled(DetailsItem)`
+  > svg {
+    font-size: 0.8rem;
+  }
+
+  ${Span} {
+    font-size: 0.9rem;
   }
 `;
 
-export { Container, NavigationBox, Span, NavListItem };
+const NavContainer = styled(Container)`
+  margin-left: 1rem;
+`;
+
+export { NavContainer, NavigationBox, Span, NavListItem };

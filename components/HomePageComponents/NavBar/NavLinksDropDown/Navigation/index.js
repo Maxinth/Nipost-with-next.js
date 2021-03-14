@@ -1,15 +1,20 @@
 import React from "react";
 import DropHeading from "../DropDownHeading";
-import { Container } from "./styled";
+import { NavContainer } from "./styled";
 import NavigationDetails from "./NavigationDetails";
+import PropTypes from "prop-types";
 
-const Navigation = () => {
+const Navigation = ({ details }) => {
   return (
-    <Container>
+    <NavContainer>
       <DropHeading text="navigation" />
-      <NavigationDetails />
-    </Container>
+      <NavigationDetails details={details} />
+    </NavContainer>
   );
+};
+
+Navigation.propTypes = {
+  details: PropTypes.array,
 };
 
 export default Navigation;

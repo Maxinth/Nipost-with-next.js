@@ -1,18 +1,21 @@
 import React from "react";
 import { NavigationBox, Span, NavListItem } from "./styled";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import PropTypes from "prop-types";
 
-const NavigationDetails = () => {
+const NavigationDetails = ({ details }) => {
   return (
     <NavigationBox>
-      <NavListItem>
-        <ArrowForwardIosIcon /> <Span>News</Span>
-      </NavListItem>
-      <NavListItem>
-        <ArrowForwardIosIcon /> <Span>photo gallery</Span>
-      </NavListItem>
+      {details.map((item, index) => (
+        <NavListItem key={index}>
+          <ArrowForwardIosIcon /> <Span>{item}</Span>
+        </NavListItem>
+      ))}
     </NavigationBox>
   );
 };
 
+NavigationDetails.propTypes = {
+  details: PropTypes.array,
+};
 export default NavigationDetails;

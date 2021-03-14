@@ -13,12 +13,16 @@ const DetailsItem = styled.li`
   display: flex;
   align-items: center;
   color: black;
-  padding: 1rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  /* font-size: 0.7rem; */
   text-transform: capitalize;
   > svg {
     font-size: 2.5rem;
     margin-right: 0.5rem;
+  }
+
+  span {
+    font-size: 0.9rem;
   }
 `;
 export { Container, DetailsBox, Span, DetailsItem };
