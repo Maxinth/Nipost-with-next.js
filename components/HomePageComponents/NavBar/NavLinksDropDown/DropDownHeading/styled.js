@@ -6,6 +6,7 @@ const Heading = styled.h3`
   padding: 1rem;
   border-bottom: 1px solid black;
   text-transform: uppercase;
+  text-align: center;
 `;
 
 export { Heading };

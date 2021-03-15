@@ -13,13 +13,18 @@ const NavigationBox = styled(DetailsBox)`
 `;
 
 const NavListItem = styled(DetailsItem)`
-  align-items: flex-start;
+  align-items: center;
+  cursor: pointer;
   > svg {
     font-size: 0.8rem;
   }
 
   ${Span} {
     font-size: 0.9rem;
+    transition: transform 0.2 ease-out;
+    :hover {
+      transform: scale(1.01);
+    }
   }
 `;
 
