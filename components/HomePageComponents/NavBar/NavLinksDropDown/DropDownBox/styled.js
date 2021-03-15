@@ -5,12 +5,13 @@ const DropDownContainer = styled.section`
   position: absolute;
   top: 119px;
   z-index: 300;
-  transition: all 0.2s;
-  padding: 0.2rem 1rem 2rem 1rem;
+  transition: all 0.2s, height 0.7s;
+  /* padding: 0.2rem 1rem 2rem 1rem; */
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 1px 3px 6px #333;
   max-width: 700px;
+  overflow: hidden;
   height: ${({ height }) => height && `${height}px`};
 
   @media (max-width: 815px) {
@@ -37,6 +38,7 @@ const DropDownContainer = styled.section`
 const Box = styled.div`
   display: flex;
   width: 100%;
+  padding: 0.2rem 1rem 2rem 1rem;
 `;
 
 export { DropDownContainer, Box };

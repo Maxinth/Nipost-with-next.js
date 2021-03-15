@@ -6,5 +6,6 @@ import { useGlobalContext } from "../../../../context";
 export const ContactDetails = () => {
   const { itemInView } = useGlobalContext();
   const { contact } = itemInView;
+
   return <DropDownBox details={contactDetails} testCondition={contact} />;
 };

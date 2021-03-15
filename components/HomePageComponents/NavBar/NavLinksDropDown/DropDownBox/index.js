@@ -10,7 +10,7 @@ const DropDownBox = ({ details, testCondition }) => {
   const { itemInView, handleMouseOut } = useGlobalContext();
   const { leftOffset } = itemInView;
   const { currentHeight, contentRef, getNewHeight } = useDropDown();
-  // useEffect for changing height of mobileMenu
+  // useEffect for changing height of linksdropDown
   useEffect(() => {
     let detailsHeight = contentRef.current.getBoundingClientRect().height;
     getNewHeight(testCondition, detailsHeight);
@@ -19,7 +19,7 @@ const DropDownBox = ({ details, testCondition }) => {
   return (
     <DropDownContainer
       height={currentHeight}
-      onMouseLeave={handleMouseOut}
+      // onMouseLeave={handleMouseOut}
       offset={leftOffset}
     >
       <Box ref={contentRef}>
