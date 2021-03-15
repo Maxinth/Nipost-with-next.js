@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 
 const DropDownContainer = styled.section`
   background-color: rgb(243, 192, 66);
-  display: flex;
   position: absolute;
   top: 119px;
   z-index: 300;
@@ -12,6 +11,7 @@ const DropDownContainer = styled.section`
   border-bottom-right-radius: 15px;
   box-shadow: 1px 3px 6px #333;
   max-width: 700px;
+  height: ${({ height }) => height && `${height}px`};
 
   @media (max-width: 815px) {
     display: none;
@@ -34,4 +34,9 @@ const DropDownContainer = styled.section`
     `}
 `;
 
-export { DropDownContainer };
+const Box = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
+export { DropDownContainer, Box };
