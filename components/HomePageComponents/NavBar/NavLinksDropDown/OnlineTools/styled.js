@@ -7,7 +7,9 @@ const Container = styled.div`
 const DetailsBox = styled.ul`
   font-family: inherit;
 `;
+
 const Span = styled.span``;
+
 const DetailsItem = styled.li`
   width: 100%;
   display: flex;
@@ -25,4 +27,5 @@ const DetailsItem = styled.li`
     font-size: 0.9rem;
   }
 `;
+
 export { Container, DetailsBox, Span, DetailsItem };

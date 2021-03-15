@@ -6,15 +6,18 @@ import {
   QuickToolsDropDown,
   ContactDetails,
 } from "./LinksDropDowns";
+import { useGlobalContext } from "../../../context";
 
 const NavLinksDropDown = () => {
+  const { itemInView } = useGlobalContext();
+  const { aboutUs, services, media, quickTools, contact } = itemInView;
   return (
     <>
-      <AboutDropDown />
-      <ServicesDropDown />
-      <MediaDropDown />
-      <QuickToolsDropDown />
-      <ContactDetails />
+      {aboutUs && <AboutDropDown />}
+      {services && <ServicesDropDown />}
+      {media && <MediaDropDown />}
+      {quickTools && <QuickToolsDropDown />}
+      {contact && <ContactDetails />}
     </>
   );
 };

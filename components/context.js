@@ -14,7 +14,7 @@ const AppProvider = ({ children }) => {
   const [itemInView, setItemInView] = useState(linkItems);
 
   /* custom function to set the value the itemInView to the current item hovered upon or
-   clicked upom(for searchIcon) */
+   clicked upon (for searchIcon) */
 
   const handleHover = (id) => {
     setItemInView(itemsOnHover(id));
@@ -26,6 +26,7 @@ const AppProvider = ({ children }) => {
         isClicked,
         toggleMobileMenu,
         handleHover,
+        itemInView,
       }}
     >
       {children}
