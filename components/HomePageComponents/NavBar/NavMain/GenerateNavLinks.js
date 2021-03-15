@@ -12,7 +12,7 @@ const GenerateNavLinks = () => {
         <Link href={item.goTo} key={index}>
           <BaseLink
             onMouseEnter={(e) => handleHover(e, item.id)}
-            onMouseLeave={handleMouseOut}
+            // onMouseLeave={handleMouseOut}
           >
             {item.linkText}
           </BaseLink>

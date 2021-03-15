@@ -4,7 +4,7 @@ const DropDownContainer = styled.section`
   background-color: rgb(243, 192, 66);
   display: flex;
   position: absolute;
-  top: 90px;
+  top: 100px;
   z-index: 300;
   /* padding: 1rem 0.5rem 1rem 1rem; */
   padding: 0.2rem 1rem 2rem 1rem;

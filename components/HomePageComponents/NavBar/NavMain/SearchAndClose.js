@@ -5,21 +5,24 @@ import { useGlobalContext } from "../../../context";
 
 const SearchAndClose = () => {
   const [isSearchInit, setIsSearchInit] = useState(false);
-  const { handleHover: handleClick } = useGlobalContext();
+  const { handleHover } = useGlobalContext();
   // see comments
-  const iconClickProps = {
-    onClick: (e) => {
+  const iconClickAndHoverProps = {
+    onClick: () => {
       setIsSearchInit(!isSearchInit);
-      handleClick(e, "searchIcon");
+    },
+
+    onMouseEnter: (e) => {
+      handleHover(e, "searchIcon");
     },
   };
 
   return (
     <>
       {isSearchInit ? (
-        <CloseIcon {...iconClickProps} />
+        <CloseIcon {...iconClickAndHoverProps} />
       ) : (
-        <SearchIcon {...iconClickProps} />
+        <SearchIcon {...iconClickAndHoverProps} />
       )}
     </>
   );
@@ -31,6 +34,6 @@ export default SearchAndClose;
 
 the onClick handler as onClick={() => setIsSearchInit(!isSearchInit)} on both icons
 
-the iconClickProps object when spread does just this.
+the iconClickAndHoverProps object when spread does just this.
 
 */

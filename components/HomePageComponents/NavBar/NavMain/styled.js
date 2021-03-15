@@ -69,7 +69,7 @@ const BaseLink = styled.a`
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   max-width: 100px;
   /* width: 100%; */
   /* display: flex;
@@ -77,6 +77,7 @@ const BaseLink = styled.a`
   align-items: center; */
   display: block;
   width: 100%;
+  height: 100%;
   text-align: center;
   :hover {
     color: rgb(169, 60, 4);
