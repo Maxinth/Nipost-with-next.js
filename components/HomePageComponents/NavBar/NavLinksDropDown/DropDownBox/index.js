@@ -12,6 +12,7 @@ const DropDownBox = ({ details }) => {
     <DropDownContainer
       style={{ left: `${leftOffset}px` }}
       onMouseLeave={handleMouseOut}
+      offset={leftOffset}
     >
       <OnlineTools />
       <Navigation details={details} />

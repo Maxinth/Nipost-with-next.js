@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const DropDownContainer = styled.section`
   background-color: rgb(243, 192, 66);
@@ -12,6 +12,17 @@ const DropDownContainer = styled.section`
   border-bottom-right-radius: 15px;
   box-shadow: 1px 3px 6px #333;
   max-width: 700px;
+
+  /* ${({ offset }) =>
+    offset &&
+    css`
+      @media (max-width: 1200px) {
+        left: 0px !important;
+      }
+      @media (max-width: 1200px) {
+        left: ${offset}px !important;
+      }
+    `} */
 `;
 
 export { DropDownContainer };

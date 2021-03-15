@@ -32,7 +32,13 @@ export default SearchAndClose;
 
 /* line 9 - so I don't have to write
 
-the onClick handler as onClick={() => setIsSearchInit(!isSearchInit)} on both icons
+the onClick handler as onClick={() => setIsSearchInit(!isSearchInit)}  
+
+AND
+
+onMouseEnter = (e) =>  handleHover(e, "searchIcon") ;
+      
+on both icons
 
 the iconClickAndHoverProps object when spread does just this.
 
