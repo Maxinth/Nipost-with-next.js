@@ -9,11 +9,6 @@ const DropDownBox = ({ details }) => {
   const { itemInView, handleMouseOut } = useGlobalContext();
   const { leftOffset } = itemInView;
 
-  //-------*******----------
-  // OVER HERE
-  // ADJUST OFFSET FOR SMALLER SCREENS - CHECK OUT ON BROWSER
-  //-------*******----------
-
   return (
     <DropDownContainer onMouseLeave={handleMouseOut} offset={leftOffset}>
       <OnlineTools />

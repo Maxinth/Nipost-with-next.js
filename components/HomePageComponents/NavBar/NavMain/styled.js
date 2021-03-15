@@ -71,10 +71,8 @@ const BaseLink = styled.a`
   transition: all 0.2s;
   padding: 1.5rem 0;
   max-width: 100px;
-  /* width: 100%; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  color: ${({ currentlyActiveLink }) =>
+    currentlyActiveLink ? "rgb(169, 60, 4)" : "#333"};
   display: block;
   width: 100%;
   height: 100%;
@@ -84,7 +82,7 @@ const BaseLink = styled.a`
   }
 
   @media (min-width: 992px) {
-    font-weight: 400;
+    font-weight: 600;
   }
   @media (min-width: 1065px) {
     text-transform: capitalize;

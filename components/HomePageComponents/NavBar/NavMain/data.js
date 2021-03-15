@@ -46,3 +46,7 @@ export const itemsWhenOutOfFocus = () => {
     searchIcon: false,
   };
 };
+
+export const makeLinkActive = (stateObj, id) => {
+  return stateObj[id] === true;
+};
