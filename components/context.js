@@ -2,6 +2,7 @@ import React, { useContext, createContext, useState } from "react";
 import {
   linkItems,
   itemsOnHover,
+  itemsWhenOutOfFocus,
 } from "./HomePageComponents/NavBar/NavMain/data";
 const AppContext = createContext();
 
@@ -16,8 +17,12 @@ const AppProvider = ({ children }) => {
   /* custom function to set the value the itemInView to the current item hovered upon or
    clicked upon (for searchIcon) */
 
-  const handleHover = (id) => {
-    setItemInView(itemsOnHover(id));
+  const handleHover = (e, id) => {
+    setItemInView(itemsOnHover(e, id));
+  };
+
+  const handleMouseOut = () => {
+    setItemInView(itemsWhenOutOfFocus);
   };
 
   return (
@@ -27,6 +32,7 @@ const AppProvider = ({ children }) => {
         toggleMobileMenu,
         handleHover,
         itemInView,
+        handleMouseOut,
       }}
     >
       {children}

@@ -15,10 +15,16 @@ export const linkItems = {
   quickTools: false,
   contact: false,
   searchIcon: false,
+  leftOffset: 0,
 };
 
-export const itemsOnHover = (id) => {
+export const itemsOnHover = (e, id) => {
+  let temp = e.target.getBoundingClientRect();
+  //   get its left offset
+  const { left } = temp;
+  console.log("leftOffset = ", left);
   return {
+    leftOffset: parseInt(left),
     home: false,
     aboutUs: false,
     services: false,
@@ -27,5 +33,18 @@ export const itemsOnHover = (id) => {
     contact: false,
     searchIcon: false,
     [id]: true,
+  };
+};
+
+export const itemsWhenOutOfFocus = () => {
+  return {
+    leftOffset: 0,
+    home: false,
+    aboutUs: false,
+    services: false,
+    media: false,
+    quickTools: false,
+    contact: false,
+    searchIcon: false,
   };
 };

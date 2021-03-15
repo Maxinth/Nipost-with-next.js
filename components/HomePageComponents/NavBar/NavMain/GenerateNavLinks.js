@@ -5,12 +5,15 @@ import { data } from "./data";
 import { useGlobalContext } from "../../../context";
 
 const GenerateNavLinks = () => {
-  const { handleHover } = useGlobalContext();
+  const { handleHover, handleMouseOut } = useGlobalContext();
   return (
     <>
       {data.map((item, index) => (
         <Link href={item.goTo} key={index}>
-          <BaseLink onMouseEnter={() => handleHover(item.id)}>
+          <BaseLink
+            onMouseEnter={(e) => handleHover(e, item.id)}
+            // onMouseLeave={handleMouseOut}
+          >
             {item.linkText}
           </BaseLink>
         </Link>
