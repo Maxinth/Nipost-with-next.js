@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const DropDownContainer = styled.section`
-  transition: height 0.3s;
+  transition: height 0.6s;
   position: fixed;
   z-index: 200;
   left: 0;

@@ -6,12 +6,15 @@ import useSliderAndGetCurrentValues, {
 import GenerateBannerImages from "./GenerateBannerImages";
 import { BannerContainer } from "./styled";
 import CircleControls from "../slideControls/CircleControls";
+import { useGlobalContext } from "../../context";
 
 const HomeBanner = () => {
   const { items, index, makeCurrentSlide } = useSliderAndGetCurrentValues(data);
   const { matchCurrentItem } = matchAndMakeCurrent(index, makeCurrentSlide);
+  const { handleMouseOut: handleMouseEnter } = useGlobalContext();
+
   return (
-    <BannerContainer>
+    <BannerContainer onMouseEnter={handleMouseEnter}>
       <GenerateBannerImages
         data={items}
         currentIndex={index}
