@@ -29,16 +29,6 @@ const Section = styled.section`
         }
       }
 
-      /* @media (max-width: 360px) {
-        ${LogoContainer} {
-          margin-left: 3rem;
-        }
-      } */
-      /* @media (max-width: 411px) {
-        ${LogoContainer} {
-          margin-left: 5rem;
-        }
-      } */
       @media (min-width: 500px) {
         ${LogoContainer} {
           margin-left: calc(6rem + 10vw);
@@ -58,7 +48,7 @@ const Section = styled.section`
     largerScreens &&
     css`
       display: none;
-      padding: 0.5rem 0.1rem;
+      /* padding: 0.5rem 0.1rem; */
       max-width: 1200px;
       margin: 0 auto;
       ${LogoContainer} {
@@ -72,7 +62,7 @@ const Section = styled.section`
 `;
 
 const BaseLink = styled.a`
-  margin-right: 0.9rem;
+  /* margin-right: 0.9rem; */
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -80,10 +70,14 @@ const BaseLink = styled.a`
   cursor: pointer;
   transition: all 0.2s;
   padding: 1rem 0;
+  max-width: 100px;
   /* width: 100%; */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: block;
+  width: 100%;
+  text-align: center;
   :hover {
     color: rgb(169, 60, 4);
   }

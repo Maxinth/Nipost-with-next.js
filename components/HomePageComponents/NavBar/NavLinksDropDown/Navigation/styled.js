@@ -21,9 +21,11 @@ const NavListItem = styled(DetailsItem)`
 
   ${Span} {
     font-size: 0.9rem;
-    transition: transform 0.2 ease-out;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    transition: color 0.2s;
     :hover {
-      transform: scale(1.01);
+      color: #fff;
     }
   }
 `;

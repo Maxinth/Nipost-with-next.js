@@ -20,9 +20,7 @@ export const linkItems = {
 
 export const itemsOnHover = (e, id) => {
   let temp = e.target.getBoundingClientRect();
-  //   get its left offset
-  const { left } = temp;
-  console.log("leftOffset = ", left);
+  const { left } = temp; //   get its left offset
   return {
     leftOffset: parseInt(left),
     home: false,

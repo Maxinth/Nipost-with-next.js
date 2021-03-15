@@ -8,9 +8,9 @@ const SearchAndClose = () => {
   const { handleHover: handleClick } = useGlobalContext();
   // see comments
   const iconClickProps = {
-    onClick: () => {
+    onClick: (e) => {
       setIsSearchInit(!isSearchInit);
-      handleClick("searchIcon");
+      handleClick(e, "searchIcon");
     },
   };
 
