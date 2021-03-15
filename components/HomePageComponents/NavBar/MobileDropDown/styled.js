@@ -13,7 +13,7 @@ const DropDownContainer = styled.section`
   > ul {
     padding: 1rem 0.5rem;
   }
-  @media (min-width: 780px) {
+  @media (min-width: 815px) {
     display: none;
   }
 `;

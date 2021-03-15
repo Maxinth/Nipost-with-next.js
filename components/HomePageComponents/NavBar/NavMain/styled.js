@@ -39,7 +39,7 @@ const Section = styled.section`
           margin-left: calc(8rem + 15vw);
         }
       }
-      @media (min-width: 780px) {
+      @media (min-width: 815px) {
         display: none;
       }
     `}
@@ -54,7 +54,7 @@ const Section = styled.section`
       ${LogoContainer} {
         margin-left: 0.2rem;
       }
-      @media (min-width: 780px) {
+      @media (min-width: 815px) {
         display: flex;
         justify-content: space-between;
       }

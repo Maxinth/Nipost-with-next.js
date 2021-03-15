@@ -8,12 +8,14 @@ import { useGlobalContext } from "../../../../context";
 const DropDownBox = ({ details }) => {
   const { itemInView, handleMouseOut } = useGlobalContext();
   const { leftOffset } = itemInView;
+
+  //-------*******----------
+  // OVER HERE
+  // ADJUST OFFSET FOR SMALLER SCREENS - CHECK OUT ON BROWSER
+  //-------*******----------
+
   return (
-    <DropDownContainer
-      style={{ left: `${leftOffset}px` }}
-      onMouseLeave={handleMouseOut}
-      offset={leftOffset}
-    >
+    <DropDownContainer onMouseLeave={handleMouseOut} offset={leftOffset}>
       <OnlineTools />
       <Navigation details={details} />
     </DropDownContainer>

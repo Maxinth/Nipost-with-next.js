@@ -31,7 +31,7 @@ const IconsContainer = styled.div`
     justify-content: center;
     align-items: center;
   }
-  @media (min-width: 780px) {
+  @media (min-width: 815px) {
     background-color: ghostwhite;
   }
 
