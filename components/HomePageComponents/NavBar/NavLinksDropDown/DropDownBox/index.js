@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import { DropDownContainer, Box } from "./styled";
-import OnlineTools from "../OnlineTools";
-import Navigation from "../Navigation";
+import { DropDownContainer } from "./styled";
 import PropTypes from "prop-types";
 import { useGlobalContext } from "../../../../context";
 import useDropDown from "../../../../useDropDown";
+import Contents from "./Contents";
 
 const DropDownBox = ({ details, testCondition }) => {
   const { itemInView, handleMouseOut } = useGlobalContext();
   const { leftOffset } = itemInView;
-  const { currentHeight, contentRef, getNewHeight } = useDropDown();
+  const { currentHeight, getNewHeight, contentRef } = useDropDown();
 
   // useEffect for changing height of links dropdown
   useEffect(() => {
@@ -23,16 +22,14 @@ const DropDownBox = ({ details, testCondition }) => {
       onMouseLeave={handleMouseOut}
       offset={leftOffset}
     >
-      <Box ref={contentRef}>
-        <OnlineTools />
-        <Navigation details={details} />
-      </Box>
+      <Contents details={details} contentRef={contentRef} />
     </DropDownContainer>
   );
 };
 
 DropDownBox.propTypes = {
   details: PropTypes.array,
+  testCondition: PropTypes.bool,
 };
 
 export default DropDownBox;
