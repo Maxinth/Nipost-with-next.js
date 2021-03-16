@@ -1,15 +1,12 @@
 import React from "react";
-import InputBox from "../InputBox";
-import { DetailsBox, Box } from "./styled";
+import { DetailsBox } from "./styled";
 import Btn from "../Btn";
+import DetailsTop from "./DetailsTop";
 
 const TrackItemsDetails = () => {
   return (
     <DetailsBox>
-      <Box>
-        <InputBox text="Enter International tracking id" />
-        <Btn text="track" />
-      </Box>
+      <DetailsTop />
       <Btn text="track domestic items" />
     </DetailsBox>
   );
