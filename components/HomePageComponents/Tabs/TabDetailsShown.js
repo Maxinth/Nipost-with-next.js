@@ -16,4 +16,5 @@ const TabDetailsShown = ({ currentItem }) => {
 TabDetailsShown.propTypes = {
   currentItem: PropTypes.string,
 };
+
 export default TabDetailsShown;

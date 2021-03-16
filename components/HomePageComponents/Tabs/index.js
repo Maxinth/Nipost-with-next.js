@@ -8,7 +8,7 @@ const Tabs = () => {
   const changeItem = (item) => setCurrentItem(item);
   return (
     <TabContainer>
-      <GenerateTabTitles changeItem={changeItem} />
+      <GenerateTabTitles changeItem={changeItem} currentItem={currentItem} />
       <TabDetailsShown currentItem={currentItem} />
     </TabContainer>
   );

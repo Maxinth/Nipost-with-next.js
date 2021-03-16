@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Span = styled.span`
   margin-left: 0.1rem;
@@ -14,12 +14,22 @@ const TabBox = styled.div`
   align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
-  padding: 0.5rem;
+  padding: 1rem;
   cursor: pointer;
+  transition: background-color 0.2s;
   text-transform: uppercase;
   > svg {
     font-size: 0.9rem;
   }
+
+  ${({ isCurrentItem }) =>
+    isCurrentItem &&
+    css`
+      background-color: #fff;
+      ${Span} {
+        color: rgb(21, 129, 157);
+      }
+    `}
 `;
 
 const TabSection = styled.section`

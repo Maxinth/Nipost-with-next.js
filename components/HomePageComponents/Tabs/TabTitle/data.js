@@ -8,3 +8,7 @@ export const data = [
   { icon: <EventNoteIcon />, title: "calculator", itemId: "calculator" },
   { icon: <LocationOnIcon />, title: "locate po", itemId: "locatePo" },
 ];
+
+export const makeCurrent = (state, item) => {
+  return state === item;
+};
