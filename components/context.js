@@ -7,6 +7,9 @@ import {
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+  // state for searchAndCloseIcon
+  const [isSearchInit, setIsSearchInit] = useState(false);
+
   // state for hamburger toggle
   const [isClicked, setIsClicked] = useState(false);
   const toggleMobileMenu = () => setIsClicked(!isClicked);
@@ -22,6 +25,10 @@ const AppProvider = ({ children }) => {
   };
 
   const handleMouseOut = () => {
+    // See Comments
+    if (isSearchInit) {
+      setIsSearchInit(!isSearchInit);
+    }
     setItemInView(itemsWhenOutOfFocus);
   };
 
@@ -33,6 +40,8 @@ const AppProvider = ({ children }) => {
         handleHover,
         itemInView,
         handleMouseOut,
+        isSearchInit,
+        setIsSearchInit,
       }}
     >
       {children}
@@ -46,3 +55,28 @@ export default AppProvider;
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };
+
+/*
+        ======== OVER HERE ======
+        
+const handleMouseOut = () => {
+    if (isSearchInit) {
+      setIsSearchInit(!isSearchInit);
+    }
+    setItemInView(itemsWhenOutOfFocus);
+  };
+
+          ======= FOR searchAndClose =======
+
+  if (isSearchInit) {
+      setIsSearchInit(!isSearchInit);
+    } 
+
+
+    lines 70-71 : when the search icon is clicked to show the search drop down , it is toggled into 
+    the close icon. when a user loses focus of the search dropdown, the icon is toggled to its initial
+    state and the dropdown is hidden.
+
+
+
+*/

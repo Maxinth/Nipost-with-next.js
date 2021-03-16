@@ -1,15 +1,28 @@
-import React from "react";
-import InputBox from "../../../../Tabs/InputBox";
-import Btn from "../../../../Tabs/Btn";
-import { Section, Box } from "./styled";
+import React, { useEffect } from "react";
+import useDropDown from "../../../../../useDropDown";
+import { useGlobalContext } from "../../../../../context";
+import { DropDownContainer } from "./styled";
+import Contents from "./Contents";
 
 export const SearchDropDown = () => {
+  const { itemInView, handleMouseOut } = useGlobalContext();
+  const { leftOffset, searchIcon } = itemInView;
+  const { currentHeight, getNewHeight, contentRef } = useDropDown();
+
+  //   useEffect for changing height of search dropdown
+  useEffect(() => {
+    let detailsHeight = contentRef.current.getBoundingClientRect().height;
+    getNewHeight(searchIcon, detailsHeight);
+  }, [searchIcon, currentHeight]);
+
   return (
-    <Section>
-      <Box>
-        <InputBox text="Enter keyword" />
-        <Btn text="search" />
-      </Box>
-    </Section>
+    <DropDownContainer
+      search
+      height={currentHeight}
+      onMouseLeave={handleMouseOut}
+      offset={leftOffset}
+    >
+      <Contents contentRef={contentRef} />
+    </DropDownContainer>
   );
 };

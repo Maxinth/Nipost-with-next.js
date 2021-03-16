@@ -1,6 +1,4 @@
-import styled from "styled-components";
 import { Box } from "../../../NavLinksDropDown/DropDownBox/styled";
+import { DropDownContainer } from "../../DropDownBox/styled";
 
-const Section = styled.section``;
-
-export { Section, Box };
+export { Box, DropDownContainer };

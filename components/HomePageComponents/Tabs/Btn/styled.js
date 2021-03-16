@@ -10,6 +10,7 @@ const Button = styled.button`
   border: none;
   min-width: 100px;
   font-weight: 500;
+  cursor: pointer;
 `;
 
 export { Button };

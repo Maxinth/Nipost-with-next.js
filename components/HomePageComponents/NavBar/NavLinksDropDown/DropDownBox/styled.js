@@ -33,12 +33,42 @@ const DropDownContainer = styled.section`
         left: ${offset}px;
       }
     `}
+
+  // if the search prop is passed in
+  ${({ search }) =>
+    search &&
+    css`
+      background-color: #fff;
+      padding-top: 1rem;
+      min-width: 400px;
+      transition: height 0.2s;
+
+      // if the search prop is available AND offset is passed in too - IF within an IF
+      ${({ offset }) =>
+        offset &&
+        css`
+          @media (max-width: 884px) {
+            left: ${offset - 700}px;
+          }
+          @media (max-width: 1350px) {
+            left: ${offset - 300}px;
+          }
+          @media (min-width: 1350px) {
+            left: ${offset - 200}px;
+          }
+        `}
+    `}
 `;
 
 const Box = styled.div`
   display: flex;
   width: 100%;
   padding: 0.2rem 1rem 2rem 1rem;
+
+  input + button {
+    min-width: unset;
+    margin-left: 0.5rem;
+  }
 `;
 
 export { DropDownContainer, Box };
