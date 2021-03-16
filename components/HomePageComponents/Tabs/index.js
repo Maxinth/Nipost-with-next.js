@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { TabContainer } from "./styled";
 import GenerateTabTitles from "./TabTitle/GenerateTabTitles";
-// import TrackItemsDetails from "./TrackItemsDetails";
-import LocatePODetails from "./LocatePoDetails";
+import TabDetailsShown from "./TabDetailsShown";
 
 const Tabs = () => {
+  const [currentItem, setCurrentItem] = useState("trackItems");
+  const changeItem = (item) => setCurrentItem(item);
   return (
     <TabContainer>
-      <GenerateTabTitles />
-      {/* <TrackItemsDetails /> */}
-      <LocatePODetails />
+      <GenerateTabTitles changeItem={changeItem} />
+      <TabDetailsShown currentItem={currentItem} />
     </TabContainer>
   );
 };
