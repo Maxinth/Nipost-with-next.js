@@ -14,10 +14,12 @@ const TabBox = styled.div`
   align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
-  padding: 1rem;
+  padding: 1.2rem 1rem 1rem;
   cursor: pointer;
   transition: background-color 0.2s;
   text-transform: uppercase;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   > svg {
     font-size: 0.9rem;
   }
@@ -26,6 +28,8 @@ const TabBox = styled.div`
     isCurrentItem &&
     css`
       background-color: #fff;
+      border: 1px solid rgb(226, 226, 226);
+      border-bottom: 1px solid transparent;
       ${Span} {
         color: rgb(21, 129, 157);
       }

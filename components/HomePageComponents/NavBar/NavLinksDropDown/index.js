@@ -5,12 +5,20 @@ import {
   MediaDropDown,
   QuickToolsDropDown,
   ContactDetails,
+  SearchDropDown,
 } from "./LinksDropDowns";
 import { useGlobalContext } from "../../../context";
 
 const NavLinksDropDown = () => {
   const { itemInView } = useGlobalContext();
-  const { aboutUs, services, media, quickTools, contact } = itemInView;
+  const {
+    aboutUs,
+    services,
+    media,
+    quickTools,
+    contact,
+    searchIcon,
+  } = itemInView;
   return (
     <>
       {aboutUs && <AboutDropDown />}
@@ -18,6 +26,7 @@ const NavLinksDropDown = () => {
       {media && <MediaDropDown />}
       {quickTools && <QuickToolsDropDown />}
       {contact && <ContactDetails />}
+      {searchIcon && <SearchDropDown />}
     </>
   );
 };

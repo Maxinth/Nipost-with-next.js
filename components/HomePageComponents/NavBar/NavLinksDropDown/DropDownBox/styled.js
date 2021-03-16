@@ -5,7 +5,7 @@ const DropDownContainer = styled.section`
   position: absolute;
   top: 119px;
   z-index: 300;
-  transition: all 0.2s, height 0.7s;
+  transition: all 0.2s, height 1s;
   /* padding: 0.2rem 1rem 2rem 1rem; */
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;

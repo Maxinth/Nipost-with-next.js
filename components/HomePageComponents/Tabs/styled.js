@@ -4,6 +4,8 @@ const DetailsBox = styled.div`
   background-color: #fff;
   padding: 2rem 1rem;
   /* margin-top: 0.5rem; */
+  border: 1px solid rgb(226, 226, 226);
+  border-top: 1px solid transparent;
 `;
 
 const TabContainer = styled.section`

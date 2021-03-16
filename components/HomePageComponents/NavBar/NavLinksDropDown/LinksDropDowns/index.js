@@ -3,3 +3,4 @@ export { ServicesDropDown } from "./ServicesDropDown";
 export { MediaDropDown } from "./MediaDropDown";
 export { QuickToolsDropDown } from "./QuickToolsDropDown";
 export { ContactDetails } from "./ContactDetails";
+export { SearchDropDown } from "./SearchDropDown";
