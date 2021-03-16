@@ -3,8 +3,11 @@ import NavBar from "./NavBar";
 import styled from "styled-components";
 import MobileDropDown from "./NavBar/MobileDropDown";
 import Banner from "./Banner";
+import Tabs from "./Tabs";
 
-const Container = styled.section``;
+const Container = styled.section`
+  background-color: rgb(245, 245, 245);
+`;
 
 const Home = () => {
   return (
@@ -12,6 +15,7 @@ const Home = () => {
       <NavBar />
       <MobileDropDown />
       <Banner />
+      <Tabs />
     </Container>
   );
 };
