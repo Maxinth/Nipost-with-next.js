@@ -2,7 +2,7 @@ const data = {
   // ems and letters radios
   emsAndLetters: [
     { label: "EMS", id: "ems" },
-    { label: "lETTERS", id: "letters" },
+    { label: "LETTERS", id: "letters" },
   ],
   emsAndLetterState: {
     ems: false,

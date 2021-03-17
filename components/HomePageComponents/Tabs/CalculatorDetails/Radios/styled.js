@@ -5,23 +5,27 @@ import RadioButtonCheckedIcon from "@material-ui/icons/RadioButtonChecked";
 const RadioContainer = styled.section`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-top: 1rem;
 `;
 // RadioButton
 const RadioButtonUnchecked = styled(RadioButtonUncheckedIcon)``;
 const Label = styled.label`
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
   margin-left: 0.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
+  > svg {
+    font-size: 0.9rem;
+  }
 `;
 
 const LabelText = styled.span`
-  margin-left: 0.5rem;
+  margin-left: 0.2rem;
+  margin-right: 9rem;
 `;
 
 const RadioButtonChecked = styled(RadioButtonCheckedIcon)``;

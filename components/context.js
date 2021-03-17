@@ -4,6 +4,7 @@ import {
   itemsOnHover,
   itemsWhenOutOfFocus,
 } from "./HomePageComponents/NavBar/NavMain/data";
+// import useRadio from './HomePageComponents/Tabs/CalculatorDetails/Radios/useRadio'
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
@@ -31,6 +32,9 @@ const AppProvider = ({ children }) => {
     }
     setItemInView(itemsWhenOutOfFocus);
   };
+
+  // // expose radio values
+  // const {radio} = useRadio()
 
   return (
     <AppContext.Provider

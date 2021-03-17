@@ -3,17 +3,22 @@ import PropTypes from "prop-types";
 import RadioButtonDisplayed from "./RadioButtonDisplayed";
 import { Label, RadioButtonContainer, LabelText } from "./styled";
 
-const RadioButton = ({ checked, toggleCheck, label, id }) => {
+const RadioButton = ({ checked, toggleCheck, label, id, getRadio }) => {
   // so I don;t have to write same props twice, once for each button state.
+  const handleToggle = () => {
+    toggleCheck();
+    getRadio();
+  };
+
   const radioInputProps = {
     type: "radio",
     id: id,
-    onClick: toggleCheck,
+    onClick: handleToggle,
   };
 
   return (
     <RadioButtonContainer>
-      <Label htmlFor={id} onClick={toggleCheck}>
+      <Label htmlFor={id} onClick={handleToggle}>
         <RadioButtonDisplayed
           checked={checked}
           radioInputProps={radioInputProps}
@@ -29,6 +34,7 @@ RadioButton.propTypes = {
   toggleCheck: PropTypes.func,
   label: PropTypes.string,
   id: PropTypes.string,
+  getRadio: PropTypes.func,
 };
 
 export default RadioButton;
