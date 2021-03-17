@@ -13,6 +13,16 @@ const data = {
     letters: false,
   },
 
+  emsSelected: {
+    ems: true,
+    letters: false,
+  },
+
+  lettersSelected: {
+    ems: false,
+    letters: true,
+  },
+
   // domestic and foreign radios
   domesticAndForeign: [
     { label: "DOMESTIC", id: "domestic" },
@@ -31,6 +41,8 @@ const {
   domesticAndForeign,
   domesticAndForeignState,
   emsAndLetterResetState,
+  emsSelected,
+  lettersSelected,
 } = data;
 
 export {
@@ -39,6 +51,8 @@ export {
   domesticAndForeign,
   domesticAndForeignState,
   emsAndLetterResetState,
+  emsSelected,
+  lettersSelected,
 };
 
 // ==== START HERE ====

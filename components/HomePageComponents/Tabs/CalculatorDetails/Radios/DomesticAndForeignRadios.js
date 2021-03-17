@@ -4,11 +4,12 @@ import GenerateRadios from "./GenerateRadios";
 import PropTypes from "prop-types";
 
 const DomesticAndForeignRadios = ({ getRadioVal, radioVal }) => {
-  const { letters, ems } = radioVal;
+  const { ems, letters } = radioVal;
+  console.log("ems from domestic = ", ems);
 
   return (
     <>
-      {(!ems || letters) && (
+      {(!ems || ems === undefined) && (
         <GenerateRadios
           list={domesticAndForeign}
           stateObj={domesticAndForeignState}
