@@ -1,13 +1,14 @@
 import React from "react";
 import EmsAndLettersRadios from "./Radios/EmsAndLettersRadios";
 import DomesticAndForeignRadios from "./Radios/DomesticAndForeignRadios";
+import { DetailsBox } from "./styled";
 
 const CalculatorDetails = () => {
   return (
-    <div>
+    <DetailsBox>
       <EmsAndLettersRadios />
       <DomesticAndForeignRadios />
-    </div>
+    </DetailsBox>
   );
 };
 
