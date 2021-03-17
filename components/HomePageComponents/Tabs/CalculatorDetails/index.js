@@ -18,12 +18,10 @@ const CalculatorDetails = () => {
       {isSecondRadiosBatchVisible && (
         <DomesticAndForeignRadios
           toggleView={toggleSecondRadiosView}
-          radioVal={isSecondRadiosBatchVisible}
+          radiosView={isSecondRadiosBatchVisible}
         />
       )}
-      {!isSecondRadiosBatchVisible && (
-        <EmsDummyComponent radioVal={isSecondRadiosBatchVisible} />
-      )}
+      {!isSecondRadiosBatchVisible && <EmsDummyComponent />}
     </DetailsBox>
   );
 };

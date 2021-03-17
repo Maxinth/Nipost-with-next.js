@@ -14,7 +14,7 @@ const EmsAndLettersRadios = ({ toggleView }) => {
 };
 
 EmsAndLettersRadios.propTypes = {
-  getRadioVal: PropTypes.func,
+  toggleView: PropTypes.func,
 };
 
 export default EmsAndLettersRadios;

@@ -23,6 +23,7 @@ RadioButtons.propTypes = {
   toggleCheck: PropTypes.func,
   radio: PropTypes.object,
   radiosList: PropTypes.array,
+  toggleView: PropTypes.func,
 };
 
 export default RadioButtons;

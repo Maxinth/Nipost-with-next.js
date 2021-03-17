@@ -1,14 +1,7 @@
 import React from "react";
 
-const EmsDummyComponent = ({ radioVal }) => {
-  const { ems, letters } = radioVal;
-  return (
-    <>
-      {!letters && (
-        <div>dummy text shown when ? is true THIS PART NEEDS FIXING</div>
-      )}
-    </>
-  );
+const EmsDummyComponent = () => {
+  return <div>dummy text shown ONLY when ems is true</div>;
 };
 
 export default EmsDummyComponent;

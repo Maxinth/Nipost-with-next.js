@@ -34,6 +34,7 @@ RadioButton.propTypes = {
   toggleCheck: PropTypes.func,
   label: PropTypes.string,
   id: PropTypes.string,
+  toggleView: PropTypes.func,
 };
 
 export default RadioButton;

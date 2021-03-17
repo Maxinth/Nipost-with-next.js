@@ -19,6 +19,7 @@ const GenerateRadios = ({ list, toggleView, stateObj }) => {
 GenerateRadios.propTypes = {
   list: PropTypes.array,
   stateObj: PropTypes.object,
+  toggleView: PropTypes.func,
 };
 
 export default GenerateRadios;

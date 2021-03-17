@@ -3,10 +3,10 @@ import { domesticAndForeign, domesticAndForeignState } from "./data";
 import GenerateRadios from "./GenerateRadios";
 import PropTypes from "prop-types";
 
-const DomesticAndForeignRadios = ({ toggleView, radioVal }) => {
+const DomesticAndForeignRadios = ({ toggleView, radiosView }) => {
   return (
     <>
-      {radioVal && (
+      {radiosView && (
         <GenerateRadios
           list={domesticAndForeign}
           stateObj={domesticAndForeignState}
@@ -19,7 +19,7 @@ const DomesticAndForeignRadios = ({ toggleView, radioVal }) => {
 
 DomesticAndForeignRadios.propTypes = {
   toggleView: PropTypes.func,
-  radioVal: PropTypes.bool,
+  radiosView: PropTypes.bool,
 };
 
 export default DomesticAndForeignRadios;
