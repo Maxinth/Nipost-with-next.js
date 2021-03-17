@@ -1,21 +1,9 @@
 import React from "react";
 import { RadioContainer } from "./styled";
 import RadioButton from "./RadioButton";
-import useRadio from "./useRadio";
-import { emsAndLetters, emsAndLetterState } from "./data";
-const EmsAndLettersRadioButtons = () => {
-  //   // state to decide which radio button is clicked
-  //   const [radio, setRadio] = useState({ jobSeeker: false, employer: false });
-  //   // see comments
-  //   const toggleCheck = (id) => {
-  //     return setRadio({ jobSeeker: false, employer: false, [id]: true });
-  //   };
+import PropTypes from "prop-types";
 
-  const { toggleCheck, radio, radiosList } = useRadio(
-    emsAndLetters,
-    emsAndLetterState
-  );
-
+const RadioButtons = ({ toggleCheck, radio, radiosList }) => {
   return (
     <RadioContainer>
       {radiosList.map((item) => (
@@ -30,7 +18,12 @@ const EmsAndLettersRadioButtons = () => {
   );
 };
 
-export default EmsAndLettersRadioButtons;
+RadioButtons.propTypes = {
+  toggleCheck: PropTypes.func,
+  radio: PropTypes.object,
+  radiosList: PropTypes.array,
+};
+export default RadioButtons;
 
 /* 
 toggleCheck is set to change only the radio button with matching id to true while 

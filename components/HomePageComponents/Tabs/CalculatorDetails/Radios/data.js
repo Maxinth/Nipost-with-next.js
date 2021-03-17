@@ -1,4 +1,5 @@
 const data = {
+  // ems and letters radios
   emsAndLetters: [
     { label: "EMS", id: "ems" },
     { label: "lETTERS", id: "letters" },
@@ -7,8 +8,29 @@ const data = {
     ems: false,
     letters: false,
   },
+
+  // domestic and foreign radios
+  domesticAndForeign: [
+    { label: "DOMESTIC", id: "domestic" },
+    { label: "FOREIGN", id: "foreign" },
+  ],
+
+  domesticAndForeignState: {
+    domestic: false,
+    foreign: false,
+  },
 };
 
-const { emsAndLetters, emsAndLetterState } = data;
+const {
+  emsAndLetters,
+  emsAndLetterState,
+  domesticAndForeign,
+  domesticAndForeignState,
+} = data;
 
-export { emsAndLetters, emsAndLetterState };
+export {
+  emsAndLetters,
+  emsAndLetterState,
+  domesticAndForeign,
+  domesticAndForeignState,
+};
