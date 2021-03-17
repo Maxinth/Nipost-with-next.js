@@ -10,7 +10,12 @@ const RadioContainer = styled.section`
   margin-top: 1rem;
 `;
 // RadioButton
-const RadioButtonUnchecked = styled(RadioButtonUncheckedIcon)``;
+const RadioButtonUnchecked = styled(RadioButtonUncheckedIcon)`
+  transition: color 0.2s;
+  :hover {
+    color: #15819d;
+  }
+`;
 const Label = styled.label`
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
@@ -28,7 +33,12 @@ const LabelText = styled.span`
   margin-right: 9rem;
 `;
 
-const RadioButtonChecked = styled(RadioButtonCheckedIcon)``;
+const RadioButtonChecked = styled(RadioButtonCheckedIcon)`
+  transition: color 0.2s;
+  :hover {
+    color: #15819d;
+  }
+`;
 const RadioButtonContainer = styled.div`
   display: flex;
   align-items: center;

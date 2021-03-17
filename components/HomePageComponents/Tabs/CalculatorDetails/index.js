@@ -6,6 +6,7 @@ import { getRadiosView } from "./toggleRadiosView";
 import EmsDummyComponent from "./EmsDummyComponent";
 
 const CalculatorDetails = () => {
+  // state to decide if the second radio batches, domesticAndForeign come into view
   const [isSecondRadiosBatchVisible, setSecondRadiosBatch] = useState(false);
 
   const toggleSecondRadiosView = (id) => {
