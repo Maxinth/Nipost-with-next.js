@@ -3,8 +3,12 @@ const data = {
     { label: "EMS", id: "ems" },
     { label: "lETTERS", id: "letters" },
   ],
+  emsAndLetterState: {
+    ems: false,
+    letters: false,
+  },
 };
 
-const { emsAndLetters } = data;
+const { emsAndLetters, emsAndLetterState } = data;
 
-export { emsAndLetters };
+export { emsAndLetters, emsAndLetterState };
