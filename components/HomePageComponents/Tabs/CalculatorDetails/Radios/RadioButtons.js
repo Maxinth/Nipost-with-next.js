@@ -3,8 +3,16 @@ import { RadioContainer } from "./styled";
 import RadioButton from "./RadioButton";
 import PropTypes from "prop-types";
 
-const RadioButtons = ({ toggleCheck, radio, radiosList, getRadio }) => {
+const RadioButtons = ({
+  toggleCheck,
+  radio,
+  radiosList,
+  getRadio,
+  type = false,
+}) => {
   return (
+    // <>
+    //   {type && (
     <RadioContainer>
       {radiosList.map((item) => (
         <RadioButton
@@ -16,6 +24,8 @@ const RadioButtons = ({ toggleCheck, radio, radiosList, getRadio }) => {
         />
       ))}
     </RadioContainer>
+    //   )}
+    // </>
   );
 };
 
@@ -25,6 +35,7 @@ RadioButtons.propTypes = {
   radiosList: PropTypes.array,
   getRadio: PropTypes.func,
 };
+
 export default RadioButtons;
 
 /* 

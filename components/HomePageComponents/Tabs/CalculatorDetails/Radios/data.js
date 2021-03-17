@@ -5,6 +5,10 @@ const data = {
     { label: "LETTERS", id: "letters" },
   ],
   emsAndLetterState: {
+    ems: true,
+    letters: false,
+  },
+  emsAndLetterResetState: {
     ems: false,
     letters: false,
   },
@@ -26,6 +30,7 @@ const {
   emsAndLetterState,
   domesticAndForeign,
   domesticAndForeignState,
+  emsAndLetterResetState,
 } = data;
 
 export {
@@ -33,4 +38,9 @@ export {
   emsAndLetterState,
   domesticAndForeign,
   domesticAndForeignState,
+  emsAndLetterResetState,
 };
+
+// ==== START HERE ====
+// add first commit and fix select box issue which needs the second select box to come in
+// veiw due to a click in one of the select boxes of the first set

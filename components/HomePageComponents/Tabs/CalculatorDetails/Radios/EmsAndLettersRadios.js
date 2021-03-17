@@ -9,6 +9,7 @@ const EmsAndLettersRadios = ({ getRadioVal }) => {
       list={emsAndLetters}
       stateObj={emsAndLetterState}
       getRadioVal={getRadioVal}
+      forEms={true}
     />
   );
 };
