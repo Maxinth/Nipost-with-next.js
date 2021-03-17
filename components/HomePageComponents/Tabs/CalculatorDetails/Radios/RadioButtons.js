@@ -3,16 +3,8 @@ import { RadioContainer } from "./styled";
 import RadioButton from "./RadioButton";
 import PropTypes from "prop-types";
 
-const RadioButtons = ({
-  toggleCheck,
-  radio,
-  radiosList,
-  getRadio,
-  type = false,
-}) => {
+const RadioButtons = ({ toggleCheck, radio, radiosList, toggleView }) => {
   return (
-    // <>
-    //   {type && (
     <RadioContainer>
       {radiosList.map((item) => (
         <RadioButton
@@ -20,12 +12,10 @@ const RadioButtons = ({
           {...item}
           checked={radio[item.id]} // see comments
           toggleCheck={() => toggleCheck(item.id)} // see comments
-          getRadio={getRadio}
+          toggleView={() => toggleView(item.id)}
         />
       ))}
     </RadioContainer>
-    //   )}
-    // </>
   );
 };
 
@@ -33,7 +23,6 @@ RadioButtons.propTypes = {
   toggleCheck: PropTypes.func,
   radio: PropTypes.object,
   radiosList: PropTypes.array,
-  getRadio: PropTypes.func,
 };
 
 export default RadioButtons;

@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import RadioButtonDisplayed from "./RadioButtonDisplayed";
 import { Label, RadioButtonContainer, LabelText } from "./styled";
 
-const RadioButton = ({ checked, toggleCheck, label, id, getRadio }) => {
+const RadioButton = ({ checked, toggleCheck, label, id, toggleView }) => {
   // so I don;t have to write same props twice, once for each button state.
   const handleToggle = () => {
     toggleCheck();
-    getRadio();
+    toggleView();
   };
 
   const radioInputProps = {
@@ -34,7 +34,6 @@ RadioButton.propTypes = {
   toggleCheck: PropTypes.func,
   label: PropTypes.string,
   id: PropTypes.string,
-  getRadio: PropTypes.func,
 };
 
 export default RadioButton;
@@ -43,4 +42,6 @@ export default RadioButton;
 the toggleCheck prop has been added to the label element so it can also listen 
 for the click event and select an item as the radio buttons would do
 when clicked 
+
+handleToggle is passed individually to the label and the svg icon to handle the click action on it.
 */

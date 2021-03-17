@@ -3,12 +3,12 @@ import GenerateRadios from "./GenerateRadios";
 import { emsAndLetters, emsAndLetterState } from "./data";
 import PropTypes from "prop-types";
 
-const EmsAndLettersRadios = ({ getRadioVal }) => {
+const EmsAndLettersRadios = ({ toggleView }) => {
   return (
     <GenerateRadios
       list={emsAndLetters}
       stateObj={emsAndLetterState}
-      getRadioVal={getRadioVal}
+      toggleView={toggleView}
     />
   );
 };

@@ -11,19 +11,21 @@ const useRadio = (radiosList, radioStateObj) => {
   // custom function to handle toggle on click
   const toggleCheck = (id) => {
     if (id === "ems") {
-      setRadio({ letters: false, ems: true });
-      console.log("id=== ems ran");
+      setRadio({ ems: true, letters: false });
+      console.log("id === ems ran");
     } else if (id === "letters") {
-      console.log("id=== letters ran");
-      setRadio({ letters: true, ems: false });
+      console.log("id === letters ran");
+      setRadio({ ems: false, letters: true });
     } else if (id === "domestic") {
-      setRadio({ domestic: true, foreign: false });
+      setRadio({ ...initialState, [id]: true });
+      console.log("id === domestic ran");
     } else if (id === "foreign") {
-      setRadio({ domestic: false, foreign: true });
+      console.log("id === foreign ran");
+      setRadio({ ...initialState, [id]: true });
     }
   };
 
-  console.log("radio = ", radio);
+  // console.log("radio = ", radio);
 
   return {
     toggleCheck,

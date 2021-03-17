@@ -3,7 +3,7 @@ import useRadio from "./useRadio";
 import RadioButtons from "./RadioButtons";
 import PropTypes from "prop-types";
 
-const GenerateRadios = ({ list, stateObj, getRadioVal }) => {
+const GenerateRadios = ({ list, toggleView, stateObj }) => {
   const { toggleCheck, radio, radiosList } = useRadio(list, stateObj);
 
   return (
@@ -11,7 +11,7 @@ const GenerateRadios = ({ list, stateObj, getRadioVal }) => {
       toggleCheck={toggleCheck}
       radio={radio}
       radiosList={radiosList}
-      getRadio={() => getRadioVal(radio)}
+      toggleView={toggleView}
     />
   );
 };
@@ -19,7 +19,6 @@ const GenerateRadios = ({ list, stateObj, getRadioVal }) => {
 GenerateRadios.propTypes = {
   list: PropTypes.array,
   stateObj: PropTypes.object,
-  getRadioVal: PropTypes.func,
 };
 
 export default GenerateRadios;
