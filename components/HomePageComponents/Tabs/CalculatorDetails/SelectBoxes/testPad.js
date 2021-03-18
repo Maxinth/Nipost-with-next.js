@@ -17,28 +17,9 @@ export const useSelect = () => {
     servicesTypesItemsForInternational,
   } = postServiceType;
 
-  const [index] = useState(0);
-
-  const [currentRegion] = useState(regionItems[index].itemValue);
+  const [currentRegion, setCurrentRegion] = useState(regionItems[0].itemValue);
 
   const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
-  console.log("serviceTypeList from useNew = ", serviceTypeList);
-  console.log("initialList from useNew = ", serviceTypesItems);
-
-  const getNewItems = () => {
-    if (index === 1) {
-      setServiceTypeList(servicesTypesItemsForDomestic);
-    } else if (index === 2) {
-      setServiceTypesList(servicesTypesItemsForInternational);
-    } else {
-      setServiceTypeList(serviceTypesItems);
-    }
-  };
-
-  useEffect(() => {
-    getNewItems();
-  }, [currentRegion]);
-  // useNewItems //
 
   const { destinationItems, destinationId } = postDestination;
   const { serviceTypeId } = postServiceType;
@@ -54,7 +35,7 @@ export const useSelect = () => {
 
   const [choice, setChoice] = useState(initialValues);
 
-  const { regionChoice, serviceChoice, destinationChoice } = choice;
+  const { region, serviceType, destination } = choice;
 
   // custom function to handle select option changes
   const onChange = (e) => {
@@ -64,22 +45,35 @@ export const useSelect = () => {
     });
   };
 
-  // reset to initial values
-  const resetChoicesValues = () => {
-    setChoice(initialValues);
+  // MIDDLE TEST
+  const getNewItems = () => {
+    if (region === "domestic") {
+      setCurrentRegion(region);
+      setServiceTypeList(servicesTypesItemsForDomestic);
+    } else if (region === "international") {
+      setCurrentRegion(region);
+      setServiceTypeList(servicesTypesItemsForInternational);
+    } else {
+      setCurrentRegion("selectRegion");
+      setServiceTypeList(serviceTypesItems);
+    }
   };
+
+  useEffect(() => {
+    getNewItems();
+  }, [region]);
 
   // data for selectBoxes
   const selectBoxList = [
-    { items: regionItems, currentChoice: regionChoice, id: regionId },
+    { items: regionItems, currentChoice: region, id: regionId },
     {
       items: serviceTypeList,
-      currentChoice: serviceChoice,
+      currentChoice: serviceType,
       id: serviceTypeId,
     },
     {
       items: destinationItems,
-      currentChoice: destinationChoice,
+      currentChoice: destination,
       id: destinationId,
     },
   ];
@@ -92,7 +86,6 @@ export const useSelect = () => {
   return {
     selectBoxList,
     onChange,
-    resetChoicesValues,
     choice,
     initialValues,
     filterParameters,

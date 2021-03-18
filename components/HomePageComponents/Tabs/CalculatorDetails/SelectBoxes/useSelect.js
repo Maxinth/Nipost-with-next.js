@@ -1,57 +1,22 @@
 import { data } from "./data";
 import { useState, useEffect } from "react";
-// import useNewListItems from "./useNewListItems";
+import { getNewServiceItems } from "./getNewOptions";
 export const useSelect = () => {
-  // destructuring individual object items from data object
-  //   const { region, destination, serviceType } = data;
+  // TRY EXPORTIN ALL FROM A SEPARTE FILE
   const { postRegion, postDestination, postServiceType } = data;
-
-  // destructuring needed properties from the objects from 12 - SEE COMMENTS FOR id naming
-
-  // useNewItems //
   const { regionItems, regionId } = postRegion;
-  //   const { destinationItems, destinationId } = postDestination;
-  const {
-    serviceTypesItems,
-    servicesTypesItemsForDomestic,
-    servicesTypesItemsForInternational,
-  } = postServiceType;
 
-  //HERE
-  const [index] = useState(0);
+  const { serviceTypesItems } = postServiceType;
+  const { destinationItems, destinationId } = postDestination;
 
-  const [currentRegion, setCurrentRegion] = useState(
-    regionItems[index].itemValue
-  );
+  // TRY EXPORTIN ALL FROM A SEPARTE FILE
 
+  // state to change the service selectboxes options Values based on region
+  const [currentRegion, setCurrentRegion] = useState(regionItems[0].itemValue);
   const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
 
-  //   const getNewItems = () => {
-  //     if (currentRegion === "domestic") {
-  //       console.log("region has changed to domestic");
-  //       setServiceTypeList(servicesTypesItemsForDomestic);
-  //     } else if (currentRegion === "international") {
-  //       console.log("region has changed to international");
-  //       setServiceTypesList(servicesTypesItemsForInternational);
-  //     } else {
-  //       console.log("region at default");
-  //       setServiceTypeList(serviceTypesItems);
-  //     }
-  //   };
-
-  //   useEffect(() => {
-  //     getNewItems();
-  //     console.log("serviceTypeList from useEffect = ", serviceTypeList);
-  //   }, [currentRegion, index]);
-
-  //HERE
-  //   useNewItems //
-
-  const { destinationItems, destinationId } = postDestination;
   const { serviceTypeId } = postServiceType;
 
-  //   const { serviceTypeList, currentRegion } = useNewListItems();
-  console.log("serviceTypeList from useSelect = ", serviceTypeList);
   // values at initial load
   const initialValues = {
     region: currentRegion,
@@ -60,9 +25,6 @@ export const useSelect = () => {
   };
 
   const [choice, setChoice] = useState(initialValues);
-
-  const { region, serviceType, destination } = choice;
-
   // custom function to handle select option changes
   const onChange = (e) => {
     setChoice({
@@ -71,56 +33,12 @@ export const useSelect = () => {
     });
   };
 
-  // MIDDLE TEST
-  const getNewItems = () => {
-    if (region === "domestic") {
-      console.log("region has changed to domestic");
-      setCurrentRegion(region);
-      setServiceTypeList(servicesTypesItemsForDomestic);
-    } else if (region === "international") {
-      console.log("region has changed to international");
-      setCurrentRegion(region);
-      setServiceTypeList(servicesTypesItemsForInternational);
-    } else {
-      console.log("region at default");
-      setCurrentRegion("selectRegion");
-      setServiceTypeList(serviceTypesItems);
-    }
-  };
+  const { region, serviceType, destination } = choice;
 
+  // useEffect to change services options List values every time the selected region changes
   useEffect(() => {
-    getNewItems();
-    console.log("serviceTypeList from useEffect = ", serviceTypeList);
-  }, [region, index]);
-
-  // HERE
-  //   const [index] = useState(0);
-
-  //   const [currentRegion, setCurrentRegion] = useState(
-  //     regionItems[index].itemValue
-  //   );
-
-  //   const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
-
-  //   const getNewItems = () => {
-  //     setCurrentRegion(region);
-  //     if (region === "domestic") {
-  //       console.log("region has changed to domestic");
-  //       setServiceTypeList(servicesTypesItemsForDomestic);
-  //     } else if (region === "international") {
-  //       console.log("region has changed to international");
-  //       setServiceTypesList(servicesTypesItemsForInternational);
-  //     } else {
-  //       console.log("region at default");
-  //       setServiceTypeList(serviceTypesItems);
-  //     }
-  //   };
-
-  //   useEffect(() => {
-  //     getNewItems();
-  //     console.log("serviceTypeList from useEffect = ", serviceTypeList);
-  //   }, [currentRegion, index]);
-  // HERE
+    getNewServiceItems(region, setCurrentRegion, setServiceTypeList);
+  }, [region]);
 
   // data for selectBoxes
   const selectBoxList = [
@@ -145,7 +63,6 @@ export const useSelect = () => {
   return {
     selectBoxList,
     onChange,
-
     choice,
     initialValues,
     filterParameters,
