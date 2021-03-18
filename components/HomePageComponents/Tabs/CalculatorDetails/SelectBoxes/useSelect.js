@@ -1,6 +1,6 @@
 import { data } from "./data";
 import { useState } from "react";
-
+import useNewListItems from "./useNewListItems";
 export const useSelect = () => {
   // destructuring individual object items from data object
   //   const { region, destination, serviceType } = data;
@@ -12,10 +12,12 @@ export const useSelect = () => {
   const { destinationItems, destinationId } = postDestination;
   const { serviceTypesItems, serviceTypeId } = postServiceType;
 
+  const { serviceTypeList, currentRegion } = useNewListItems(serviceTypesItems);
+  console.log("serviceTypeList from useSelect = ", serviceTypeList);
   // values at initial load
   const initialValues = {
-    region: regionItems[0].itemValue,
-    serviceType: serviceTypesItems[0].itemValue,
+    region: currentRegion,
+    serviceType: serviceTypeList[0].itemValue,
     destination: destinationItems[0].itemValue,
   };
 
@@ -40,7 +42,7 @@ export const useSelect = () => {
   const selectBoxList = [
     { items: regionItems, currentChoice: regionChoice, id: regionId },
     {
-      items: serviceTypesItems,
+      items: serviceTypeList,
       currentChoice: serviceChoice,
       id: serviceTypeId,
     },
