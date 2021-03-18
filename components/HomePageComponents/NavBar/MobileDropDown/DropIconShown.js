@@ -1,12 +1,13 @@
 import React from "react";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Span } from "./styled";
 import PropTypes from "prop-types";
 
 const DropIconShown = ({ flipState, doFlip }) => {
   return (
-    <Span flip={flipState} onClick={doFlip}>
-      <ExpandLessIcon />
+    <Span onClick={doFlip}>
+      {!flipState ? <ExpandLessIcon /> : <ExpandMoreIcon />}
     </Span>
   );
 };

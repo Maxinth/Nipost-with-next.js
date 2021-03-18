@@ -16,7 +16,7 @@ const SelectBox = ({ items, currentChoice, onChange, id }) => {
 
           return (
             <SelectBoxOption value={itemValue} key={`${index}${itemValue}`}>
-              {itemName}
+              {itemName.toUpperCase()}
             </SelectBoxOption>
           );
         })}

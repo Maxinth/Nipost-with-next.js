@@ -1,24 +1,22 @@
 import styled from "styled-components";
 
 const SelectBoxContainer = styled.div`
-  display: ${({ twoItems }) => (twoItems ? "flex" : "unset")};
+  /* display: ${({ twoItems }) => (twoItems ? "flex" : "unset")}; */
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 `;
 
 const SelectBoxItem = styled.select`
-  padding: 0.8rem 0.5rem;
+  padding: 0.4rem 0.5rem;
   background-color: #fff;
-  margin-bottom: 1rem;
-  border: none;
+  border: 1px solid #c1bebe;
   outline: none;
-  /* text-align: center; */
   border-radius: 5px;
-  font-size: 1.1rem;
-  text-transform: capitalize;
+  font-size: 0.8rem;
+  text-transform: uppercase;
   cursor: pointer;
-  color: grey;
+  color: black;
   width: 100%;
   transition: text-align 0.3s;
 
@@ -34,9 +32,11 @@ const SelectBoxOption = styled.option`
   min-width: 300px;
   font-family: "Open Sans", sans-serif;
   padding: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #333;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
 `;
 
 const FormContainer = styled.section`
@@ -44,25 +44,22 @@ const FormContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
-  /* background-color: rgba(0, 0, 0, 0.45); */
-  /* margin-bottom: 1rem; */
 `;
 
 const BannerForm = styled.form`
   /* margin-top: 2rem; */
   width: 100%;
-  padding: 2rem;
+  padding: 0.5rem 0.6rem;
   /* margin-top: 8rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  background-color: rgba(0, 0, 0, 0.45);
+  /* background-color: rgba(0, 0, 0, 0.45); */
 
-  > * {
+  /* > * {
     margin-right: 1rem;
-  }
+  } */
 
   @media (min-width: 1140px) {
     flex-direction: row;
