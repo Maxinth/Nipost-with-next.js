@@ -6,7 +6,7 @@ const SelectBox = ({ items, currentChoice, onChange, id }) => {
   return (
     <SelectBoxContainer>
       <SelectBoxItem
-        // name="jobFunction"
+        name={id}
         id={id}
         value={currentChoice}
         onChange={onChange}

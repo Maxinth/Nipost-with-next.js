@@ -22,27 +22,23 @@ export const useSelect = () => {
   const [currentRegion] = useState(regionItems[index].itemValue);
 
   const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
-  //   console.log("serviceTypeList from useNew = ", serviceTypeList);
-  //   console.log("initialList from useNew = ", serviceTypesItems);
+  console.log("serviceTypeList from useNew = ", serviceTypeList);
+  console.log("initialList from useNew = ", serviceTypesItems);
 
   const getNewItems = () => {
-    if (currentRegion === "domestic") {
-      console.log("region has changed to domestic");
+    if (index === 1) {
       setServiceTypeList(servicesTypesItemsForDomestic);
-    } else if (currentRegion === "international") {
-      console.log("region has changed to international");
+    } else if (index === 2) {
       setServiceTypesList(servicesTypesItemsForInternational);
     } else {
-      console.log("region at default");
       setServiceTypeList(serviceTypesItems);
     }
   };
 
   useEffect(() => {
     getNewItems();
-    console.log("serviceTypeList from useEffect = ", serviceTypeList);
-  }, [currentRegion, index]);
-  //   useNewItems //
+  }, [currentRegion]);
+  // useNewItems //
 
   const { destinationItems, destinationId } = postDestination;
   const { serviceTypeId } = postServiceType;
@@ -58,7 +54,7 @@ export const useSelect = () => {
 
   const [choice, setChoice] = useState(initialValues);
 
-  const { region, serviceType, destination } = choice;
+  const { regionChoice, serviceChoice, destinationChoice } = choice;
 
   // custom function to handle select option changes
   const onChange = (e) => {
@@ -68,17 +64,22 @@ export const useSelect = () => {
     });
   };
 
+  // reset to initial values
+  const resetChoicesValues = () => {
+    setChoice(initialValues);
+  };
+
   // data for selectBoxes
   const selectBoxList = [
-    { items: regionItems, currentChoice: region, id: regionId },
+    { items: regionItems, currentChoice: regionChoice, id: regionId },
     {
       items: serviceTypeList,
-      currentChoice: serviceType,
+      currentChoice: serviceChoice,
       id: serviceTypeId,
     },
     {
       items: destinationItems,
-      currentChoice: destination,
+      currentChoice: destinationChoice,
       id: destinationId,
     },
   ];
@@ -91,7 +92,7 @@ export const useSelect = () => {
   return {
     selectBoxList,
     onChange,
-
+    resetChoicesValues,
     choice,
     initialValues,
     filterParameters,
