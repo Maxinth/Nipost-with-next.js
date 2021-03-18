@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FormContainer, BannerForm } from "./styled";
-import SelectBox from "./FormSelect";
+import SelectBox from "./SelectBox";
 
-const GenerateSelectBoxes = ({ selectBoxList, onChange, handleSubmit }) => {
+const GenerateSelectBoxes = ({ selectBoxList, onChange }) => {
   return (
     <FormContainer>
       <BannerForm>
@@ -16,7 +16,6 @@ const GenerateSelectBoxes = ({ selectBoxList, onChange, handleSubmit }) => {
               currentChoice={currentChoice}
               onChange={onChange}
               id={id}
-              handleSubmit={handleSubmit}
             />
           );
         })}
@@ -28,7 +27,6 @@ const GenerateSelectBoxes = ({ selectBoxList, onChange, handleSubmit }) => {
 GenerateSelectBoxes.propTypes = {
   selectBoxList: PropTypes.array,
   onChange: PropTypes.func,
-  handleSubmit: PropTypes.func,
 };
 
 export default GenerateSelectBoxes;

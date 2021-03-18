@@ -18,7 +18,7 @@ export const data = {
 
   serviceType: {
     serviceTypeId: "serviceType",
-    serviceTypeItems: [
+    serviceTypesItems: [
       {
         itemName: "select service type",
         itemValue: "selectServiceType",

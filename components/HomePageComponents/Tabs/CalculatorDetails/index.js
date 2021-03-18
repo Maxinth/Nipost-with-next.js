@@ -3,7 +3,7 @@ import EmsAndLettersRadios from "./Radios/EmsAndLettersRadios";
 import DomesticAndForeignRadios from "./Radios/DomesticAndForeignRadios";
 import { DetailsBox } from "./styled";
 import { getRadiosView } from "./toggleRadiosView";
-import EmsDummyComponent from "./EmsDummyComponent";
+import SelectBoxes from "./SelectBoxes";
 
 const CalculatorDetails = () => {
   // state to decide if the second radio batches, domesticAndForeign come into view
@@ -22,7 +22,7 @@ const CalculatorDetails = () => {
           radiosView={isSecondRadiosBatchVisible}
         />
       )}
-      {!isSecondRadiosBatchVisible && <EmsDummyComponent />}
+      {!isSecondRadiosBatchVisible && <SelectBoxes />}
     </DetailsBox>
   );
 };

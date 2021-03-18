@@ -2,7 +2,7 @@ import React from "react";
 import { SelectBoxItem, SelectBoxOption, SelectBoxContainer } from "./styled";
 import PropTypes from "prop-types";
 
-const SelectBox = ({ items, currentChoice, onChange, id, handleSubmit }) => {
+const SelectBox = ({ items, currentChoice, onChange, id }) => {
   return (
     <SelectBoxContainer>
       <SelectBoxItem
@@ -30,7 +30,6 @@ SelectBox.propTypes = {
   currentChoice: PropTypes.string,
   onChange: PropTypes.func,
   id: PropTypes.string,
-  handleSubmit: PropTypes.func,
 };
 
 export default SelectBox;
