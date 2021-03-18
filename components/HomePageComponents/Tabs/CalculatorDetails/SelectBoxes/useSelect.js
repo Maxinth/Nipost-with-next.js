@@ -17,31 +17,34 @@ export const useSelect = () => {
     servicesTypesItemsForInternational,
   } = postServiceType;
 
+  //HERE
   const [index] = useState(0);
 
-  const [currentRegion] = useState(regionItems[index].itemValue);
+  const [currentRegion, setCurrentRegion] = useState(
+    regionItems[index].itemValue
+  );
 
   const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
-  //   console.log("serviceTypeList from useNew = ", serviceTypeList);
-  //   console.log("initialList from useNew = ", serviceTypesItems);
 
-  const getNewItems = () => {
-    if (currentRegion === "domestic") {
-      console.log("region has changed to domestic");
-      setServiceTypeList(servicesTypesItemsForDomestic);
-    } else if (currentRegion === "international") {
-      console.log("region has changed to international");
-      setServiceTypesList(servicesTypesItemsForInternational);
-    } else {
-      console.log("region at default");
-      setServiceTypeList(serviceTypesItems);
-    }
-  };
+  //   const getNewItems = () => {
+  //     if (currentRegion === "domestic") {
+  //       console.log("region has changed to domestic");
+  //       setServiceTypeList(servicesTypesItemsForDomestic);
+  //     } else if (currentRegion === "international") {
+  //       console.log("region has changed to international");
+  //       setServiceTypesList(servicesTypesItemsForInternational);
+  //     } else {
+  //       console.log("region at default");
+  //       setServiceTypeList(serviceTypesItems);
+  //     }
+  //   };
 
-  useEffect(() => {
-    getNewItems();
-    console.log("serviceTypeList from useEffect = ", serviceTypeList);
-  }, [currentRegion, index]);
+  //   useEffect(() => {
+  //     getNewItems();
+  //     console.log("serviceTypeList from useEffect = ", serviceTypeList);
+  //   }, [currentRegion, index]);
+
+  //HERE
   //   useNewItems //
 
   const { destinationItems, destinationId } = postDestination;
@@ -67,6 +70,57 @@ export const useSelect = () => {
       [e.target.id]: e.target.value,
     });
   };
+
+  // MIDDLE TEST
+  const getNewItems = () => {
+    if (region === "domestic") {
+      console.log("region has changed to domestic");
+      setCurrentRegion(region);
+      setServiceTypeList(servicesTypesItemsForDomestic);
+    } else if (region === "international") {
+      console.log("region has changed to international");
+      setCurrentRegion(region);
+      setServiceTypeList(servicesTypesItemsForInternational);
+    } else {
+      console.log("region at default");
+      setCurrentRegion("selectRegion");
+      setServiceTypeList(serviceTypesItems);
+    }
+  };
+
+  useEffect(() => {
+    getNewItems();
+    console.log("serviceTypeList from useEffect = ", serviceTypeList);
+  }, [region, index]);
+
+  // HERE
+  //   const [index] = useState(0);
+
+  //   const [currentRegion, setCurrentRegion] = useState(
+  //     regionItems[index].itemValue
+  //   );
+
+  //   const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
+
+  //   const getNewItems = () => {
+  //     setCurrentRegion(region);
+  //     if (region === "domestic") {
+  //       console.log("region has changed to domestic");
+  //       setServiceTypeList(servicesTypesItemsForDomestic);
+  //     } else if (region === "international") {
+  //       console.log("region has changed to international");
+  //       setServiceTypesList(servicesTypesItemsForInternational);
+  //     } else {
+  //       console.log("region at default");
+  //       setServiceTypeList(serviceTypesItems);
+  //     }
+  //   };
+
+  //   useEffect(() => {
+  //     getNewItems();
+  //     console.log("serviceTypeList from useEffect = ", serviceTypeList);
+  //   }, [currentRegion, index]);
+  // HERE
 
   // data for selectBoxes
   const selectBoxList = [
