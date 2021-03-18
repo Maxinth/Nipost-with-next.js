@@ -1,5 +1,5 @@
 const data = {
-  serviceTypesItems: [
+  defaultServiceTypesItems: [
     {
       itemName: "select service type",
       itemValue: "selectServiceType",
@@ -38,13 +38,13 @@ const data = {
 };
 
 const {
-  serviceTypesItems,
+  defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
 } = data;
 
 export {
-  serviceTypesItems,
+  defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
 };

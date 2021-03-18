@@ -1,10 +1,12 @@
 import {
-  serviceTypesItems,
+  defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
   regionItems,
   itemTypeItems,
-  destinationItems,
+  defaultDestinationItems,
+  destinationsForDomesticRegion,
+  destinationsForInternationalRegion,
 } from "./selectBoxesData";
 
 const data = {
@@ -15,14 +17,14 @@ const data = {
 
   postServiceType: {
     serviceTypeId: "serviceType",
-    serviceTypesItems,
+    defaultServiceTypesItems,
     servicesTypesItemsForDomestic,
     servicesTypesItemsForInternational,
   },
 
   postDestination: {
     destinationId: "destination",
-    destinationItems,
+    defaultDestinationItems,
   },
   postItemType: {
     itemTypeId: "itemType",
@@ -43,9 +45,11 @@ const { itemTypeId } = postItemType;
 export {
   regionItems,
   regionId,
-  destinationItems,
+  defaultDestinationItems,
+  destinationsForDomesticRegion,
+  destinationsForInternationalRegion,
   destinationId,
-  serviceTypesItems,
+  defaultServiceTypesItems,
   serviceTypeId,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,

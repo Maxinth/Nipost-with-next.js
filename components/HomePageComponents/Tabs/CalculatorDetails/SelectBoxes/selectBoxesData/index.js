@@ -1,9 +1,13 @@
-export { destinationItems } from "./destinationData";
+export {
+  defaultDestinationItems,
+  destinationsForDomesticRegion,
+  destinationsForInternationalRegion,
+} from "./destinationData";
 
 export { itemTypeItems } from "./itemTypeData";
 
 export {
-  serviceTypesItems,
+  defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
 } from "./serviceData";

@@ -1,22 +1,29 @@
 import {
-  serviceTypesItems,
+  defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
+  defaultDestinationItems,
+  destinationsForDomesticRegion,
+  destinationsForInternationalRegion,
 } from "./data";
 
-export const getNewServiceItems = (
+export const getNewItemsList = (
   region,
   regionSetterFn,
-  changeServicesList
+  changeServicesList,
+  changeDestinationList
 ) => {
   if (region === "domestic") {
     regionSetterFn(region);
     changeServicesList(servicesTypesItemsForDomestic);
+    changeDestinationList(destinationsForDomesticRegion);
   } else if (region === "international") {
     regionSetterFn(region);
     changeServicesList(servicesTypesItemsForInternational);
+    changeDestinationList(destinationsForInternationalRegion);
   } else {
     regionSetterFn("selectRegion");
-    changeServicesList(serviceTypesItems);
+    changeServicesList(defaultServiceTypesItems);
+    changeDestinationList(defaultDestinationItems);
   }
 };

@@ -1,23 +1,27 @@
 import {
   regionItems,
   regionId,
-  destinationItems,
+  defaultDestinationItems,
   destinationId,
-  serviceTypesItems,
+  defaultServiceTypesItems,
   serviceTypeId,
   itemTypeId,
   itemTypeItems,
 } from "./data";
 import { useState, useEffect } from "react";
-import { getNewServiceItems } from "./getNewOptions";
+import { getNewItemsList } from "./getNewOptions";
 import useGetChoice from "./useGetChoice";
 
 export const useSelect = () => {
-  // state to change the service selectboxes options Values based on region
+  // state to track region
   const [currentRegion, setCurrentRegion] = useState(regionItems[0].itemValue);
-  const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
+  // state to change the service selectboxes options Values based on region
+  const [serviceTypeList, setServiceTypeList] = useState(
+    defaultServiceTypesItems
+  );
+  // state to change the destination selectboxes options Values based on region
   const [destinationTypeList, setDestinationTypeList] = useState(
-    destinationItems
+    defaultDestinationItems
   );
 
   const [
@@ -31,13 +35,18 @@ export const useSelect = () => {
   ] = useGetChoice(
     currentRegion,
     serviceTypeList,
-    destinationItems,
+    defaultDestinationItems,
     itemTypeItems
   );
 
   // useEffect to change services options List values every time the selected region changes
   useEffect(() => {
-    getNewServiceItems(region, setCurrentRegion, setServiceTypeList);
+    getNewItemsList(
+      region,
+      setCurrentRegion,
+      setServiceTypeList,
+      setDestinationTypeList
+    );
   }, [region]);
 
   // data for selectBoxes
@@ -49,7 +58,7 @@ export const useSelect = () => {
       id: serviceTypeId,
     },
     {
-      items: destinationItems,
+      items: destinationTypeList,
       currentChoice: destination,
       id: destinationId,
     },

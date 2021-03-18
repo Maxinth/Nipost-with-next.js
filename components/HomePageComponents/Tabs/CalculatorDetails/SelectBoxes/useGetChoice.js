@@ -2,15 +2,15 @@ import { useState } from "react";
 
 const useGetChoice = (
   currentRegion,
-  serviceTypeList,
-  destinationItems,
+  defaultServiceTypesItems,
+  defaultDestinationItems,
   itemTypeItems
 ) => {
   // default select boxes values on start up
   const initialValues = {
     region: currentRegion,
-    serviceType: serviceTypeList[0].itemValue,
-    destination: destinationItems[0].itemValue,
+    serviceType: defaultServiceTypesItems[0].itemValue,
+    destination: defaultDestinationItems[0].itemValue,
     itemType: itemTypeItems[0].itemValue,
   };
 
