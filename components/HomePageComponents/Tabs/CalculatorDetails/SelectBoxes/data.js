@@ -1,84 +1,54 @@
+import {
+  serviceTypesItems,
+  servicesTypesItemsForDomestic,
+  servicesTypesItemsForInternational,
+  regionItems,
+  itemTypeItems,
+  destinationItems,
+} from "./selectBoxesData";
+
 export const data = {
   postRegion: {
     regionId: "region",
-    regionItems: [
-      { itemName: "select region", itemValue: "selectRegion" },
-      { itemName: "domestic", itemValue: "domestic" },
-      { itemName: "international", itemValue: "international" },
-    ],
+    regionItems,
   },
 
   postServiceType: {
     serviceTypeId: "serviceType",
-    serviceTypesItems: [
-      {
-        itemName: "select service type",
-        itemValue: "selectServiceType",
-      },
-      // {
-      //   itemName: "select service type 2",
-      //   itemValue: "selectServiceType2",
-      // },
-      // {
-      //   itemName: "select service type 3",
-      //   itemValue: "selectServiceType3",
-      // },
-    ],
-
-    servicesTypesItemsForDomestic: [
-      {
-        itemName: "select service type",
-        itemValue: "selectServiceType",
-      },
-      {
-        itemName: "Airpost express",
-        itemValue: "airpostExpress",
-      },
-      {
-        itemName: "speed post",
-        itemValue: "speedPost",
-      },
-      {
-        itemName: "speed post economy",
-        itemValue: "speedPostEconomy",
-      },
-    ],
-
-    servicesTypesItemsForInternational: [
-      {
-        itemName: "select service type",
-        itemValue: "selectServiceType",
-      },
-      {
-        itemName: "ems",
-        itemValue: "ems",
-      },
-    ],
+    serviceTypesItems,
+    servicesTypesItemsForDomestic,
+    servicesTypesItemsForInternational,
   },
 
   postDestination: {
     destinationId: "destination",
-    destinationItems: [
-      {
-        itemName: "select destination",
-        itemValue: "selectDestination",
-      },
-      {
-        itemName: "select destination2",
-        itemValue: "selectDestination2",
-      },
-      {
-        itemName: "select destination3",
-        itemValue: "selectDestination3",
-      },
-    ],
+    destinationItems,
+  },
+  postItemType: {
+    itemTypeId: "itemType",
+    itemTypeItems,
   },
 };
 
-const { postRegion, postDestination, postServiceType } = data;
+const { postRegion, postDestination, postServiceType, postItemType } = data;
 
-const { regionItems } = postRegion;
-const { destinationItems } = postDestination;
-const { serviceTypesItems } = postServiceType;
+const { regionId } = postRegion;
 
-export { regionItems, destinationItems, serviceTypesItems };
+const { serviceTypeId } = postServiceType;
+
+const { destinationId } = postDestination;
+
+const { itemTypeId } = postItemType;
+
+export {
+  regionItems,
+  regionId,
+  destinationItems,
+  destinationId,
+  serviceTypesItems,
+  serviceTypeId,
+  servicesTypesItemsForDomestic,
+  servicesTypesItemsForInternational,
+  itemTypeId,
+  itemTypeItems,
+};

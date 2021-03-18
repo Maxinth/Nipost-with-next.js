@@ -14,6 +14,7 @@ const TabContainer = styled.section`
   border: 1px solid black;
   padding: 1rem;
   transition: margin-top 0.2s;
+
   @media (min-width: 456px) {
     margin-top: calc(8rem + 10vw);
   }
