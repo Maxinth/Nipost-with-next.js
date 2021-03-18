@@ -1,21 +1,22 @@
-import { data } from "./data";
-
-const { postServiceType } = data;
-const {
+import {
   serviceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
-} = postServiceType;
+} from "./data";
 
-export const getNewServiceItems = (region, regionSetterFn, listSetterFn) => {
+export const getNewServiceItems = (
+  region,
+  regionSetterFn,
+  changeServicesList
+) => {
   if (region === "domestic") {
     regionSetterFn(region);
-    listSetterFn(servicesTypesItemsForDomestic);
+    changeServicesList(servicesTypesItemsForDomestic);
   } else if (region === "international") {
     regionSetterFn(region);
-    listSetterFn(servicesTypesItemsForInternational);
+    changeServicesList(servicesTypesItemsForInternational);
   } else {
     regionSetterFn("selectRegion");
-    listSetterFn(serviceTypesItems);
+    changeServicesList(serviceTypesItems);
   }
 };

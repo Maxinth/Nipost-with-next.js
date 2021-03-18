@@ -7,7 +7,7 @@ import {
   destinationItems,
 } from "./selectBoxesData";
 
-export const data = {
+const data = {
   postRegion: {
     regionId: "region",
     regionItems,

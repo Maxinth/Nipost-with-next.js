@@ -16,6 +16,9 @@ export const useSelect = () => {
   // state to change the service selectboxes options Values based on region
   const [currentRegion, setCurrentRegion] = useState(regionItems[0].itemValue);
   const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
+  const [destinationTypeList, setDestinationTypeList] = useState(
+    destinationItems
+  );
 
   const [
     initialValues,
