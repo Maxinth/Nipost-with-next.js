@@ -3,19 +3,20 @@ import { useState } from "react";
 
 export const useSelect = () => {
   // destructuring individual object items from data object
-  const { region, destination, serviceType } = data;
+  //   const { region, destination, serviceType } = data;
+  const { postRegion, postDestination, postServiceType } = data;
 
   // destructuring needed properties from the objects from 12 - SEE COMMENTS FOR id naming
 
-  const { regionItems, regionId } = region;
-  const { destinationItems, destinationId } = destination;
-  const { serviceTypesItems, serviceTypeId } = serviceType;
+  const { regionItems, regionId } = postRegion;
+  const { destinationItems, destinationId } = postDestination;
+  const { serviceTypesItems, serviceTypeId } = postServiceType;
 
   // values at initial load
   const initialValues = {
-    regionChoice: regionItems[0].itemValue,
-    serviceChoice: serviceTypesItems[0].itemValue,
-    destinationChoice: destinationItems[0].itemValue,
+    region: regionItems[0].itemValue,
+    serviceType: serviceTypesItems[0].itemValue,
+    destination: destinationItems[0].itemValue,
   };
 
   const [choice, setChoice] = useState(initialValues);

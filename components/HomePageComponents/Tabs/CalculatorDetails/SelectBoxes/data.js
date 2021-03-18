@@ -7,7 +7,7 @@ destination = destination
 */
 
 export const data = {
-  region: {
+  postRegion: {
     regionId: "region",
     regionItems: [
       { itemName: "select region", itemValue: "selectRegion" },
@@ -16,31 +16,47 @@ export const data = {
     ],
   },
 
-  serviceType: {
+  postServiceType: {
     serviceTypeId: "serviceType",
     serviceTypesItems: [
       {
         itemName: "select service type",
         itemValue: "selectServiceType",
       },
+      {
+        itemName: "select service type 2",
+        itemValue: "selectServiceType2",
+      },
+      {
+        itemName: "select service type 3",
+        itemValue: "selectServiceType3",
+      },
     ],
   },
 
-  destination: {
+  postDestination: {
     destinationId: "destination",
     destinationItems: [
       {
         itemName: "select destination",
         itemValue: "selectDestination",
       },
+      {
+        itemName: "select destination2",
+        itemValue: "selectDestination2",
+      },
+      {
+        itemName: "select destination3",
+        itemValue: "selectDestination3",
+      },
     ],
   },
 };
 
-const { region, destination, serviceType } = data;
+const { postRegion, postDestination, postServiceType } = data;
 
-const { regionItems } = region;
-const { destinationItems } = destination;
-const { serviceTypesItems } = serviceType;
+const { regionItems } = postRegion;
+const { destinationItems } = postDestination;
+const { serviceTypesItems } = postServiceType;
 
 export { regionItems, destinationItems, serviceTypesItems };
