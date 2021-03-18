@@ -39,4 +39,40 @@ const SelectBoxOption = styled.option`
   font-weight: 500;
 `;
 
-export { SelectBoxItem, SelectBoxOption, SelectBoxContainer };
+const FormContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  /* background-color: rgba(0, 0, 0, 0.45); */
+  /* margin-bottom: 1rem; */
+`;
+
+const BannerForm = styled.form`
+  /* margin-top: 2rem; */
+  width: 100%;
+  padding: 2rem;
+  /* margin-top: 8rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: rgba(0, 0, 0, 0.45);
+
+  > * {
+    margin-right: 1rem;
+  }
+
+  @media (min-width: 1140px) {
+    flex-direction: row;
+  }
+`;
+
+export {
+  SelectBoxItem,
+  SelectBoxOption,
+  SelectBoxContainer,
+  FormContainer,
+  BannerForm,
+};

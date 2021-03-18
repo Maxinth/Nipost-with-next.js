@@ -26,9 +26,9 @@ export const data = {
     ],
   },
 
-  destinations: {
-    destinationsId: "destination",
-    destinationsItems: [
+  destination: {
+    destinationId: "destination",
+    destinationItems: [
       {
         itemName: "select destination",
         itemValue: "selectDestination",
