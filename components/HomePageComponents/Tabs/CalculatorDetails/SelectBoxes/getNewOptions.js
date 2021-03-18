@@ -7,22 +7,25 @@ import {
   destinationsForInternationalRegion,
 } from "./data";
 
+// custom function to change options values list of service and destinations select boxes based on
+// the option selected in region select box
+
 export const getNewItemsList = (
   region,
-  regionSetterFn,
+  currentRegionSetterFn,
   changeServicesList,
   changeDestinationList
 ) => {
   if (region === "domestic") {
-    regionSetterFn(region);
+    currentRegionSetterFn(region);
     changeServicesList(servicesTypesItemsForDomestic);
     changeDestinationList(destinationsForDomesticRegion);
   } else if (region === "international") {
-    regionSetterFn(region);
+    currentRegionSetterFn(region);
     changeServicesList(servicesTypesItemsForInternational);
     changeDestinationList(destinationsForInternationalRegion);
   } else {
-    regionSetterFn("selectRegion");
+    currentRegionSetterFn("selectRegion");
     changeServicesList(defaultServiceTypesItems);
     changeDestinationList(defaultDestinationItems);
   }

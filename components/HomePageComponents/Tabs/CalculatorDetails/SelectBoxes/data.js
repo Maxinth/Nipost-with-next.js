@@ -18,8 +18,6 @@ const data = {
   postServiceType: {
     serviceTypeId: "serviceType",
     defaultServiceTypesItems,
-    servicesTypesItemsForDomestic,
-    servicesTypesItemsForInternational,
   },
 
   postDestination: {

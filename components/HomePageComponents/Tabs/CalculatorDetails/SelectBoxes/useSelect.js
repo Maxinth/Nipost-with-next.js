@@ -3,27 +3,26 @@ import {
   regionId,
   defaultDestinationItems,
   destinationId,
-  defaultServiceTypesItems,
   serviceTypeId,
   itemTypeId,
   itemTypeItems,
 } from "./data";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { getNewItemsList } from "./getNewOptions";
 import useGetChoice from "./useGetChoice";
-
+import useTrackRegionAndOptionValues from "./useTrackOptionValues";
 export const useSelect = () => {
-  // state to track region
-  const [currentRegion, setCurrentRegion] = useState(regionItems[0].itemValue);
-  // state to change the service selectboxes options Values based on region
-  const [serviceTypeList, setServiceTypeList] = useState(
-    defaultServiceTypesItems
-  );
-  // state to change the destination selectboxes options Values based on region
-  const [destinationTypeList, setDestinationTypeList] = useState(
-    defaultDestinationItems
-  );
+  // getting needed values from useTrackRegionAndOptionsValues
+  const {
+    currentRegion,
+    setCurrentRegion,
+    serviceTypeList,
+    setServiceTypeList,
+    destinationTypeList,
+    setDestinationTypeList,
+  } = useTrackRegionAndOptionValues();
 
+  // getting values from useGetChoice custom hoook
   const [
     initialValues,
     choice,
@@ -53,12 +52,12 @@ export const useSelect = () => {
   const selectBoxList = [
     { items: regionItems, currentChoice: region, id: regionId },
     {
-      items: serviceTypeList,
+      items: serviceTypeList, // serviceItems is a tracked state value
       currentChoice: serviceType,
       id: serviceTypeId,
     },
     {
-      items: destinationTypeList,
+      items: destinationTypeList, // destinationItems  is also tracked state value
       currentChoice: destination,
       id: destinationId,
     },
