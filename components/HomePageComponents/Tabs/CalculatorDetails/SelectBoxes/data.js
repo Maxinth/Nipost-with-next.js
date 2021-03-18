@@ -15,14 +15,14 @@ export const data = {
         itemName: "select service type",
         itemValue: "selectServiceType",
       },
-      {
-        itemName: "select service type 2",
-        itemValue: "selectServiceType2",
-      },
-      {
-        itemName: "select service type 3",
-        itemValue: "selectServiceType3",
-      },
+      // {
+      //   itemName: "select service type 2",
+      //   itemValue: "selectServiceType2",
+      // },
+      // {
+      //   itemName: "select service type 3",
+      //   itemValue: "selectServiceType3",
+      // },
     ],
 
     servicesTypesItemsForDomestic: [

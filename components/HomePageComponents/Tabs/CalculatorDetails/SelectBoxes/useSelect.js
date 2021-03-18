@@ -1,6 +1,6 @@
 import { data } from "./data";
-import { useState } from "react";
-import useNewListItems from "./useNewListItems";
+import { useState, useEffect } from "react";
+// import useNewListItems from "./useNewListItems";
 export const useSelect = () => {
   // destructuring individual object items from data object
   //   const { region, destination, serviceType } = data;
@@ -8,11 +8,42 @@ export const useSelect = () => {
 
   // destructuring needed properties from the objects from 12 - SEE COMMENTS FOR id naming
 
+  // useNewItems //
   const { regionItems, regionId } = postRegion;
-  const { destinationItems, destinationId } = postDestination;
-  const { serviceTypesItems, serviceTypeId } = postServiceType;
+  //   const { destinationItems, destinationId } = postDestination;
+  const {
+    serviceTypesItems,
+    servicesTypesItemsForDomestic,
+    servicesTypesItemsForInternational,
+  } = postServiceType;
 
-  const { serviceTypeList, currentRegion } = useNewListItems(serviceTypesItems);
+  const [index] = useState(0);
+
+  const [currentRegion] = useState(regionItems[index].itemValue);
+
+  const [serviceTypeList, setServiceTypeList] = useState(serviceTypesItems);
+  console.log("serviceTypeList from useNew = ", serviceTypeList);
+  console.log("initialList from useNew = ", serviceTypesItems);
+
+  const getNewItems = () => {
+    if (index === 1) {
+      setServiceTypeList(servicesTypesItemsForDomestic);
+    } else if (index === 2) {
+      setServiceTypesList(servicesTypesItemsForInternational);
+    } else {
+      setServiceTypeList(serviceTypesItems);
+    }
+  };
+
+  useEffect(() => {
+    getNewItems();
+  }, [currentRegion]);
+  // useNewItems //
+
+  const { destinationItems, destinationId } = postDestination;
+  const { serviceTypeId } = postServiceType;
+
+  //   const { serviceTypeList, currentRegion } = useNewListItems();
   console.log("serviceTypeList from useSelect = ", serviceTypeList);
   // values at initial load
   const initialValues = {
