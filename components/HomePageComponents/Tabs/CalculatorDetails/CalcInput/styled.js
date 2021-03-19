@@ -8,13 +8,18 @@ const CalcBox = styled.div`
     border: none;
   }
   margin: 0rem 0.6rem 0.5rem;
-
   border-radius: 5px;
 
   ${({ reverse }) =>
     reverse &&
     css`
       flex-direction: row-reverse;
+      button {
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+        border-top-left-radius:5px;
+        border-bottom-left-radius: 5px;
+      }
     `}
 `;
 

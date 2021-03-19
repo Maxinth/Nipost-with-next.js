@@ -8,6 +8,11 @@ const Input = styled.input`
   border: 1px solid rgb(193, 190, 190);
   border-radius: 5px;
   font-size: 0.7rem;
+  :disabled {
+    background: #fff;
+
+    cursor: not-allowed;
+  }
 `;
 
 export { Input };

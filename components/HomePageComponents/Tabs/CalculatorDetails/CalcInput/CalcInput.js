@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const CalcInput = ({ btnText, text, reverseOrder }) => {
   return (
     <CalcBox reverse={reverseOrder}>
-      <InputBox text={text} />
+      <InputBox text={text} disabled={reverseOrder} />
       <Button>{btnText}</Button>
     </CalcBox>
   );
