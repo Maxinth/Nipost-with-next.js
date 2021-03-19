@@ -17,7 +17,7 @@ const CalcBox = styled.div`
       button {
         border-top-right-radius: unset;
         border-bottom-right-radius: unset;
-        border-top-left-radius:5px;
+        border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
       }
     `}
@@ -32,4 +32,15 @@ const Button = styled.button`
   color: black;
 `;
 
-export { CalcBox, Button };
+const Section = styled.section`
+  ${({ main }) =>
+    main &&
+    css`
+      div + button {
+        width: 100%;
+        margin: 0.2rem 0.8rem 0.5rem 0.4rem;
+      }
+    `}
+`;
+
+export { CalcBox, Button, Section };

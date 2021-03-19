@@ -17,4 +17,5 @@ CalcInput.propTypes = {
   text: PropTypes.string,
   reverseOrder: PropTypes.bool,
 };
+
 export default CalcInput;

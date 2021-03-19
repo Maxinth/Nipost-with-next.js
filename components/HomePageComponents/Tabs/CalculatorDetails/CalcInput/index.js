@@ -1,14 +1,14 @@
 import React from "react";
-import { data } from "./data";
-import CalcInput from "./CalcInput";
+import CalcInputs from "./CalculateInputs";
+import { Section } from "./styled";
+import Btn from "../../Btn";
 
 const GenerateCalcInputs = () => {
   return (
-    <>
-      {data.map((item) => (
-        <CalcInput key={item.text} {...item} />
-      ))}
-    </>
+    <Section main>
+      <CalcInputs />
+      <Btn text="calculate" />
+    </Section>
   );
 };
 
