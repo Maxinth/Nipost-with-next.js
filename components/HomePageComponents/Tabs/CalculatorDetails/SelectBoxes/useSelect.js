@@ -6,6 +6,8 @@ import {
   serviceTypeId,
   itemTypeId,
   itemTypeItems,
+  servicesTypesItemsForRadioAtDomestic,
+  serviceTypeDomesticId,
 } from "./data";
 import { useEffect } from "react";
 import { getNewItemsList } from "./getNewOptions";
@@ -31,11 +33,13 @@ export const useSelect = () => {
     serviceType,
     destination,
     itemType,
+    serviceAtDomesticRadio,
   ] = useGetChoice(
     currentRegion,
     serviceTypeList,
     defaultDestinationItems,
-    itemTypeItems
+    itemTypeItems,
+    servicesTypesItemsForRadioAtDomestic
   );
 
   // useEffect to change services options List values every time the selected region changes
@@ -68,10 +72,21 @@ export const useSelect = () => {
     },
   ];
 
+  //  serviceTypeDomesticId,
+  // servicesTypesItemsForRadioAtDomestic,
+  const selectBoxForDomesticRadio = [
+    {
+      items: servicesTypesItemsForRadioAtDomestic,
+      currentChoice: serviceAtDomesticRadio,
+      id: serviceTypeDomesticId,
+    },
+  ];
+
   return {
     selectBoxList,
     onChange,
     choice,
     initialValues,
+    selectBoxForDomesticRadio,
   };
 };

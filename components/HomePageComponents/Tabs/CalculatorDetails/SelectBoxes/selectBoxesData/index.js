@@ -10,6 +10,7 @@ export {
   defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
+  servicesTypesItemsForRadioAtDomestic,
 } from "./serviceData";
 
 export { regionItems } from "./regionData";

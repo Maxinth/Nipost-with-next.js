@@ -2,6 +2,7 @@ import {
   defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
+  servicesTypesItemsForRadioAtDomestic,
   regionItems,
   itemTypeItems,
   defaultDestinationItems,
@@ -20,6 +21,11 @@ const data = {
     defaultServiceTypesItems,
   },
 
+  postServiceTypesForDomesticRadio: {
+    serviceTypeDomesticId: "serviceTypeForDomesticRadio",
+    servicesTypesItemsForRadioAtDomestic,
+  },
+
   postDestination: {
     destinationId: "destination",
     defaultDestinationItems,
@@ -30,11 +36,18 @@ const data = {
   },
 };
 
-const { postRegion, postDestination, postServiceType, postItemType } = data;
+const {
+  postRegion,
+  postDestination,
+  postServiceType,
+  postItemType,
+  postServiceTypesForDomesticRadio,
+} = data;
 
 const { regionId } = postRegion;
 
 const { serviceTypeId } = postServiceType;
+const { serviceTypeDomesticId } = postServiceTypesForDomesticRadio;
 
 const { destinationId } = postDestination;
 
@@ -53,4 +66,6 @@ export {
   servicesTypesItemsForInternational,
   itemTypeId,
   itemTypeItems,
+  serviceTypeDomesticId,
+  servicesTypesItemsForRadioAtDomestic,
 };

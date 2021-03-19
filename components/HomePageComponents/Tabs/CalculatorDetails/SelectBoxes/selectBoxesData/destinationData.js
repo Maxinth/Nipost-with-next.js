@@ -53,16 +53,58 @@ const data = {
       itemValue: "togo",
     },
   ],
+
+  // destinations values when foreign Radio is clicked
+  destinationsForRadioAtForeign: [
+    {
+      itemName: "select destination",
+      itemValue: "selectDestination",
+    },
+    {
+      itemName: "asia",
+      itemValue: "asia",
+    },
+    {
+      itemName: "east africa",
+      itemValue: "eastAfrica",
+    },
+    {
+      itemName: "europe",
+      itemValue: "europe",
+    },
+    {
+      itemName: "far east & ocenia",
+      itemValue: "farEastAndOcenia",
+    },
+    {
+      itemName: "north & south america",
+      itemValue: "northAndSouthAmerica",
+    },
+    {
+      itemName: "north africa",
+      itemValue: "northAfrica",
+    },
+    {
+      itemName: "south africa",
+      itemValue: "southAfrica",
+    },
+    {
+      itemName: "west africa",
+      itemValue: "westAfrica",
+    },
+  ],
 };
 
 const {
   defaultDestinationItems,
   destinationsForDomesticRegion,
   destinationsForInternationalRegion,
+  destinationsForRadioAtForeign,
 } = data;
 
 export {
   defaultDestinationItems,
   destinationsForDomesticRegion,
   destinationsForInternationalRegion,
+  destinationsForRadioAtForeign,
 };
