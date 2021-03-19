@@ -1,23 +1,12 @@
-import { useState, useEffect } from "react";
-// import { servicesTypesItemsForRadioAtDomestic } from "./data";
-import { useGlobalContexnt } from "../../../../context";
+import { useState } from "react";
+import { useGlobalContext } from "../../../../context";
+
 const useLocale = () => {
-  const { localeList, setLocaleList } = useGlobalContext();
-  // // state to track and change options list based on radio click
-  // const [localeList, setLocaleList] = useState(
-  //   servicesTypesItemsForRadioAtDomestic
-  // );
+  const { localeList } = useGlobalContext();
 
   const initialState = {
     localeInitialValue: localeList[0].itemValue,
   };
-
-  // console.log("localeList = ", localeList);
-
-  // useEffect(() => {
-  //   setLocaleList(localeList);
-  // }, [localeList]);
-
   const [localeOptionVal, setLocaleOptionVal] = useState(initialState);
 
   const onChangeLocaleOptionVal = (e) => {
@@ -31,7 +20,6 @@ const useLocale = () => {
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
-    // localeList,
   };
 };
 
