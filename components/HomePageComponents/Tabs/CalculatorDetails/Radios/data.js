@@ -17,7 +17,8 @@ const data = {
   ],
 
   domesticAndForeignState: {
-    domestic: false,
+    // domestic: false,
+    domestic: true,
     foreign: false,
   },
 };
@@ -48,6 +49,20 @@ const emsAndLettersOnSelect = {
 // destructing needed values from emsLettersOnSelect for export
 const { emsSelected, lettersSelected } = emsAndLettersOnSelect;
 
+const domesticAndForeignOnSelect = {
+  domesticSelected: {
+    domestic: true,
+    foreign: false,
+  },
+
+  foreignSelected: {
+    domestic: false,
+    foreign: true,
+  },
+};
+
+const { domesticSelected, foreignSelected } = domesticAndForeignOnSelect;
+
 export {
   emsAndLetters,
   emsAndLetterState,
@@ -55,4 +70,6 @@ export {
   domesticAndForeignState,
   emsSelected,
   lettersSelected,
+  domesticSelected,
+  foreignSelected,
 };

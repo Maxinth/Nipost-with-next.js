@@ -6,6 +6,7 @@ const data = {
     },
   ],
 
+  //servicesTypes Items when region is set as Domestic on  region select box
   servicesTypesItemsForDomestic: [
     {
       itemName: "select service type",
@@ -25,6 +26,7 @@ const data = {
     },
   ],
 
+  //servicesTypes Items when region is set as International on  region select box
   servicesTypesItemsForInternational: [
     {
       itemName: "select service type",
@@ -35,16 +37,33 @@ const data = {
       itemValue: "ems",
     },
   ],
+
+  servicesTypesItemsForRadioAtDomestic: [
+    {
+      itemName: "select service type",
+      itemValue: "selectServiceType",
+    },
+    {
+      itemName: "counter delivery",
+      itemValue: "counterDelivery",
+    },
+    {
+      itemName: "home delivery",
+      itemValue: "homeDelivery",
+    },
+  ],
 };
 
 const {
   defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
+  servicesTypesItemsForRadioAtDomestic,
 } = data;
 
 export {
   defaultServiceTypesItems,
   servicesTypesItemsForDomestic,
   servicesTypesItemsForInternational,
+  servicesTypesItemsForRadioAtDomestic,
 };

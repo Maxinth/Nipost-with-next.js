@@ -1,9 +1,11 @@
-import { emsSelected, lettersSelected } from "./data";
+import {
+  emsSelected,
+  lettersSelected,
+  domesticSelected,
+  foreignSelected,
+} from "./data";
 
-export const getRadiosStates = (id, initState, setterFn) => {
-  // toggle state based on id and initState
-  const doStateToggle = { ...initState, [id]: true };
-
+export const getRadiosStates = (id, setterFn) => {
   // new states
   switch (id) {
     case "ems":
@@ -13,8 +15,10 @@ export const getRadiosStates = (id, initState, setterFn) => {
       setterFn(lettersSelected);
       break;
     case "domestic":
+      setterFn(domesticSelected);
+      break;
     case "foreign":
-      setterFn(doStateToggle);
+      setterFn(foreignSelected);
       break;
     default:
       return;
