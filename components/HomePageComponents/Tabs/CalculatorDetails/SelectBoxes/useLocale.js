@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { servicesTypesItemsForRadioAtDomestic } from "./data";
+import {
+  // servicesTypesItemsForRadioAtDomestic,
+  destinationsForRadioAtForeign,
+} from "./data";
 const useLocale = () => {
   const [localeList, setLocaleList] = useState(
-    servicesTypesItemsForRadioAtDomestic
+    // servicesTypesItemsForRadioAtDomestic
+    destinationsForRadioAtForeign
   );
 
   const initialState = {
@@ -21,6 +25,7 @@ const useLocale = () => {
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
+    localeList,
   };
 };
 

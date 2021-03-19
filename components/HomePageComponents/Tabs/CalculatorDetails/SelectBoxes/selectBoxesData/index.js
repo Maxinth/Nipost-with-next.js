@@ -2,6 +2,7 @@ export {
   defaultDestinationItems,
   destinationsForDomesticRegion,
   destinationsForInternationalRegion,
+  destinationsForRadioAtForeign,
 } from "./destinationData";
 
 export { itemTypeItems } from "./itemTypeData";

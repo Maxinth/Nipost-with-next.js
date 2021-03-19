@@ -36,9 +36,7 @@ export const useSelect = () => {
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
-
-    // onChangeLocaleOptionVal,
-    // localeOptionVal,
+    localeList,
   ] = useGetChoice(
     currentRegion,
     serviceTypeList,
@@ -78,7 +76,7 @@ export const useSelect = () => {
 
   const selectBoxForDomesticRadio = [
     {
-      items: servicesTypesItemsForRadioAtDomestic,
+      items: localeList,
       currentChoice: localeInitialValue,
       id: serviceTypeDomesticId,
     },

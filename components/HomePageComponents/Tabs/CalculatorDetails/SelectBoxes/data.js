@@ -8,6 +8,7 @@ import {
   defaultDestinationItems,
   destinationsForDomesticRegion,
   destinationsForInternationalRegion,
+  destinationsForRadioAtForeign,
 } from "./selectBoxesData";
 
 const data = {
@@ -68,4 +69,5 @@ export {
   itemTypeItems,
   serviceTypeDomesticId,
   servicesTypesItemsForRadioAtDomestic,
+  destinationsForRadioAtForeign,
 };
