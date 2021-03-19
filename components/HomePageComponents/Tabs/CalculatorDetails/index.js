@@ -4,6 +4,7 @@ import { DetailsBox } from "./styled";
 import { getRadiosView } from "./toggleRadiosView";
 import SelectBoxes from "./SelectBoxes";
 import LettersRadioClickedView from "./LettersRadioClickedView";
+import CalcInput from "./CalcInput";
 
 const CalculatorDetails = () => {
   // state to decide if the second radio batches, domesticAndForeign come into view
@@ -23,6 +24,7 @@ const CalculatorDetails = () => {
         />
       )}
       {!isSecondRadiosBatchVisible && <SelectBoxes />}
+      <CalcInput />
     </DetailsBox>
   );
 };
