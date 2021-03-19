@@ -32,15 +32,14 @@ const Button = styled.button`
   color: black;
 `;
 
-const Section = styled.section`
-  ${({ main }) =>
-    main &&
-    css`
-      div + button {
-        width: 100%;
-        margin: 0.2rem 0.8rem 0.5rem 0.4rem;
-      }
-    `}
+const Section = styled.section``;
+
+const Box = styled.div`
+  padding: 0.5rem 0.7rem;
+  button {
+    width: 100%;
+    font-weight: 700;
+  }
 `;
 
-export { CalcBox, Button, Section };
+export { CalcBox, Button, Section, Box };

@@ -1,13 +1,15 @@
 import React from "react";
 import CalcInputs from "./CalculateInputs";
-import { Section } from "./styled";
+import { Section, Box } from "./styled";
 import Btn from "../../Btn";
 
 const GenerateCalcInputs = () => {
   return (
-    <Section main>
+    <Section>
       <CalcInputs />
-      <Btn text="calculate" />
+      <Box>
+        <Btn text="calculate" />
+      </Box>
     </Section>
   );
 };
