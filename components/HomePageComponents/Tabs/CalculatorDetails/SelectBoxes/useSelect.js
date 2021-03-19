@@ -6,14 +6,16 @@ import {
   serviceTypeId,
   itemTypeId,
   itemTypeItems,
-  servicesTypesItemsForRadioAtDomestic,
   serviceTypeDomesticId,
 } from "./data";
 import { useEffect } from "react";
 import { getNewItemsList } from "./getNewOptions";
 import useGetChoice from "./useGetChoice";
 import useTrackRegionAndOptionValues from "./useTrackOptionValues";
+import { useGlobalContext } from "../../../../context";
+
 export const useSelect = () => {
+  const { localeList } = useGlobalContext();
   // getting needed values from useTrackRegionAndOptionsValues
   const {
     currentRegion,
@@ -36,7 +38,6 @@ export const useSelect = () => {
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
-    localeList,
   ] = useGetChoice(
     currentRegion,
     serviceTypeList,
@@ -74,7 +75,7 @@ export const useSelect = () => {
     },
   ];
 
-  const selectBoxForDomesticRadio = [
+  const foreignAndDomesticRadioClicksList = [
     {
       items: localeList,
       currentChoice: localeInitialValue,
@@ -87,7 +88,7 @@ export const useSelect = () => {
     onChange,
     choice,
     initialValues,
-    selectBoxForDomesticRadio,
+    foreignAndDomesticRadioClicksList,
     onChangeLocaleOptionVal,
     localeOptionVal,
   };

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useLocale from "./useLocale";
 import useChoice from "./useChoice";
 
@@ -23,7 +22,6 @@ const useGetChoice = (
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
-    localeList,
   } = useLocale();
 
   // const { localeInitialValue } = localeOptionVal;
@@ -40,7 +38,6 @@ const useGetChoice = (
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
-    localeList,
   ];
 };
 

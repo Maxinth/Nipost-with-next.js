@@ -3,11 +3,14 @@ import { useSelect } from "./useSelect";
 import GenerateSelectBoxes from "../SelectBoxes/GenerateSelectBoxes";
 
 const ServiceSelectBoxForDomesticRadio = () => {
-  const { selectBoxForDomesticRadio, onChangeLocaleOptionVal } = useSelect();
+  const {
+    foreignAndDomesticRadioClicksList,
+    onChangeLocaleOptionVal,
+  } = useSelect();
 
   return (
     <GenerateSelectBoxes
-      selectBoxList={selectBoxForDomesticRadio}
+      selectBoxList={foreignAndDomesticRadioClicksList}
       onChange={onChangeLocaleOptionVal}
     />
   );
