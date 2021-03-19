@@ -1,11 +1,12 @@
 import { useState } from "react";
+import useLocale from "./useLocale";
+import useChoice from "./useChoice";
 
 const useGetChoice = (
   currentRegion,
   defaultServiceTypesItems,
   defaultDestinationItems,
-  itemTypeItems,
-  servicesTypesItemsForRadioAtDomestic
+  itemTypeItems
 ) => {
   // default select boxes values on start up
   const initialValues = {
@@ -13,27 +14,19 @@ const useGetChoice = (
     serviceType: defaultServiceTypesItems[0].itemValue,
     destination: defaultDestinationItems[0].itemValue,
     itemType: itemTypeItems[0].itemValue,
-    serviceAtDomesticRadio: servicesTypesItemsForRadioAtDomestic[0].itemValue,
   };
 
-  // state to track select boxes state.
-  const [choice, setChoice] = useState(initialValues);
-
-  // custom function to handle select option changes
-  const onChange = (e) => {
-    setChoice({
-      ...choice,
-      [e.target.id]: e.target.value,
-    });
-  };
+  // getting user choice and function to change choice from useChoice custom hook
+  const { choice, onChange } = useChoice(initialValues);
 
   const {
-    region,
-    serviceType,
-    destination,
-    itemType,
-    serviceAtDomesticRadio,
-  } = choice;
+    localeInitialValue,
+    onChangeLocaleOptionVal,
+    localeOptionVal,
+  } = useLocale();
+
+  // const { localeInitialValue } = localeOptionVal;
+  const { region, serviceType, destination, itemType } = choice;
 
   return [
     initialValues,
@@ -43,7 +36,9 @@ const useGetChoice = (
     serviceType,
     destination,
     itemType,
-    serviceAtDomesticRadio,
+    localeInitialValue,
+    onChangeLocaleOptionVal,
+    localeOptionVal,
   ];
 };
 

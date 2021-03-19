@@ -33,13 +33,17 @@ export const useSelect = () => {
     serviceType,
     destination,
     itemType,
-    serviceAtDomesticRadio,
+    localeInitialValue,
+    onChangeLocaleOptionVal,
+    localeOptionVal,
+
+    // onChangeLocaleOptionVal,
+    // localeOptionVal,
   ] = useGetChoice(
     currentRegion,
     serviceTypeList,
     defaultDestinationItems,
-    itemTypeItems,
-    servicesTypesItemsForRadioAtDomestic
+    itemTypeItems
   );
 
   // useEffect to change services options List values every time the selected region changes
@@ -72,12 +76,10 @@ export const useSelect = () => {
     },
   ];
 
-  //  serviceTypeDomesticId,
-  // servicesTypesItemsForRadioAtDomestic,
   const selectBoxForDomesticRadio = [
     {
       items: servicesTypesItemsForRadioAtDomestic,
-      currentChoice: serviceAtDomesticRadio,
+      currentChoice: localeInitialValue,
       id: serviceTypeDomesticId,
     },
   ];
@@ -88,5 +90,7 @@ export const useSelect = () => {
     choice,
     initialValues,
     selectBoxForDomesticRadio,
+    onChangeLocaleOptionVal,
+    localeOptionVal,
   };
 };
