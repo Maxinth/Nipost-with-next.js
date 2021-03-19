@@ -4,7 +4,7 @@ const SelectBoxContainer = styled.div`
   /* display: ${({ twoItems }) => (twoItems ? "flex" : "unset")}; */
   justify-content: center;
   align-items: center;
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
 `;
 
 const SelectBoxItem = styled.select`

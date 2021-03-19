@@ -1,14 +1,15 @@
 import React from "react";
-import InputBox from "../../InputBox";
-import { CalcBox, Button } from "./styled";
+import { data } from "./data";
+import CalcInput from "./CalcInput";
 
-const CalcInput = () => {
+const GenerateCalcInputs = () => {
   return (
-    <CalcBox reverse>
-      <InputBox text="Enter Weight" />
-      <Button>Kg</Button>
-    </CalcBox>
+    <>
+      {data.map((item) => (
+        <CalcInput key={item.text} {...item} />
+      ))}
+    </>
   );
 };
 
-export default CalcInput;
+export default GenerateCalcInputs;
