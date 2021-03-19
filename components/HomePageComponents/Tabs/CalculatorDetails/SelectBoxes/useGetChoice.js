@@ -22,6 +22,7 @@ const useGetChoice = (
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
+    // localeList,
   } = useLocale();
 
   // const { localeInitialValue } = localeOptionVal;
@@ -38,6 +39,7 @@ const useGetChoice = (
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
+    // localeList,
   ];
 };
 

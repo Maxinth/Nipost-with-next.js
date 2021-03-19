@@ -14,7 +14,6 @@ const AppProvider = ({ children }) => {
   const [localeList, setLocaleList] = useState(
     servicesTypesItemsForRadioAtDomestic
   );
-
   // state for searchAndCloseIcon
   const [isSearchInit, setIsSearchInit] = useState(false);
 
