@@ -4,7 +4,7 @@ const SelectBoxContainer = styled.div`
   /* display: ${({ twoItems }) => (twoItems ? "flex" : "unset")}; */
   justify-content: center;
   align-items: center;
-  /* margin-top: 1rem; */
+  margin-top: 0.2rem;
 `;
 
 const SelectBoxItem = styled.select`
@@ -61,9 +61,9 @@ const BannerForm = styled.form`
     margin-right: 1rem;
   } */
 
-  @media (min-width: 1140px) {
+  /* @media (min-width: 1140px) {
     flex-direction: row;
-  }
+  } */
 `;
 
 export {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import EmsAndLettersRadios from "./Radios/EmsAndLettersRadios";
-import DomesticAndForeignRadios from "./Radios/DomesticAndForeignRadios";
 import { DetailsBox } from "./styled";
 import { getRadiosView } from "./toggleRadiosView";
 import SelectBoxes from "./SelectBoxes";
+import LettersRadioClickedView from "./LettersRadioClickedView";
 
 const CalculatorDetails = () => {
   // state to decide if the second radio batches, domesticAndForeign come into view
@@ -17,7 +17,7 @@ const CalculatorDetails = () => {
     <DetailsBox>
       <EmsAndLettersRadios toggleView={toggleSecondRadiosView} />
       {isSecondRadiosBatchVisible && (
-        <DomesticAndForeignRadios
+        <LettersRadioClickedView
           toggleView={toggleSecondRadiosView}
           radiosView={isSecondRadiosBatchVisible}
         />
