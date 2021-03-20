@@ -2,7 +2,7 @@ import React from "react";
 import News from "./News";
 import { getSlidePosition } from "./useSlider";
 import PropTypes from "prop-types";
-
+// import Controls from '../Controls'
 const GenerateNews = ({ data, index }) => {
   return (
     <>

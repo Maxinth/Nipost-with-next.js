@@ -1,6 +1,6 @@
 import useSlider, { getSlidePosition } from "./useSlider";
 
-const useSliderAndGetCurrentValues = (data, interval = 4000) => {
+const useSliderAndGetCurrentValues = (data, interval = 6000) => {
   const { items, index, setIndex } = useSlider(data, interval);
 
   // custom function to set current index

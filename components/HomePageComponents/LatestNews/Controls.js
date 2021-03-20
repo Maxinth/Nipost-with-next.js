@@ -3,13 +3,13 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { ControlsBox, Span } from "./styled";
 
-const Controls = () => {
+const Controls = ({ makeCurrentSlide, index }) => {
   return (
     <ControlsBox>
-      <Span>
+      <Span onClick={() => makeCurrentSlide(index + 1)}>
         <ChevronLeftIcon />
       </Span>
-      <Span>
+      <Span onClick={() => makeCurrentSlide(index - 1)}>
         <ChevronRightIcon />
       </Span>
     </ControlsBox>

@@ -5,18 +5,13 @@ import LatestNewsSlides from "./slides";
 import { data } from "./slides/data";
 import useSliderAndGetCurrentValues from "./slides/useSliderAndGetCurrentValues";
 const LatestNews = () => {
-  const {
-    items,
-    index,
-    makeCurrentSlide,
-    matchCurrentItem,
-  } = useSliderAndGetCurrentValues(data);
+  const { items, index, makeCurrentSlide } = useSliderAndGetCurrentValues(data);
 
   return (
     <NewsContainer>
       <Title>Latest News</Title>
       <LatestNewsSlides news={items} index={index} />
-      <Controls />
+      <Controls makeCurrentSlide={makeCurrentSlide} index={index} />
     </NewsContainer>
   );
 };

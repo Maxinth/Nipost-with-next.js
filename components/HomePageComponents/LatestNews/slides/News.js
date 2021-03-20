@@ -10,4 +10,5 @@ News.propTypes = {
   newsHeadLine: PropTypes.string,
   position: PropTypes.string,
 };
+
 export default News;
