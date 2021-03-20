@@ -5,7 +5,7 @@ const Box = styled.div``;
 
 const CalcDetailsBox = styled(DetailsBox)`
   @media (min-width: 992px) {
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 1rem 0.5rem;
   }
 `;
 
