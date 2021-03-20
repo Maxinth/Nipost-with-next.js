@@ -20,6 +20,8 @@ const Title = styled.div`
   color: #fff;
   padding: 0.5rem;
   width: unset;
+  font-size: 0.8rem;
+  font-weight: 700;
   border-top-left-radius: 9px;
   border-bottom-left-radius: 9px;
 `;
