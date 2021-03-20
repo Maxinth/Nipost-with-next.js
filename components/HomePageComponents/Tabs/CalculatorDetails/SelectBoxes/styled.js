@@ -24,7 +24,7 @@ const SelectBoxItem = styled.select`
 
   @media (min-width: 1150px) {
     text-align: center;
-    width: unset;
+    /* width: unset; */
   }
 `;
 
@@ -54,16 +54,12 @@ const BannerForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* background-color: rgba(0, 0, 0, 0.45); */
 
-  /* > * {
-    margin-right: 1rem;
-  } */
-
-  /* @media (min-width: 1140px) {
-    flex-direction: row;
-  } */
+  @media (min-width: 768px) {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 `;
 
 export {

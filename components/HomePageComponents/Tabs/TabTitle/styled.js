@@ -13,13 +13,23 @@ const TabBox = styled.div`
   display: flex;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-  font-size: 0.7rem;
-  padding: 1.2rem 1rem 1rem;
+  font-size: 0.4rem;
+  padding: 0.6rem 0.5rem 0.5rem;
   cursor: pointer;
   transition: background-color 0.2s;
   text-transform: uppercase;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  text-align: center;
+
+  @media (max-width: 280px) {
+    font-size: 0.2rem;
+  }
+  @media (min-width: 500px) {
+    padding: 1.2rem 1rem 1rem;
+    font-size: 0.7rem;
+  }
+
   > svg {
     font-size: 0.9rem;
   }

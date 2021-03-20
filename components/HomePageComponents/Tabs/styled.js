@@ -10,6 +10,9 @@ const DetailsBox = styled.div`
 
 const TabContainer = styled.section`
   background-color: rgb(245, 245, 245);
+  margin-right: auto;
+  margin-left: auto;
+
   margin-top: 8rem;
   border: 1px solid black;
   padding: 1rem;
@@ -20,6 +23,10 @@ const TabContainer = styled.section`
   }
   @media (min-width: 666px) {
     margin-top: calc(8rem + 20vw);
+  }
+
+  @media (min-width: 768px) {
+    max-width: 750px;
   }
 `;
 

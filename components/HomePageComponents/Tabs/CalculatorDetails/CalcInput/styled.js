@@ -34,6 +34,14 @@ const Button = styled.button`
 
 const Section = styled.section``;
 
+const CostSection = styled.section`
+  @media (min-width: 768px) {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+`;
+
 const Box = styled.div`
   padding: 0.5rem 0.7rem;
   button {
@@ -42,4 +50,4 @@ const Box = styled.div`
   }
 `;
 
-export { CalcBox, Button, Section, Box };
+export { CalcBox, Button, Section, Box, CostSection };
