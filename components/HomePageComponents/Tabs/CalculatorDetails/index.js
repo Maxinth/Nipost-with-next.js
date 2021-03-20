@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import EmsAndLettersRadios from "./Radios/EmsAndLettersRadios";
-import { DetailsBox } from "./styled";
+import { CalcDetailsBox } from "./styled";
 import { getRadiosView } from "./toggleRadiosView";
 import SelectBoxes from "./SelectBoxes";
 import LettersRadioClickedView from "./LettersRadioClickedView";
@@ -15,7 +15,7 @@ const CalculatorDetails = () => {
   };
 
   return (
-    <DetailsBox>
+    <CalcDetailsBox>
       <EmsAndLettersRadios toggleView={toggleSecondRadiosView} />
       {isSecondRadiosBatchVisible && (
         <LettersRadioClickedView
@@ -25,7 +25,7 @@ const CalculatorDetails = () => {
       )}
       {!isSecondRadiosBatchVisible && <SelectBoxes />}
       <GenerateCalcInputs />
-    </DetailsBox>
+    </CalcDetailsBox>
   );
 };
 

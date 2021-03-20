@@ -40,6 +40,10 @@ const CostSection = styled.section`
     gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 `;
 
 const Box = styled.div`

@@ -5,6 +5,12 @@ const SelectBoxContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 0.4rem;
+  @media (min-width: 768px) {
+    :nth-child(3),
+    :nth-child(4) {
+      margin-bottom: 0.2rem;
+    }
+  }
 `;
 
 const SelectBoxItem = styled.select`
@@ -25,6 +31,10 @@ const SelectBoxItem = styled.select`
   @media (min-width: 1150px) {
     text-align: center;
     /* width: unset; */
+  }
+
+  @media (min-width: 992px) {
+    /* width: 50%; */
   }
 `;
 
@@ -59,6 +69,9 @@ const BannerForm = styled.form`
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 `;
 

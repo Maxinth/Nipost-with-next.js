@@ -7,6 +7,7 @@ import Tabs from "./Tabs";
 
 const Container = styled.section`
   background-color: rgb(245, 245, 245);
+  position: relative;
 `;
 
 const Home = () => {

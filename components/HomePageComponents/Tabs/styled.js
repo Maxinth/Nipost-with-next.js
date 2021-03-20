@@ -6,6 +6,10 @@ const DetailsBox = styled.div`
   /* margin-top: 0.5rem; */
   border: 1px solid rgb(226, 226, 226);
   border-top: 1px solid transparent;
+  transition: padding 0.2;
+  /* @media (min-width: 992px) {
+    padding: 0.2rem 1rem;
+  } */
 `;
 
 const TabContainer = styled.section`
@@ -27,6 +31,10 @@ const TabContainer = styled.section`
 
   @media (min-width: 768px) {
     max-width: 750px;
+  }
+  @media (min-width: 992px) {
+    position: absolute;
+    top: -200px;
   }
 `;
 
