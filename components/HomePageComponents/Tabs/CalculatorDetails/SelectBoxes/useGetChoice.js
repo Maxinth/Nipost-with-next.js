@@ -1,5 +1,6 @@
 import useLocale from "./useLocale";
 import useChoice from "./useChoice";
+// import { defaultDestinationItems } from "./data";
 
 const useGetChoice = (
   currentRegion,

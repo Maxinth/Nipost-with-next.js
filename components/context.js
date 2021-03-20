@@ -4,15 +4,15 @@ import {
   itemsOnHover,
   itemsWhenOutOfFocus,
 } from "./HomePageComponents/NavBar/NavMain/data";
-import { servicesTypesItemsForRadioAtDomestic } from "./HomePageComponents/Tabs/CalculatorDetails/SelectBoxes/data";
+// import { servicesTypesItemsForRadioAtDomestic } from "./HomePageComponents/Tabs/CalculatorDetails/SelectBoxes/data";
 
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  // state to track and change options list based on radio click
-  const [localeList, setLocaleList] = useState(
-    servicesTypesItemsForRadioAtDomestic
-  );
+  // // state to track and change options list based on radio click
+  // const [localeList, setLocaleList] = useState(
+  //   servicesTypesItemsForRadioAtDomestic
+  // );
 
   // state for searchAndCloseIcon
   const [isSearchInit, setIsSearchInit] = useState(false);
@@ -49,8 +49,8 @@ const AppProvider = ({ children }) => {
         handleMouseOut,
         isSearchInit,
         setIsSearchInit,
-        localeList,
-        setLocaleList,
+        // localeList,
+        // setLocaleList,
       }}
     >
       {children}
