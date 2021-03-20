@@ -8,6 +8,7 @@ import {
   itemTypeItems,
   serviceTypeDomesticId,
   destinationsForRadioAtForeign,
+  servicesTypesItemsForRadioAtDomestic,
 } from "./data";
 import { useEffect } from "react";
 import { getNewItemsList } from "./getNewOptions";
@@ -39,6 +40,9 @@ export const useSelect = () => {
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
+    // new
+    // localeList,
+    // setLocaleList,
   ] = useGetChoice(
     currentRegion,
     serviceTypeList,
@@ -78,7 +82,8 @@ export const useSelect = () => {
 
   const domesticRadioClicksList = [
     {
-      items: localeList,
+      // items: localeList,
+      items: servicesTypesItemsForRadioAtDomestic,
       currentChoice: localeInitialValue,
       id: serviceTypeDomesticId,
     },

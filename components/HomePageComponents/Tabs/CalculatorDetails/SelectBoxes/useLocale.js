@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { useGlobalContext } from "../../../../context";
+import { servicesTypesItemsForRadioAtDomestic } from "./data";
 
 const useLocale = () => {
-  const { localeList } = useGlobalContext();
+  const [localeList, setLocaleList] = useState(
+    servicesTypesItemsForRadioAtDomestic
+  );
 
   const initialState = {
+    // initial option visible on select box
     localeInitialValue: localeList[0].itemValue,
   };
+
   const [localeOptionVal, setLocaleOptionVal] = useState(initialState);
 
   const onChangeLocaleOptionVal = (e) => {
@@ -20,6 +24,8 @@ const useLocale = () => {
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
+    localeList,
+    setLocaleList,
   };
 };
 

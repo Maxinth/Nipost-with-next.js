@@ -5,7 +5,6 @@ import {
   itemsWhenOutOfFocus,
 } from "./HomePageComponents/NavBar/NavMain/data";
 import { servicesTypesItemsForRadioAtDomestic } from "./HomePageComponents/Tabs/CalculatorDetails/SelectBoxes/data";
-import { changeLocaleList } from "./HomePageComponents/Tabs/CalculatorDetails/SelectBoxes/changeLocaleList";
 
 const AppContext = createContext();
 
@@ -51,7 +50,6 @@ const AppProvider = ({ children }) => {
         isSearchInit,
         setIsSearchInit,
         localeList,
-        changeLocaleList,
         setLocaleList,
       }}
     >
