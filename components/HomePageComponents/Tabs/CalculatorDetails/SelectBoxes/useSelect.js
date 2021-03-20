@@ -75,7 +75,7 @@ export const useSelect = () => {
     },
   ];
 
-  const foreignAndDomesticRadioClicksList = [
+  const domesticRadioClicksList = [
     {
       items: localeList,
       currentChoice: localeInitialValue,
@@ -88,7 +88,7 @@ export const useSelect = () => {
     onChange,
     choice,
     initialValues,
-    foreignAndDomesticRadioClicksList,
+    domesticRadioClicksList,
     onChangeLocaleOptionVal,
     localeOptionVal,
   };
