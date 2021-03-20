@@ -1,17 +1,15 @@
 import React from "react";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { ControlsBox, Span } from "./styled";
+import { controlsData } from "./slides/data";
 
 const Controls = ({ makeCurrentSlide, index }) => {
   return (
     <ControlsBox>
-      <Span onClick={() => makeCurrentSlide(index + 1)}>
-        <ChevronLeftIcon />
-      </Span>
-      <Span onClick={() => makeCurrentSlide(index - 1)}>
-        <ChevronRightIcon />
-      </Span>
+      {controlsData.map((item) => (
+        <Span key={item.id} onClick={() => makeCurrentSlide(index + item.val)}>
+          {item.icon}
+        </Span>
+      ))}
     </ControlsBox>
   );
 };

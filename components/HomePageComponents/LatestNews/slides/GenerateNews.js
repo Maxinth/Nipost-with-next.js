@@ -1,13 +1,13 @@
 import React from "react";
 import News from "./News";
-import { getSlidePosition } from "./useSlider";
+import { itemPosition } from "./useSliderAndGetCurrentValues";
 import PropTypes from "prop-types";
-// import Controls from '../Controls'
+
 const GenerateNews = ({ data, index }) => {
   return (
     <>
       {data.map((item, itemIndex) => {
-        let slidePosition = getSlidePosition(index, itemIndex, data);
+        let slidePosition = itemPosition(index, itemIndex, data);
         return (
           <News key={itemIndex} newsHeadLine={item} position={slidePosition} />
         );

@@ -47,7 +47,7 @@ const Span = styled.span`
   }
 
   :nth-child(2) {
-    border-left: 1px solid rgb(84, 85, 94);
+    border-left: 1px solid rgb(245, 245, 245);
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
   }

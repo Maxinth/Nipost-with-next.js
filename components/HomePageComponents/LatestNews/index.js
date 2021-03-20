@@ -4,6 +4,7 @@ import Controls from "./Controls";
 import LatestNewsSlides from "./slides";
 import { data } from "./slides/data";
 import useSliderAndGetCurrentValues from "./slides/useSliderAndGetCurrentValues";
+
 const LatestNews = () => {
   const { items, index, makeCurrentSlide } = useSliderAndGetCurrentValues(data);
 
