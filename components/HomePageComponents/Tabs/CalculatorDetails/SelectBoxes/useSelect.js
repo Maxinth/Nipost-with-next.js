@@ -14,10 +14,8 @@ import { useEffect } from "react";
 import { getNewItemsList } from "./getNewOptions";
 import useGetChoice from "./useGetChoice";
 import useTrackRegionAndOptionValues from "./useTrackOptionValues";
-import { useGlobalContext } from "../../../../context";
 
 export const useSelect = () => {
-  const { localeList } = useGlobalContext();
   // getting needed values from useTrackRegionAndOptionsValues
   const {
     currentRegion,
@@ -28,7 +26,7 @@ export const useSelect = () => {
     setDestinationTypeList,
   } = useTrackRegionAndOptionValues();
 
-  // getting values from useGetChoice custom hoook
+  // getting values from useGetChoice custom hook
   const [
     initialValues,
     choice,
@@ -40,9 +38,6 @@ export const useSelect = () => {
     localeInitialValue,
     onChangeLocaleOptionVal,
     localeOptionVal,
-    // new
-    // localeList,
-    // setLocaleList,
   ] = useGetChoice(
     currentRegion,
     serviceTypeList,
@@ -82,7 +77,6 @@ export const useSelect = () => {
 
   const domesticRadioClicksList = [
     {
-      // items: localeList,
       items: servicesTypesItemsForRadioAtDomestic,
       currentChoice: localeInitialValue,
       id: serviceTypeDomesticId,
