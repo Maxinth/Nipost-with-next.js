@@ -4,7 +4,7 @@ import GenerateTabTitles from "./TabTitle/GenerateTabTitles";
 import TabDetailsShown from "./TabDetailsShown";
 
 const Tabs = () => {
-  const [currentItem, setCurrentItem] = useState("trackItems");
+  const [currentItem, setCurrentItem] = useState("calculator");
   const changeItem = (item) => setCurrentItem(item);
   return (
     <TabContainer>
