@@ -1,14 +1,11 @@
 import React from "react";
-import CbuCard from "./CbuCard";
-import { Container, Title, CardsContainer } from "./styled";
-
+import { Container, Title } from "./styled";
+import GenerateCards from "./GenerateCards";
 const CommercialBusinessUnit = () => {
   return (
     <Container>
       <Title>Commercial Business Unit</Title>
-      <CardsContainer>
-        <CbuCard />
-      </CardsContainer>
+      <GenerateCards />
     </Container>
   );
 };

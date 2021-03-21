@@ -1,11 +1,12 @@
 import React from "react";
 import { CardBox, CardImage, CardTitle } from "./styled";
+import PropTypes from "prop-types";
 
-const CbuCard = () => {
+const CbuCard = ({ imageSrc, text }) => {
   return (
     <CardBox>
-      <CardImage src="/commercialBusinessUnits/chairs.jpg" alt="cbu" />
-      <CardTitle>counters</CardTitle>
+      <CardImage src={imageSrc} alt="cbu" />
+      <CardTitle>{text}</CardTitle>
     </CardBox>
   );
 };
