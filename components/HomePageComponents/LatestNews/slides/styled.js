@@ -27,6 +27,17 @@ const NewsBox = styled.div`
   font-family: "Raleway", sans-serif;
   cursor: pointer;
   font-weight: 700;
+  font-size: 0.7rem;
+  @media (min-width: 648px) {
+    font-size: 0.8rem;
+  }
+  @media (min-width: 700px) {
+    font-size: 0.9rem;
+  }
+  @media (min-width: 800px) {
+    font-size: 0.95rem;
+  }
+
   ${(props) =>
     props.position === "activeSlide" &&
     css`

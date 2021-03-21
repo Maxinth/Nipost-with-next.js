@@ -5,6 +5,7 @@ import MobileDropDown from "./NavBar/MobileDropDown";
 import Banner from "./Banner";
 import Tabs from "./Tabs";
 import LatestNews from "./LatestNews";
+import SubMenuOptions from "./SubMenuOptions";
 
 const Container = styled.section`
   background-color: rgb(245, 245, 245);
@@ -19,6 +20,7 @@ const Home = () => {
       <Banner />
       <Tabs />
       <LatestNews />
+      <SubMenuOptions />
     </Container>
   );
 };

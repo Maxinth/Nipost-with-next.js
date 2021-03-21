@@ -7,8 +7,17 @@ const CalcBox = styled.div`
   input {
     border: none;
   }
-  margin: 0rem 0.6rem 0.5rem;
   border-radius: 5px;
+  margin: 0rem 0.6rem 0.5rem;
+
+  @media (min-width: 768px) {
+    margin-right: unset;
+
+    :nth-child(2) {
+      margin-left: unset;
+      margin-right: 0.6rem;
+    }
+  }
 
   ${({ reverse }) =>
     reverse &&
