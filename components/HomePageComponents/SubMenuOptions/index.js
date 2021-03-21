@@ -1,11 +1,12 @@
 import React from "react";
 import MenuOptions from "./MenuOptions";
+import { MenusContainer } from "./styled";
 
 const GenerateMenuOptions = () => {
   return (
-    <div>
+    <MenusContainer>
       <MenuOptions />
-    </div>
+    </MenusContainer>
   );
 };
 
