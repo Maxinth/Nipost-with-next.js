@@ -6,7 +6,7 @@ const NewsContainer = styled.section`
   display: flex;
   align-items: center;
   border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
+  border-top-left-radius: 9px;
   box-shadow: 1px 2px 4px grey;
   margin: 0 auto;
   max-width: 1170px;
