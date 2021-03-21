@@ -1,30 +1,30 @@
 export const data = [
   {
-    imageSrc: "/commercialBusinessUnit/counters.jpg",
+    imageSrc: "/commercialBusinessUnits/counters.jpg",
     text: "counters",
   },
   {
-    imageSrc: "/commercialBusinessUnit/ems.jpg",
+    imageSrc: "/commercialBusinessUnits/ems.jpg",
     text: "EMS / Parcels",
   },
   {
-    imageSrc: "/commercialBusinessUnit/mails.jpg",
+    imageSrc: "/commercialBusinessUnits/mails.jpg",
     text: "Mails",
   },
   {
-    imageSrc: "/commercialBusinessUnit/logistics1.jpg",
+    imageSrc: "/commercialBusinessUnits/logistics1.jpg",
     text: "E-Commerce And Logistics",
   },
   {
-    imageSrc: "/commercialBusinessUnit/postcash.jpg",
+    imageSrc: "/commercialBusinessUnits/postcash.jpg",
     text: "Financial Services",
   },
   {
-    imageSrc: "/commercialBusinessUnit/chairs.jpg",
+    imageSrc: "/commercialBusinessUnits/chairs.jpg",
     text: "Workshop & Properties",
   },
   {
-    imageSrc: "/commercialBusinessUnit/training.jpg",
+    imageSrc: "/commercialBusinessUnits/training.jpg",
     text: "Nigerian Postal Institute",
   },
 ];

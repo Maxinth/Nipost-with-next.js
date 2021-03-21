@@ -29,12 +29,18 @@ const CardBox = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fff;
-
+  margin-bottom: 1rem;
   box-shadow: 1px 2px 4px grey;
   border-radius: 5px;
+
+  @media (min-width: 481px) {
+    max-width: 300px;
+  }
 `;
 
 const CardsContainer = styled.section`
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
 `;
 export { Container, Title, CardBox, CardImage, CardTitle, CardsContainer };

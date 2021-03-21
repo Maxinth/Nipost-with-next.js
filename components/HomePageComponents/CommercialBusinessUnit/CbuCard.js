@@ -11,4 +11,8 @@ const CbuCard = ({ imageSrc, text }) => {
   );
 };
 
+CbuCard.propTypes = {
+  imageSrc: PropTypes.string,
+  text: PropTypes.string,
+};
 export default CbuCard;
