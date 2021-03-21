@@ -1,13 +1,13 @@
 import React from "react";
-import MenuOptions from "./MenuOptions";
-import { MenusContainer } from "./styled";
+import GenerateMenuOptions from "./GenerateMenuOptions";
+import { Container } from "./styled";
 
-const GenerateMenuOptions = () => {
+const SubMenuOptions = () => {
   return (
-    <MenusContainer>
-      <MenuOptions />
-    </MenusContainer>
+    <Container>
+      <GenerateMenuOptions />
+    </Container>
   );
 };
 
-export default GenerateMenuOptions;
+export default SubMenuOptions;
