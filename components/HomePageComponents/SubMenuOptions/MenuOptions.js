@@ -1,6 +1,5 @@
 import React from "react";
 import { MenuBox, Span } from "./styled";
-
 import PropTypes from "prop-types";
 
 const MenuOptions = ({ icon, title }) => {

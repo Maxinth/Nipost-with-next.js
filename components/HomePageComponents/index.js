@@ -6,7 +6,7 @@ import Banner from "./Banner";
 import Tabs from "./Tabs";
 import LatestNews from "./LatestNews";
 import SubMenuOptions from "./SubMenuOptions";
-
+import CommercialBusinessUnit from "./CommercialBusinessUnit";
 const Container = styled.section`
   background-color: rgb(245, 245, 245);
   position: relative;
@@ -21,6 +21,7 @@ const Home = () => {
       <Tabs />
       <LatestNews />
       <SubMenuOptions />
+      <CommercialBusinessUnit />
     </Container>
   );
 };
