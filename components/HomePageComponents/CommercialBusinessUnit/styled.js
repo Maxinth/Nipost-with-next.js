@@ -20,7 +20,6 @@ const CardImage = styled.img`
   width: 100%;
   height: 100%;
 
-  /* min-height: 40px; */
   object-fit: contain;
   transition: opacity 0.2;
 `;
@@ -56,14 +55,8 @@ const CardBox = styled.div`
     }
   }
 
-  /* max-width: 300px; */
-
-  @media (min-width: 531px) {
-    /* max-width: 350px; */
-  }
   @media (min-width: 674px) {
     margin-bottom: unset;
-    /* max-width: 350px; */
   }
 `;
 
@@ -84,8 +77,5 @@ const CardsContainer = styled.section`
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  /* @media (min-width: 700px) {
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-  } */
 `;
 export { Container, Title, CardBox, CardImage, CardTitle, CardsContainer };

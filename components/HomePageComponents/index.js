@@ -7,6 +7,7 @@ import Tabs from "./Tabs";
 import LatestNews from "./LatestNews";
 import SubMenuOptions from "./SubMenuOptions";
 import CommercialBusinessUnit from "./CommercialBusinessUnit";
+import PostOfficeBoxOnline from "./PostOfficeBoxOnline";
 const Container = styled.section`
   background-color: rgb(245, 245, 245);
   position: relative;
@@ -22,6 +23,7 @@ const Home = () => {
       <LatestNews />
       <SubMenuOptions />
       <CommercialBusinessUnit />
+      <PostOfficeBoxOnline />
     </Container>
   );
 };

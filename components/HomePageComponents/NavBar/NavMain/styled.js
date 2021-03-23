@@ -5,8 +5,13 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const Nav = styled.nav`
   position: sticky;
+  /* position: fixed; */
   background: #fff;
   box-shadow: 1px 2px 6px grey;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  z-index: 400; */
 `;
 
 const Section = styled.section`
