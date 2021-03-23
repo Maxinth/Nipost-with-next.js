@@ -32,12 +32,25 @@ const StepBox = styled.div`
 const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
+  margin-top: 1rem;
 `;
 const Btn = styled.button`
   outline: none;
   border-radius: 10px;
   padding: 1rem 3rem;
   border: 1px solid black;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  cursor: pointer;
+  :hover {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    border: 1px solid transparent;
+  }
 `;
 
 export { ButtonContainer, Btn, OuterBox, InnerBox, Text, StepSection, StepBox };
