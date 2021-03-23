@@ -7,7 +7,7 @@ const Steps = () => {
   return (
     <StepSection>
       <GenerateSteps />
-      <GetPostOffice />
+      <GetPostOffice text="get post office box" />
     </StepSection>
   );
 };

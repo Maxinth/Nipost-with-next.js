@@ -1,12 +1,17 @@
 import React from "react";
 import { ButtonContainer, Btn } from "./styled";
+import PropTypes from "prop-types";
 
-const GetPostOffice = () => {
+const SubmitBtn = ({ text }) => {
   return (
     <ButtonContainer>
-      <Btn type="submit">get post office box</Btn>
+      <Btn type="submit">{text}</Btn>
     </ButtonContainer>
   );
 };
 
-export default GetPostOffice;
+SubmitBtn.propTypes = {
+  text: PropTypes.string,
+};
+
+export default SubmitBtn;

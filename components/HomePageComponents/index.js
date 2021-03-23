@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "./NavBar";
-import styled from "styled-components";
 import MobileDropDown from "./NavBar/MobileDropDown";
 import Banner from "./Banner";
 import Tabs from "./Tabs";
