@@ -6,7 +6,7 @@ import OfficeBoxOnline from "./OfficeBoxOnline";
 const PostOfficeBoxOnline = () => {
   return (
     <Section>
-      <LetterBox />
+      <LetterBox src="/letterbox.gif" alt="letterbox" />
       <OfficeBoxOnline />
     </Section>
   );

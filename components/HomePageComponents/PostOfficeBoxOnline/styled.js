@@ -5,6 +5,7 @@ const Section = styled.section`
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 3rem;
   @media (min-width: 768px) {
     flex-direction: row;
   }
