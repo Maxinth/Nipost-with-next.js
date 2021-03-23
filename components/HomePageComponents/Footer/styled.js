@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-
+import { IconsContainer } from "../NavBar/TopInfoAndSocial/styled";
 const Container = styled.section`
   background-color: rgb(102, 102, 102);
   font-family: "Open Sans", sans-serif;
@@ -136,7 +136,15 @@ const Contact = styled.p`
 `;
 
 const FooterStyled = styled.footer``;
-
+const SocialIconsContainer = styled.div`
+  ${IconsContainer} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(102, 102, 102);
+    margin-left: -2rem;
+  }
+`;
 export {
   IconContainer,
   SignContainer,
@@ -149,4 +157,5 @@ export {
   Heading,
   ListContainer,
   FooterStyled,
+  SocialIconsContainer,
 };

@@ -53,3 +53,8 @@ export const data = [
     ],
   },
 ];
+
+// custom function to check if heading is 'CUSTOMER SERVICE"
+export const isHeadingCustomerService = (heading) => {
+  return heading === "CUSTOMER SERVICE";
+};
