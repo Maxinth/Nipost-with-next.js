@@ -8,6 +8,14 @@ const DetailsBox = styled.ul`
   font-family: inherit;
 `;
 
+const Anchor = styled.a`
+  cursor: pointer;
+  transition: all 0.2s;
+  :hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+`;
 const Span = styled.span``;
 
 const DetailsItem = styled.li`
@@ -28,4 +36,4 @@ const DetailsItem = styled.li`
   }
 `;
 
-export { Container, DetailsBox, Span, DetailsItem };
+export { Span, Container, DetailsBox, Anchor, DetailsItem };

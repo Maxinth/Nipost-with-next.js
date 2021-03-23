@@ -1,14 +1,13 @@
 import React from "react";
 import { data } from "./data";
-import { DetailsBox, Span, DetailsItem } from "./styled";
+import { DetailsBox } from "./styled";
+import DetailsListItem from "./DetailsListItem";
 
 const Details = () => {
   return (
     <DetailsBox>
       {data.map((item, index) => (
-        <DetailsItem key={index}>
-          {item.icon} <Span>{item.text}</Span>
-        </DetailsItem>
+        <DetailsListItem key={index} item={item} />
       ))}
     </DetailsBox>
   );
