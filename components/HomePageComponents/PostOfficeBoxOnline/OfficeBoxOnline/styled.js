@@ -16,11 +16,14 @@ const Heading = styled.h4`
     sm &&
     css`
       font-size: 1rem;
+      text-align: left;
+      margin-top: 1rem;
     `}
 `;
 
 const Text = styled.p`
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: justify;
 `;
 export { OfficeSection, Heading, Text };

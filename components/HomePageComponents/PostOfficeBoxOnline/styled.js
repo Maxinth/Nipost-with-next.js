@@ -21,6 +21,10 @@ const Image = styled.img`
   display: block;
   object-fit: contain;
   max-width: 300px;
+  transition: max-width 0.2s;
+  @media (min-width: 768px) {
+    max-width: 450px;
+  }
 `;
 
 export { Section, Image, ImageBox };
