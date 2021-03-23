@@ -26,5 +26,18 @@ const StepSection = styled.section``;
 const StepBox = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 0.5rem;
 `;
-export { OuterBox, InnerBox, Text, StepSection, StepBox };
+
+const ButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+`;
+const Btn = styled.button`
+  outline: none;
+  border-radius: 10px;
+  padding: 1rem 3rem;
+  border: 1px solid black;
+`;
+
+export { ButtonContainer, Btn, OuterBox, InnerBox, Text, StepSection, StepBox };

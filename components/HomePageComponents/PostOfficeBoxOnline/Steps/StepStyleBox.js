@@ -1,12 +1,16 @@
 import React from "react";
 import { OuterBox, InnerBox } from "./styled";
+import PropTypes from "prop-types";
 
-const StepStyleBox = () => {
+const StepStyleBox = ({ num }) => {
   return (
     <OuterBox>
-      <InnerBox>1</InnerBox>
+      <InnerBox>{num}</InnerBox>
     </OuterBox>
   );
 };
 
+StepStyleBox.propTypes = {
+  num: PropTypes.number,
+};
 export default StepStyleBox;
