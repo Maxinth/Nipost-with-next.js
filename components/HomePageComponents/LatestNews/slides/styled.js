@@ -10,6 +10,11 @@ const SlidesContainer = styled.section`
   align-items: center;
   overflow: hidden;
   text-align: center;
+  transition: all 0.2s;
+  @media (max-width: 500px) {
+    padding: 2.2rem 1.2rem;
+    border-radius: 10px;
+  }
 `;
 
 const NewsBox = styled.div`
@@ -20,11 +25,15 @@ const NewsBox = styled.div`
   height: 100%;
   opacity: 0;
   transition: all 0.8s ease-in-out, color 0.2s;
-  /* transition: all 2s ease-in-out, color 0.2s; */
+
   border-radius: 5px;
   text-align: center;
   overflow: hidden;
   font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
   cursor: pointer;
   font-weight: 700;
   font-size: 0.7rem;

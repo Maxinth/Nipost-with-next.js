@@ -1,12 +1,14 @@
 import React from "react";
-import { Container } from "./styled";
-import GenerateFooterBoxes from "./GenerateFooterBoxes";
+import { FooterStyled } from "./styled";
+import FooterMain from "./FooterMain";
+import Signature from "./Signature";
 
 const Footer = () => {
   return (
-    <Container>
-      <GenerateFooterBoxes />
-    </Container>
+    <FooterStyled>
+      <FooterMain />
+      <Signature />
+    </FooterStyled>
   );
 };
 

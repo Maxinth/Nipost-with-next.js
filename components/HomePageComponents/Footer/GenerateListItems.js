@@ -1,16 +1,12 @@
 import React from "react";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import { ListItem, Span } from "./styled";
 import PropTypes from "prop-types";
+import FooterListItem from "./FooterListItem";
 
 const GenerateListItems = ({ items, withIcon }) => {
   return (
     <>
       {items.map((item, index) => (
-        <ListItem key={index}>
-          {withIcon && <ChevronRightIcon />}
-          <Span>{item}</Span>
-        </ListItem>
+        <FooterListItem key={index} item={item} withIcon={withIcon} />
       ))}
     </>
   );

@@ -1,14 +1,14 @@
 import React from "react";
-import { Section, Heading } from "./styled";
+import { Section as Box, Heading } from "./styled";
 import FooterList from "./FooterList";
 
 const FooterBox = (props) => {
   const { heading, ...footerListProps } = props;
   return (
-    <Section>
+    <Box>
       <Heading>{heading}</Heading>
       <FooterList {...footerListProps} />
-    </Section>
+    </Box>
   );
 };
 

@@ -16,6 +16,7 @@ const ImageBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 `;
 const Image = styled.img`
   width: 100%;
