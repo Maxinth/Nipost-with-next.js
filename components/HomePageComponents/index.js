@@ -8,6 +8,7 @@ import SubMenuOptions from "./SubMenuOptions";
 import CommercialBusinessUnit from "./CommercialBusinessUnit";
 import PostOfficeBoxOnline from "./PostOfficeBoxOnline";
 import PostageStamps from "./PostageStamps";
+import Footer from "./Footer";
 import { Container } from "./styled";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       <CommercialBusinessUnit />
       <PostOfficeBoxOnline />
       <PostageStamps />
+      <Footer />
     </Container>
   );
 };
