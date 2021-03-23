@@ -1,5 +1,6 @@
 import React from "react";
 import { ImageBox, Image } from "./styled";
+
 const LetterBox = () => {
   return (
     <ImageBox>

@@ -37,7 +37,7 @@ const ButtonContainer = styled.div`
 const Btn = styled.button`
   outline: none;
   border-radius: 10px;
-  padding: 1rem 3rem;
+  padding: 0.5rem 1rem;
   border: 1px solid black;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -50,6 +50,10 @@ const Btn = styled.button`
     background-color: rgb(255, 0, 0);
     color: #fff;
     border: 1px solid transparent;
+  }
+
+  @media (min-width: 600px) {
+    padding: 1rem 3rem;
   }
 `;
 

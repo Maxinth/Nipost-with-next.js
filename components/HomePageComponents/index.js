@@ -8,10 +8,8 @@ import LatestNews from "./LatestNews";
 import SubMenuOptions from "./SubMenuOptions";
 import CommercialBusinessUnit from "./CommercialBusinessUnit";
 import PostOfficeBoxOnline from "./PostOfficeBoxOnline";
-const Container = styled.section`
-  background-color: rgb(245, 245, 245);
-  position: relative;
-`;
+import PostageStamps from "./PostageStamps";
+import { Container } from "./styled";
 
 const Home = () => {
   return (
@@ -24,6 +22,7 @@ const Home = () => {
       <SubMenuOptions />
       <CommercialBusinessUnit />
       <PostOfficeBoxOnline />
+      <PostageStamps />
     </Container>
   );
 };
