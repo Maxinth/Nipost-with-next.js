@@ -1,23 +1,20 @@
 import React from "react";
-import HomeIcon from "@material-ui/icons/Home";
-import Link from "next/link";
-import { PageName, Span, Box, Anchor } from "./styled";
+import HomeLink from "./HomeLink";
+import { PageName, Span, Box } from "./styled";
 import PropTypes from "prop-types";
 
 const InPageNav = ({ pageName }) => {
   return (
     <Box>
-      <Link href="/">
-        <Anchor>
-          <HomeIcon />
-        </Anchor>
-      </Link>
+      <HomeLink />
       <Span>/</Span>
       <PageName>{pageName}</PageName>
     </Box>
   );
 };
+
 InPageNav.propTypes = {
   pageName: PropTypes.string,
 };
+
 export default InPageNav;
