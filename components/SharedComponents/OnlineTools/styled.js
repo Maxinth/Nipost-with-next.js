@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  border: 1px solid rgb(105, 105, 105);
+  border: 1px solid rgb(212, 211, 211);
   border-radius: 5px;
   margin: 1rem 2rem;
   font-family: "Open Sans", sans-serif;
@@ -28,6 +28,7 @@ const ListItem = styled.li`
 `;
 const Span = styled.span`
   font-size: 0.7rem;
+  text-transform: capitalize;
 `;
 
 export { Span, ListItem, ListContainer, TopBox, Container };

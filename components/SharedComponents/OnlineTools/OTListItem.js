@@ -1,13 +1,18 @@
 import React from "react";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { ListItem, Span } from "./styled";
+import PropTypes from "prop-types";
 
-const OTListItem = () => {
+const OTListItem = ({ item }) => {
   return (
     <ListItem>
-      <ArrowForwardIcon /> <Span>Track And Trace</Span>
+      <ArrowForwardIcon /> <Span>{item}</Span>
     </ListItem>
   );
+};
+
+OTListItem.propTypes = {
+  item: PropTypes.string,
 };
 
 export default OTListItem;
