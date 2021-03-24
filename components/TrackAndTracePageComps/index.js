@@ -1,15 +1,13 @@
 import React from "react";
-import { Container } from "../CalculatorPageComps/styled";
-import Banner from "../SharedComponents/Banner";
-import InPageNav from "../SharedComponents/InPageNav";
+import TrackItemsMain from "./TrackItemsMain";
 import PropTypes from "prop-types";
+import SharedLayout from "../SharedComponents/SharedLayout";
 
 const TrackAndTracePage = ({ text }) => {
   return (
-    <Container>
-      <Banner text={text} />
-      <InPageNav pageName={text} />
-    </Container>
+    <SharedLayout text={text}>
+      <TrackItemsMain />
+    </SharedLayout>
   );
 };
 

@@ -1,17 +1,13 @@
 import React from "react";
-import Banner from "../SharedComponents/Banner";
-import { Container } from "./styled";
 import PropTypes from "prop-types";
-import InPageNav from "../SharedComponents/InPageNav";
 import CalculatorSection from "./CalculatorSection";
+import SharedLayout from "../SharedComponents/SharedLayout";
 
 const CalculatorPage = ({ text }) => {
   return (
-    <Container>
-      <Banner text={text} />
-      <InPageNav pageName={text} />
+    <SharedLayout text={text}>
       <CalculatorSection />
-    </Container>
+    </SharedLayout>
   );
 };
 
