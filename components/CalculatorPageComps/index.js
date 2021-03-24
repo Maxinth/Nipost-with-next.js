@@ -4,7 +4,7 @@ import Banner from "../SharedComponents/Banner";
 const CalculatorPage = () => {
   return (
     <>
-      <Banner />
+      <Banner text="Online Calculator" />
     </>
   );
 };
