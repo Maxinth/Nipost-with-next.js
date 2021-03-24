@@ -5,6 +5,7 @@ const Box = styled.div`
   align-items: center;
   font-family: "Open Sans", sans-serif;
   padding: 1rem 3rem;
+  margin-top: 3rem;
 `;
 
 const Span = styled.span`
