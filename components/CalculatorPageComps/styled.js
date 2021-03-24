@@ -4,4 +4,5 @@ const Container = styled.section`
   background-color: rgb(254, 254, 254);
 `;
 
-export { Container };
+const Section = styled.section``;
+export { Container, Section };

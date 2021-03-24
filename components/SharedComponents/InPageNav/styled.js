@@ -13,7 +13,7 @@ const Span = styled.span`
 `;
 
 const PageName = styled.p`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-transform: capitalize;
   color: rgb(153, 153, 153);
 `;
@@ -22,7 +22,7 @@ const Anchor = styled.a`
   > svg {
     color: rgb(222, 57, 57);
     transition: color 0.2s;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   :hover {
