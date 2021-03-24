@@ -1,11 +1,11 @@
 import React from "react";
-import { Section, BannerImage, Heading } from "./styled";
+import { Section, Heading } from "./styled";
 import PropTypes from "prop-types";
+import { bgImg } from "./data";
 
 const Banner = ({ text }) => {
   return (
-    <Section>
-      <BannerImage src="./busbanner.jpg" alt="banner" />
+    <Section image={bgImg}>
       <Heading>{text}</Heading>
     </Section>
   );
