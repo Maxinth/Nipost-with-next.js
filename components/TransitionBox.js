@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useVariants } from "../components/useVariants";
+import { useVariants } from "./useVariants";
 import React from "react";
 
 const TransitionBox = ({ children }) => {

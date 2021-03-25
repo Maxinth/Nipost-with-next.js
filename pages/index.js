@@ -1,5 +1,6 @@
 import Head from "next/head";
 import HomePage from "../components/HomePageComponents/index";
+import TransitionBox from "../components/TransitionBox";
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomePage />
+      <TransitionBox>
+        <HomePage />
+      </TransitionBox>
     </>
   );
 }
