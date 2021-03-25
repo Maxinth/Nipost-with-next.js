@@ -9,7 +9,7 @@ const SharedLayout = ({ text, children }) => {
     <Container>
       <Banner text={text} />
       <InPageNav pageName={text} />
-      {children}
+      <ChildrenSection comp={children} />
     </Container>
   );
 };
