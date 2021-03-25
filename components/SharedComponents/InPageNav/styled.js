@@ -20,6 +20,9 @@ const PageName = styled.p`
 `;
 
 const Anchor = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   > svg {
     color: rgb(222, 57, 57);
     transition: color 0.2s;
