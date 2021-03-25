@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CalculatorSection from "./CalculatorSection";
+import CalculatorDetails from "../HomePageComponents/Tabs/CalculatorDetails";
 import SharedLayout from "../SharedComponents/SharedLayout";
 
 const CalculatorPage = ({ text }) => {
   return (
     <SharedLayout text={text}>
-      <CalculatorSection />
+      <CalculatorDetails />
     </SharedLayout>
   );
 };

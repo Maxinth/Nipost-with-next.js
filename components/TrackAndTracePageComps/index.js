@@ -1,12 +1,12 @@
 import React from "react";
-import TrackItemsMain from "./TrackItemsMain";
+import TrackItemDetails from "../HomePageComponents/Tabs/TrackItemsDetails";
 import PropTypes from "prop-types";
 import SharedLayout from "../SharedComponents/SharedLayout";
 
 const TrackAndTracePage = ({ text }) => {
   return (
     <SharedLayout text={text}>
-      <TrackItemsMain />
+      <TrackItemDetails />
     </SharedLayout>
   );
 };
