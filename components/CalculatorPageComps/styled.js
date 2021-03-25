@@ -1,10 +1,33 @@
 import styled from "styled-components";
 import { CalcBox } from "../HomePageComponents/Tabs/CalculatorDetails/CalcInput/styled";
 import { Button } from "../HomePageComponents/Tabs/Btn/styled";
+import { Box } from "../HomePageComponents/Tabs/TrackItemsDetails/styled";
 
 const Container = styled.section`
   background-color: rgb(254, 254, 254);
   padding-bottom: 3rem;
+
+  ${Box} + ${Button} {
+    min-width: 172px;
+    max-width: 40%;
+  }
+
+  ${Box} {
+    ${Button} {
+      width: 20%;
+    }
+  }
+  @media (min-width: 1049px) {
+    ${Box} + ${Button} {
+      width: 25%;
+    }
+
+    /* ${Box} {
+      ${Button} {
+        width: 20%;
+      }
+    } */
+  }
 `;
 
 const Section = styled.section`
