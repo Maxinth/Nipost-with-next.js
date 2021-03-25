@@ -35,11 +35,18 @@ const PickUpBox = styled.div`
   left: 90px;
   display: flex;
   flex-direction: column;
-  /* opacity: 0; */
+  opacity: 0;
   /* opacity: ${({ showContents }) => (showContents ? 1 : 0)}; */
   transition: transform 0.2s;
+  transform: translateX(-100vw);
   transform: ${({ showContents }) =>
     showContents ? "translateX(0px)" : "translateX(-100vw)"};
+
+  ${({ showContents }) =>
+    showContents &&
+    css`
+      opacity: 1;
+    `}
 `;
 const Header = styled.h1`
   font-size: calc(1.2rem + 2vw);
@@ -92,4 +99,6 @@ const Btn = styled.button`
     opacity: 1;
   }
 `;
-export { BannerContainer, BannerImage, PickUpBox, Btn, Header };
+
+const Box = styled.div``;
+export { BannerContainer, BannerImage, PickUpBox, Btn, Header, Box };

@@ -32,8 +32,11 @@ const Span = styled.span`
   font-size: 0.9rem;
   text-transform: capitalize;
   cursor: pointer;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 
+  :hover {
+    color: blue;
+  }
   @media (min-width: 768px) {
     font-size: 0.7rem;
   }

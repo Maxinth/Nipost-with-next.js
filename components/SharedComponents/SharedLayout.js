@@ -5,6 +5,7 @@ import InPageNav from "./InPageNav";
 import PropTypes from "prop-types";
 import ChildSection from "./ChildSection";
 
+// ShareLayout contains the layout shared by calculator, track and trace and post pages.
 const SharedLayout = ({ text, children }) => {
   return (
     <Container>

@@ -67,9 +67,24 @@ const slideFromTop = {
   },
 };
 
+const slideFromLeft = {
+  hidden: {
+    x: "-50vh",
+  },
+
+  visible: {
+    x: 0,
+    transition: {
+      type: "tween",
+      duration: 1,
+      // delay: 1,
+    },
+  },
+};
+
 const cardHover = {
   hover: {
-    scale: 1.03,
+    scale: 1.01,
     transition: {
       type: "tween",
       yoyo: Infinity,
@@ -86,5 +101,6 @@ export const useVariants = () => {
     aboutBlockContainer,
     pageVariant,
     slideFromTop,
+    slideFromLeft,
   };
 };
