@@ -8,8 +8,9 @@ const Container = styled.section`
   padding-bottom: 3rem;
 
   ${Box} + ${Button} {
-    min-width: 172px;
+    min-width: 192px;
     max-width: 40%;
+    font-size: 0.6rem;
   }
 
   ${Box} {
@@ -17,16 +18,20 @@ const Container = styled.section`
       width: 20%;
     }
   }
+
+  @media (min-width: 768px) {
+    input + ${Button} {
+      max-width: 250px;
+    }
+    ${Box} + ${Button} {
+      font-size: 1rem;
+      min-width: 250px;
+    }
+  }
   @media (min-width: 1049px) {
     ${Box} + ${Button} {
       width: 25%;
     }
-
-    /* ${Box} {
-      ${Button} {
-        width: 20%;
-      }
-    } */
   }
 `;
 
