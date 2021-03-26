@@ -1,14 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import { HomeRedirectBox, Anchor } from "./styled";
+import { Anchor } from "./styled";
+import { motion } from "framer-motion";
+import { useVariants } from "../useVariants";
 
 const RedirectBox = () => {
+  const { variantProps, cardHover: btnHover } = useVariants();
   return (
-    <HomeRedirectBox>
+    <motion.div variants={btnHover} {...variantProps} whileHover="hover">
       <Link href="/">
         <Anchor>Go back to home page</Anchor>
       </Link>
-    </HomeRedirectBox>
+    </motion.div>
   );
 };
 
