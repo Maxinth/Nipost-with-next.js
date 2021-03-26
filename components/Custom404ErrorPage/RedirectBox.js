@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { useVariants } from "../useVariants";
 
 const RedirectBox = () => {
-  const { variantProps, cardHover: btnHover } = useVariants();
+  const { variantProps, cardHover: boxHover } = useVariants();
   return (
-    <motion.div variants={btnHover} {...variantProps} whileHover="hover">
+    <motion.div variants={boxHover} {...variantProps} whileHover="hover">
       <Link href="/">
         <Anchor>Go back to home page</Anchor>
       </Link>
