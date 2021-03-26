@@ -1,8 +1,13 @@
 import React from "react";
 import CalculatorPage from "../components/CalculatorPageComps";
+import TransitionBox from "../components/TransitionBox";
 
 const Calculator = () => {
-  return <CalculatorPage text="online calculator" />;
+  return (
+    <TransitionBox>
+      <CalculatorPage text="online calculator" />
+    </TransitionBox>
+  );
 };
 
 export default Calculator;
