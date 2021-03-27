@@ -9,7 +9,6 @@ import styled from "styled-components";
 const NavigationBox = styled(DetailsBox)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  /* margin-top: 1rem; */
   margin-top: 0.5rem;
 `;
 

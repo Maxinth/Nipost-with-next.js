@@ -5,7 +5,13 @@ import NavTopInfoAndSocial from "./TopInfoAndSocial";
 import NavLinksDropDown from "./NavLinksDropDown";
 
 const NavContainer = styled.section`
-  position: relative;
+  /* position: relative; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 300;
 `;
 
 const Navbar = () => {
