@@ -9,7 +9,8 @@ import styled from "styled-components";
 const NavigationBox = styled(DetailsBox)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin-top: 0.5rem;
 `;
 
 const NavListItem = styled(DetailsItem)`
@@ -24,6 +25,7 @@ const NavListItem = styled(DetailsItem)`
     color: black;
     font-family: "Open Sans", sans-serif;
     transition: color 0.2s;
+    font-weight: 700;
     :hover {
       color: #fff;
     }

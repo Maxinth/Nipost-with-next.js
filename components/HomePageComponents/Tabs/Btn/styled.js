@@ -9,8 +9,9 @@ const Button = styled.button`
   outline: none;
   border: none;
   min-width: 100px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
+  font-family: "Open Sans", sans-serif;
 `;
 
 export { Button };

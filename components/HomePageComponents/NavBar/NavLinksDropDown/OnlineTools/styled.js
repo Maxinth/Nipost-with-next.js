@@ -11,6 +11,9 @@ const DetailsBox = styled.ul`
 const Anchor = styled.a`
   cursor: pointer;
   transition: all 0.2s;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
   :hover {
     text-decoration: underline;
     color: #fff;
@@ -27,7 +30,7 @@ const DetailsItem = styled.li`
   /* font-size: 0.7rem; */
   text-transform: capitalize;
   > svg {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-right: 0.5rem;
   }
 
