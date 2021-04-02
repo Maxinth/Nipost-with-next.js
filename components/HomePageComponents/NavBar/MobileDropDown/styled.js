@@ -22,6 +22,7 @@ const DropDownContainer = styled.section`
   /* height: 100%; */
   height: ${({ height }) => height && `${height}px`};
   background-color: rgb(190, 186, 186);
+
   width: 100%;
   overflow: auto;
   padding-bottom: 4rem;
@@ -78,10 +79,16 @@ const Span = styled.span`
 `;
 
 const DetailsBox = styled.div`
-  /* transition: height 0.3s; */
   overflow: auto;
-  /* height: ${({ height }) => height && `${height}px`};
-  padding: 0 2rem; */
+  border: 5px ridge ghostwhite;
+  border-top: unset;
+  padding-left: 0.5rem;
+  margin: 0 2rem;
+  margin-right: 1rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 1px 3px 5px grey;
+  background-color: ghostwhite;
 `;
 
 export {

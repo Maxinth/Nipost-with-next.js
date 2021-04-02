@@ -14,7 +14,7 @@ const Signature = () => {
         <IconContainer color="red">
           <FavoriteIcon />
         </IconContainer>
-        in Lagos, Nigeria.
+        by Tunde.
       </SignContainer>
       <Contact>+234 902 428 2995</Contact>
     </SignatureContainer>

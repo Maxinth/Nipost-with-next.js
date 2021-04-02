@@ -8,7 +8,7 @@ const NavTopInfoAndSocial = () => {
 
   return (
     <Container onMouseEnter={handleMouseEnter}>
-      <Info>Contact me on +234 902 428 2995</Info>
+      <Info>Say "Hi" at tunde.j.adeleye@gmail.com</Info>
       <SocialIcons />
     </Container>
   );
