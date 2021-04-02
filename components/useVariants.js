@@ -2,6 +2,7 @@ const variantProps = {
   initial: "hidden",
   animate: "visible",
   hover: "hover",
+  exit: "exit",
 };
 
 const landRVariant = (direction, delay = 0) => {
@@ -92,9 +93,25 @@ const cardHover = {
   },
 };
 
+const dropVariant = {
+  hidden: {
+    height: "0px",
+  },
+
+  visible: {
+    height: "100%",
+    transition: {
+      type: "tween",
+      duration: 1,
+    },
+  },
+  exit: { height: "0px", transition: { type: "tween", duration: 1 } },
+};
+
 // custom Hook to export the variants as needed
 export const useVariants = () => {
   return {
+    dropVariant,
     variantProps,
     cardHover,
     landRVariant,

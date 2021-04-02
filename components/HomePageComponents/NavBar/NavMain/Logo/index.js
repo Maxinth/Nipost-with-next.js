@@ -5,7 +5,7 @@ import LogoTexts from "./LogoTexts";
 const Logo = () => {
   return (
     <LogoContainer>
-      <LogoImage src="./logoMain.png" alt="logo" />
+      <LogoImage src="/logoMain.png" alt="nipost logo" />
       <LogoTexts />
     </LogoContainer>
   );

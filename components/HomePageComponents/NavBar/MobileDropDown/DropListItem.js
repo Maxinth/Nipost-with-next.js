@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ItemName from "./ItemName";
-import { ListItem, ContentBox } from "./styled";
+import { ListItem } from "./styled";
 import IsDropDownIconShown from "./IsDropDownIconShown";
 import PropTypes from "prop-types";
 import DropDownDetails from "./DropDownDetails";
@@ -8,7 +8,7 @@ import DropDownDetails from "./DropDownDetails";
 const DropListItem = ({
   linkText,
   withDropDown,
-  addDetailsHeight,
+  // addDetailsHeight,
   details,
 }) => {
   const [clicked, setClicked] = useState(false);
@@ -27,7 +27,7 @@ const DropListItem = ({
       {withDropDown && (
         <DropDownDetails
           showDetails={clicked}
-          addDetailsHeight={addDetailsHeight}
+          // addDetailsHeight={addDetailsHeight}
           details={details}
         />
       )}
