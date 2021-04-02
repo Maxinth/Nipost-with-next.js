@@ -1,34 +1,23 @@
-import React, { useEffect } from "react";
-import { ContentBox, Box } from "./styled";
-import useDropDown from "../../../useDropDown";
+import React from "react";
+import { Box } from "./styled";
 import PropTypes from "prop-types";
 import GenerateInnerListItems from "./GenerateInnerListItems";
+import { motion, AnimatePresence } from "framer-motion";
+import { useVariants } from "../../../useVariants";
 
-const DropDownDetails = ({
-  showDetails,
-  // addDetailsHeight,
-  details,
-}) => {
-  // const { currentHeight, contentRef, getNewHeight } = useDropDown();
-
-  // useEffect for each detailsDropDown based on showDetails
-  // useEffect(() => {
-  //   let detailsHeight = contentRef.current.getBoundingClientRect().height;
-  //   getNewHeight(!showDetails, detailsHeight);
-  //   addDetailsHeight(currentHeight);
-  // }, [showDetails, currentHeight]);
+const DropDownDetails = ({ showDetails, details }) => {
+  const { variantProps, dropVariant } = useVariants();
 
   return (
-    <Box
-      details
-      // height={currentHeight}
-    >
-      <ContentBox
-      // ref={contentRef}
-      >
-        <GenerateInnerListItems data={details} />
-      </ContentBox>
-    </Box>
+    <AnimatePresence>
+      {showDetails && (
+        <Box details>
+          <motion.ul variants={dropVariant} {...variantProps}>
+            <GenerateInnerListItems data={details} />
+          </motion.ul>
+        </Box>
+      )}
+    </AnimatePresence>
   );
 };
 
