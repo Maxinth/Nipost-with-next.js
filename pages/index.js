@@ -3,10 +3,8 @@ import TransitionBox from "../components/TransitionBox";
 
 export default function Home() {
   return (
-    <>
-      <TransitionBox>
-        <HomePage />
-      </TransitionBox>
-    </>
+    <TransitionBox>
+      <HomePage />
+    </TransitionBox>
   );
 }

@@ -10,7 +10,7 @@ const Signature = () => {
   return (
     <SignatureContainer>
       <SignContainer>
-        CLONED with
+        MADE with
         <IconContainer color="red">
           <FavoriteIcon />
         </IconContainer>
