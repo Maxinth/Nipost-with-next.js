@@ -1,23 +1,14 @@
 import React from "react";
-import { Box } from "./styled";
+import { DetailsBox } from "./styled";
 import PropTypes from "prop-types";
 import GenerateInnerListItems from "./GenerateInnerListItems";
-import { motion, AnimatePresence } from "framer-motion";
-import { useVariants } from "../../../useVariants";
+import TransitionChildHeight from "./TransitionChildHeight";
 
 const DropDownDetails = ({ showDetails, details }) => {
-  const { variantProps, dropVariant } = useVariants();
-
   return (
-    <AnimatePresence>
-      {showDetails && (
-        <Box details>
-          <motion.ul variants={dropVariant} {...variantProps}>
-            <GenerateInnerListItems data={details} />
-          </motion.ul>
-        </Box>
-      )}
-    </AnimatePresence>
+    <TransitionChildHeight condition={showDetails} ParentBox={DetailsBox}>
+      <GenerateInnerListItems data={details} />
+    </TransitionChildHeight>
   );
 };
 

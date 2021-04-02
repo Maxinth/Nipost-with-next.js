@@ -1,26 +1,16 @@
 import React from "react";
 import { DropDownContainer } from "./styled";
-
 import GenerateDropListItems from "./GenerateDropListItems";
 import { useGlobalContext } from "../../../context";
-import { motion, AnimatePresence } from "framer-motion";
-import { useVariants } from "../../../useVariants";
+import TransitionChildHeight from "./TransitionChildHeight";
 
 const MobileDropDown = () => {
-  const { variantProps, dropVariant } = useVariants();
-
   const { isClicked } = useGlobalContext();
 
   return (
-    <AnimatePresence>
-      {isClicked && (
-        <DropDownContainer>
-          <motion.ul variants={dropVariant} {...variantProps}>
-            <GenerateDropListItems />
-          </motion.ul>
-        </DropDownContainer>
-      )}
-    </AnimatePresence>
+    <TransitionChildHeight condition={isClicked} ParentBox={DropDownContainer}>
+      <GenerateDropListItems />
+    </TransitionChildHeight>
   );
 };
 
