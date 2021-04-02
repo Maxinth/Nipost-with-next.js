@@ -4,7 +4,7 @@ import TransitionBox from "../components/TransitionBox";
 
 const Post = () => {
   return (
-    <TransitionBox>
+    <TransitionBox docTitle="Nipost - Post office Address">
       <PostOfficeAddressPage text="postoffice finder" />
     </TransitionBox>
   );
