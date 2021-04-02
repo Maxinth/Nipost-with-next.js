@@ -29,4 +29,8 @@ export default TransitionBox;
 /*
 Custom component to do page transitions.
 
+see the file with this same name in portfolio for 
+The reason for moving <Head> template</Head>
+here !
+
 */

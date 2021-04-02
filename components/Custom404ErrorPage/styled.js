@@ -43,6 +43,7 @@ const Anchor = styled.a`
   font-size: 0.7rem;
   transition: all 0.2s;
   cursor: pointer;
+  font-family: "Open Sans", sans-serif;
 
   @media (min-width: 768px) {
     font-size: 1.1rem;
