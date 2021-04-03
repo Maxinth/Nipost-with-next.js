@@ -1,11 +1,18 @@
-import { motion } from "framer-motion";
+import { motion, useEffect } from "framer-motion";
 import { useVariants } from "./useVariants";
 import React from "react";
 import Head from "next/head";
 import PropTypes from "prop-types";
+import { getTitle } from "./getTitle";
+import { useRouter } from "next/router";
 
-const TransitionBox = ({ children, docTitle = "Nipost" }) => {
+const TransitionBox = ({ children }) => {
   const { pageVariant, variantProps } = useVariants();
+  // get currrent path
+  const { pathname } = useRouter();
+
+  const docTitle = getTitle(pathname);
+
   return (
     <>
       <Head>
@@ -21,7 +28,6 @@ const TransitionBox = ({ children, docTitle = "Nipost" }) => {
 
 TransitionBox.propTypes = {
   children: PropTypes.object,
-  docTitle: PropTypes.string,
 };
 
 export default TransitionBox;
