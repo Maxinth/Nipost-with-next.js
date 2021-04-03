@@ -4,7 +4,7 @@ import TransitionBox from "../components/TransitionBox";
 
 const Custom404 = () => {
   return (
-    <TransitionBox docTitle="Oops!, 404 says HI!">
+    <TransitionBox>
       <CustomErrorPage />
     </TransitionBox>
   );

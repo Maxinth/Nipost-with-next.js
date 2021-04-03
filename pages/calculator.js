@@ -4,7 +4,7 @@ import TransitionBox from "../components/TransitionBox";
 
 const Calculator = () => {
   return (
-    <TransitionBox docTitle="Nipost - Use our expenses calculator">
+    <TransitionBox>
       <CalculatorPage text="online calculator" />
     </TransitionBox>
   );

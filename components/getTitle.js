@@ -3,18 +3,18 @@ let title = "";
 export const getTitle = (path) => {
   switch (path) {
     case "/":
-      title = "Home";
+      title = "Nipost -- Home";
       break;
 
     case "/track-and-trace":
-      title = "Track and Trace";
+      title = "Nipost - Track and Trace";
       break;
 
     case "/calculator":
-      title = "Online Calculator";
+      title = "Nipost - Use our expenses calculator";
       break;
     case "/post":
-      title = "PostOffice Address";
+      title = "Nipost - Post office Finder";
       break;
 
     default:

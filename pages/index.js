@@ -3,7 +3,7 @@ import TransitionBox from "../components/TransitionBox";
 
 export default function Home() {
   return (
-    <TransitionBox docTitle="Nipost -- Home">
+    <TransitionBox>
       <HomePage />
     </TransitionBox>
   );

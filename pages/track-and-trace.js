@@ -4,7 +4,7 @@ import TransitionBox from "../components/TransitionBox";
 
 const TrackAndTrace = () => {
   return (
-    <TransitionBox docTitle="Nipost - Track and Trace">
+    <TransitionBox>
       <TrackAndTracePage text="track and trace" />
     </TransitionBox>
   );

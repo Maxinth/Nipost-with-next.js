@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 const TransitionBox = ({ children }) => {
   const { pageVariant, variantProps } = useVariants();
-  // get currrent path
+  // get current path
   const { pathname } = useRouter();
 
   const docTitle = getTitle(pathname);
