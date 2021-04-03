@@ -3,20 +3,17 @@ import { useVariants } from "./useVariants";
 import React from "react";
 import Head from "next/head";
 import PropTypes from "prop-types";
-import { getTitle } from "./getTitle";
-import { useRouter } from "next/router";
+import usePageTitle from "./useTitle";
 
 const TransitionBox = ({ children }) => {
   const { pageVariant, variantProps } = useVariants();
-  // get current path
-  const { pathname } = useRouter();
 
-  const docTitle = getTitle(pathname);
+  const { pageTitle } = usePageTitle();
 
   return (
     <>
       <Head>
-        <title> {docTitle}</title>
+        <title> {pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <motion.div variants={pageVariant(0.5, 0)} {...variantProps}>

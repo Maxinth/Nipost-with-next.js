@@ -1,15 +1,12 @@
+import { useRouter } from "next/router";
 import { getTitle } from "./getTitle";
-import Router from "next/router";
 
-const useTitle = () => {
-  const { route } = Router;
-  const { pathname } = route;
+const usePageTitle = () => {
+  const { pathname } = useRouter();
 
   const pageTitle = getTitle(pathname);
 
-  return {
-    pageTitle,
-  };
+  return { pageTitle };
 };
 
-export default useTitle;
+export default usePageTitle;
