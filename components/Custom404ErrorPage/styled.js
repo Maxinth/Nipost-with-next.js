@@ -49,4 +49,16 @@ const Anchor = styled.a`
     font-size: 1.1rem;
   }
 `;
-export { Container, HomeRedirectBox, Image, Anchor };
+
+const Text = styled.p`
+  margin-top: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.8rem;
+`;
+const Time = styled.span`
+  font-weight: 700;
+  margin: 0 0.5rem;
+  font-size: 0.7rem;
+`;
+export { Text, Time, Container, HomeRedirectBox, Image, Anchor };

@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const useRedirect = () => {
-  const [time, setTime] = useState(3);
+  //state to monitor countdown
+  const [time, setTime] = useState(5);
   const countTimeDown = () => setTime(time - 1);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const useRedirect = () => {
     if (time === 1) {
       router.push("/");
     }
-  });
+  }, [time]);
   return { time };
 };
 
