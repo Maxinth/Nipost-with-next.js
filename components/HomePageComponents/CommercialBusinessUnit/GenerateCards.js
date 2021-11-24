@@ -7,7 +7,7 @@ const GenerateCards = () => {
   return (
     <CardsContainer>
       {data.map((item, index) => (
-        <CbuCard key={index} {...item} />
+        <CbuCard key={index} {...item} index={index} />
       ))}
     </CardsContainer>
   );

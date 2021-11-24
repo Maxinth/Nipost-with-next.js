@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled.section`
   background-color: rgb(238, 238, 238);
@@ -29,7 +30,7 @@ const CardTitle = styled.span`
   text-transform: capitalize;
   text-align: center;
 `;
-const CardBox = styled.div`
+const CardBox = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

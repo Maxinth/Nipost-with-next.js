@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Image, Text, Time } from "./styled";
+import { Container, Image } from "./styled";
 import RedirectBox from "./RedirectBox";
 import { bgImg } from "./data";
 import PropTypes from "prop-types";
