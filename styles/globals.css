@@ -21,6 +21,6 @@ svg {
 
 #__next {
   position: relative;
-  max-width: 1400px;
+  width: 100%;
   overflow: hidden;
 }
